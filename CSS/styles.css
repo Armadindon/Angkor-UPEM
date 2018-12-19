@@ -1,0 +1,35 @@
+body {
+  margin: 0%;
+  padding: 0%;
+}
+
+
+header {
+  background-color: green;
+  margin: 0%;
+  padding: 2%;
+  width: 100%;
+}
+
+header h1 {
+  padding: inherit;
+  margin: inherit;
+}
+
+header > ul {
+  margin: inherit;
+  padding: inherit;
+}
+
+header > ul > li {
+  float: left;
+  padding: inherit;
+}
+
+header li {
+  list-style-type: none;
+}
+
+.Menus {
+  display: none;
+}
