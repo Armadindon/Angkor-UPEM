@@ -6,6 +6,7 @@ padding: 0%;
 
 header {
   background-color: green;
+  margin-bottom: 0%;
 }
 
 h1 {
@@ -78,4 +79,28 @@ nav li:hover .submenu{
 
 .Menu >li:hover a {
   padding: 0.5em 1.5em 0.5em 1.5em
+}
+
+.submenu li {
+  background-color: #00cc00;
+}
+
+.submenu li:hover {
+  background-color: #009933;
+}
+
+.Page {
+  margin-top: 0%;
+  background-color: grey;
+  height: 100%;
+}
+
+.Contenu {
+  background-color: white;
+  margin: 0% 5% 0% 5%;
+  height: inherit;
+}
+
+h2 {
+  margin: 0;
 }
