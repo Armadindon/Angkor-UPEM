@@ -1,7 +1,16 @@
+
+/*On fait en sorte que la page prenne toute la place de l'écran*/
+html {
+  height: 100%;
+}
+
 body {
 font-family: 'Roboto Condensed', sans-serif;
 margin: 0%;
 padding: 0%;
+height: 100%;
+background-image: url("Images/angkor_nuit.jpg");
+background-size: cover; /*l'image s'adapte a l'écran*/
 }
 
 header {
@@ -10,7 +19,7 @@ header {
 }
 
 h1 {
-  padding: 0% 2% 0% 0.5em;
+  padding: 0% 2% 0% 0.5%;
   margin: inherit;
 }
 
@@ -45,7 +54,7 @@ nav a{
 }
 
 nav > ul > li > a{
-  padding: 0.7em 1.5em; /* A regler en pourcentage */
+  padding: 0.7em 0.5em; /* A regler en pourcentage */
   color: #FFF;
 }
 
@@ -70,7 +79,7 @@ nav li:hover .submenu{
   padding: 3% 6%;
   font-size: 13px;
   color: #222538;
-  width: 270px;
+  width: 250px;
 }
 
 .Menu > li:hover {
@@ -78,7 +87,7 @@ nav li:hover .submenu{
 }
 
 .Menu >li:hover a {
-  padding: 0.5em 1.5em 0.5em 1.5em
+  padding: 0.5em 0.5em 0.5em 0.5em
 }
 
 .submenu li {
@@ -89,16 +98,12 @@ nav li:hover .submenu{
   background-color: #009933;
 }
 
-.Page {
-  margin-top: 0%;
-  background-color: grey;
-  height: 100%;
-}
+
 
 .Contenu {
   background-color: white;
   margin: 0% 5% 0% 5%;
-  height: inherit;
+  height: 91.85%;
 }
 
 h2 {
