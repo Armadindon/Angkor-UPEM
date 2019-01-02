@@ -13,18 +13,19 @@ background-size: cover; /*l'image s'adapte a l'écran*/
 }
 
 header {
-  background-color: green;
+  background-color: red;
   margin-bottom: 0%;
 }
 
 h1 {
   padding: 0% 2% 0% 0.5%;
   margin: inherit;
+  text-align: center;
 }
 
 nav {
   width: 100%;
-  background-color: inherit;
+  background-color: green;
 }
 
 nav > ul {
@@ -96,8 +97,6 @@ nav li:hover .submenu{
 .submenu li:hover {
   background-color: #009933;
 }
-
-
 
 .Contenu {
   background-color: white;
