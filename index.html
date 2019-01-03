@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
+
+ <!-- Intégrations Map-->
+ <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+ <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
+ <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
+<!-- Google Fonts et info générales -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <link rel="stylesheet" href="CSS\styles.css">
     <meta charset="utf-8">
@@ -53,8 +59,19 @@
       <div class="Contenu">
 
         <img class="diapo" src="CSS\Images\Diapo1.JPG" alt="">
+        <div id='map'></div>
+        <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiYXJtYWRpbmRvbiIsImEiOiJjanFnbmN4bzUwMGNtNDJwcWI0ZjQwMzdlIn0.nXQZ0vYO6txUmUgWgiPTrw';
+        const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/armadindon/cjqgq2lph02xw2smwm67ogld6',
+        center: [103.867,13.412],
+        zoom: 16.0
+        });
+        </script>
 
       </div>
+
 
 
   </body>

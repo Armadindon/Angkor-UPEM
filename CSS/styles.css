@@ -1,13 +1,9 @@
 /*On fait en sorte que la page prenne toute la place de l'écran*/
-html {
-  height: 100%;
-}
 
 body {
 font-family: 'Roboto Condensed', sans-serif;
 margin: 0%;
 padding: 0%;
-height: 100%;
 background-image: url("Images/Angkor.JPG");
 background-size: cover; /*l'image s'adapte a l'écran*/
 }
@@ -103,7 +99,7 @@ nav li:hover .submenu{
 .Contenu {
   background-color:   #fefff1 ;
   margin: 0% 8% 0% 8%;
-  height: 91.85%;
+  padding: 3%;
 }
 
 h2 {
@@ -112,10 +108,9 @@ h2 {
 
 .diapo {
   width: 50%;
-  margin: 4% 0% 0% 4%;
 }
 
-.map {
+#map {
   height: 400px;
-  width: 100%;
+  width: 50%;
 }
