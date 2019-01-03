@@ -8,13 +8,14 @@ font-family: 'Roboto Condensed', sans-serif;
 margin: 0%;
 padding: 0%;
 height: 100%;
-background-image: url("Images/angkor_nuit.jpg");
+background-image: url("Images/Angkor.JPG");
 background-size: cover; /*l'image s'adapte a l'écran*/
 }
 
 header {
   background-color:  #27cb66;
   margin-bottom: 0%;
+  margin: 0% 8% 0% 8%;
 }
 
 h1 {
@@ -100,11 +101,21 @@ nav li:hover .submenu{
 }
 
 .Contenu {
-  background-color: white;
-  margin: 0% 5% 0% 5%;
+  background-color:   #fefff1 ;
+  margin: 0% 8% 0% 8%;
   height: 91.85%;
 }
 
 h2 {
   margin: 0;
+}
+
+.diapo {
+  width: 50%;
+  margin: 4% 0% 0% 4%;
+}
+
+.map {
+  height: 400px;
+  width: 100%;
 }
