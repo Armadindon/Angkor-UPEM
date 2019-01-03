@@ -13,19 +13,20 @@ background-size: cover; /*l'image s'adapte a l'écran*/
 }
 
 header {
-  background-color: red;
+  background-color:  #27cb66;
   margin-bottom: 0%;
 }
 
 h1 {
-  padding: 0% 2% 0% 0.5%;
+  padding: 5% 2% 2% 0.5%;
   margin: inherit;
   text-align: center;
+  color: white;
 }
 
 nav {
   width: 100%;
-  background-color: green;
+  background-color:  #22b75b;
 }
 
 nav > ul {
