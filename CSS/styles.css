@@ -108,20 +108,11 @@ nav li:hover .submenu{
   background-color:   #fefff1 ;
   margin: 0% 8% 0% 8%;
   padding: 3%;
-  border-radius: 0% 0% 2% 2%;
-}
-
-h2 {
-  margin: 0;
+  border-radius: 0% 0% 5px 5px;
 }
 
 .diapo {
   width: 50%;
-}
-
-#map {
-  height: 300px;
-  width: 100%;
 }
 
 hr {
