@@ -1,21 +1,29 @@
+/*On fait en sorte que la page prenne toute la place de l'écran*/
+
 body {
 font-family: 'Roboto Condensed', sans-serif;
 margin: 0%;
 padding: 0%;
+background-image: url("Images/Angkor.JPG");
+background-size: cover; /*l'image s'adapte a l'écran*/
 }
 
 header {
-  background-color: green;
+  background-color:  #27cb66;
+  margin-bottom: 0%;
+  margin: 0% 8% 0% 8%;
 }
 
 h1 {
-  padding: 0% 2% 0% 0.5em;
+  padding: 5% 2% 2% 0.5%;
   margin: inherit;
+  text-align: center;
+  color: white;
 }
 
 nav {
   width: 100%;
-  background-color: inherit;
+  background-color:  #22b75b;
 }
 
 nav > ul {
@@ -44,7 +52,7 @@ nav a{
 }
 
 nav > ul > li > a{
-  padding: 0.7em 1.5em; /* A regler en pourcentage */
+  padding: 0.7em 0.5em; /* A regler en pourcentage */
   color: #FFF;
 }
 
@@ -69,7 +77,7 @@ nav li:hover .submenu{
   padding: 3% 6%;
   font-size: 13px;
   color: #222538;
-  width: 270px;
+  width: 250px;
 }
 
 .Menu > li:hover {
@@ -77,5 +85,32 @@ nav li:hover .submenu{
 }
 
 .Menu >li:hover a {
-  padding: 0.5em 1.5em 0.5em 1.5em
+  padding: 0.5em 0.5em 0.5em 0.5em
+}
+
+.submenu li {
+  background-color: #00cc00;
+}
+
+.submenu li:hover {
+  background-color: #009933;
+}
+
+.Contenu {
+  background-color:   #fefff1 ;
+  margin: 0% 8% 0% 8%;
+  padding: 3%;
+}
+
+h2 {
+  margin: 0;
+}
+
+.diapo {
+  width: 50%;
+}
+
+#map {
+  height: 400px;
+  width: 50%;
 }
