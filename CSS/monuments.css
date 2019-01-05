@@ -1,12 +1,12 @@
 #MonumentsPrincipaux img {
   width: 100%;
   border-radius: 1000px;
-  filter: grayscale(100%);
+  filter: sepia(25%);
   transition: 0.5s;
 }
 
 #MonumentsPrincipaux img:hover {
-  filter: grayscale(0%);
+  filter: sepia(0%);
 }
 
 #MonumentsPrincipaux img:hover + .centered {
