@@ -1,9 +1,5 @@
 /*On fait en sorte que la page prenne toute la place de l'écran*/
 
-html {
-  height: 100%;
-}
-
 body {
 font-family: 'Roboto Condensed', sans-serif;
 margin: 0%;
@@ -11,7 +7,7 @@ padding: 0%;
 background-image: url("Images/Angkor.JPG");
 background-repeat: no-repeat;
 background-position: center;
-height: 100%;
+background-attachment: fixed;
 
 /*l'image s'adapte a l'écran*/
 }
