@@ -114,3 +114,36 @@ nav li:hover .submenu{
 hr {
   margin: 5% 0%;
 }
+
+
+.img img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin-left:5em;
+  margin-right: 5em;
+  margin-top:5%;
+}
+
+.Equipe {
+  align-content: center;
+}
+.ens {
+  display:inline-block;
+}
+
+.Equipe h3 {
+  text-align: center;
+  display: block;
+  margin:5px;
+}
+
+.Equipe h4 {
+  text-align: center;
+  color:#17c440;
+  margin:5px;
+}
+
+.Equipe p {
+  text-align: center;
+}
