@@ -1,16 +1,7 @@
-#MonumentsPrincipaux img {
+#Monuments img {
   width: 100%;
   border-radius: 1000px;
-  filter: sepia(25%);
-  transition: 0.5s;
-}
-
-#MonumentsPrincipaux img:hover {
-  filter: sepia(0%);
-}
-
-#MonumentsPrincipaux img:hover + .centered {
-  filter: opacity(100%);
+  filter: grayscale(0%);
   transition: 0.5s;
 }
 
@@ -18,7 +9,22 @@
   position: relative;
   text-align: center;
   color: white;
-  font-size: 20px;
+  font-size: 17px;
+}
+
+.container {
+  width: 100%;
+  border-radius: 100px;
+  filter: grayscale(0%);
+  transition: 0.5s;
+}
+
+.container:hover {
+  filter: grayscale(100%);
+}
+
+.container:hover .centered {
+  filter: opacity(100%);
 }
 
 .centered {
