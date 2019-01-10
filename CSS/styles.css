@@ -115,23 +115,18 @@ hr {
   margin: 5% 0%;
 }
 
-.banniere img {
-  width: 100px;
-  height: 100px;
-  padding-bottom:0px;
-}
-
-.banniere h1 {
-  padding-top:0px;
-  display:inline-block;
-  padding-bottom:0px;
-
-}
-
-.banniere {
-
-}
 
 p {
   text-align: justify;
+}
+
+.left {
+  position: absolute;
+  float: left;
+}
+
+.left img {
+  max-width: 100%;
+  height: auto;
+  width: auto\9; /* ie8 */
 }
