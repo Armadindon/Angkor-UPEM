@@ -118,7 +118,20 @@ hr {
 .banniere img {
   width: 100px;
   height: 100px;
+  padding-bottom:0px;
+}
+
+.banniere h1 {
+  padding-top:0px;
+  display:inline-block;
+  padding-bottom:0px;
+
 }
 
 .banniere {
+
+}
+
+p {
+  text-align: justify;
 }
