@@ -142,3 +142,9 @@ p {
     background-color:  #27cb66;
     min-height: 100px;
 }
+
+@media only screen and (max-width: 655px) {
+  nav a {
+    font-size: 13px;
+  }
+}
