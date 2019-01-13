@@ -1,4 +1,4 @@
-img {
+#outil {
   height: 300px;
   width: 200px;
   display:block;
@@ -11,4 +11,18 @@ img {
   font-style: italic;
   font-size: 13px;
   text-align: center;
+}
+
+#palais {
+  height: 200px;
+  width: 300px;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius:7px;
+}
+
+h4 {
+  padding-bottom:3px;
+  margin-bottom:3px;
 }
