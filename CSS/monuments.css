@@ -25,6 +25,7 @@
 
 .container:hover .centered {
   filter: opacity(100%);
+
 }
 
 .centered {
@@ -71,11 +72,13 @@
   -moz-transition: opacity 400ms ease-in;
   transition: opacity 400ms ease-in;
   pointer-events: none;
+
 }
 
 .Modal:target {
   opacity:1;
   pointer-events: auto;
+
 }
 
 .Modal:target > div {
