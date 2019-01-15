@@ -5,5 +5,13 @@
 
 .diapo {
   width: 100%;
-  height: 30em;
+  margin-bottom: 5%;
+}
+
+.Anecdote{
+  padding: 0%;
+  background-color: green;
+  border-radius: 5px;
+  box-shadow:0 10px 16px 0 rgba(0,0,0,0.2);
+  padding: 2px;
 }
