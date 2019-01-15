@@ -108,17 +108,8 @@ nav li:hover .submenu{
   border-radius: 0% 0% 5px 5px;
 }
 
-.diapo {
-  width: 50%;
-}
-
 hr {
   margin: 5% 0%;
-}
-
-
-p {
-  text-align: justify;
 }
 
 .left {
@@ -150,9 +141,4 @@ p {
   .submenu li a{
     width: 150px;
   }
-}
-
-.diapo {
-  width: 100%;
-  height: 30em;
 }
