@@ -4,7 +4,6 @@ body {
 font-family: 'Roboto Condensed', sans-serif;
 margin: 0%;
 padding: 0%;
-background-image: url("Images/Angkor.JPG");
 background-repeat: no-repeat;
 background-position: center;
 background-attachment: fixed;
@@ -12,13 +11,7 @@ background-attachment: fixed;
 /*l'image s'adapte a l'écran*/
 }
 
-header {
-  margin-bottom: 0%;
-  margin: 0% 8% 0% 8%;
-  background-color:  #27cb66;
-}
-
-h1 {
+#Titre {
   padding: 5% 2% 2% 0.5%;
   margin: inherit;
   text-align: center;
@@ -27,7 +20,7 @@ h1 {
 
 nav {
   width: 100%;
-  background-color:  #22b75b;
+  background-color:  #ea5c0d;
   z-index: 5;
 }
 
@@ -58,7 +51,7 @@ nav a{
 
 nav > ul > li > a{
   padding: 0.7em 0.5em;
-  color: #FFF;
+  color: white;
 }
 
 .submenu {
@@ -81,12 +74,12 @@ nav li:hover .submenu{
 .submenu li a{
   padding: 3% 6%;
   font-size: 13px;
-  color: #222538;
+  color: white;
   width: 200px;
 }
 
 .Menu > li:hover {
-  border-top: 0.2em solid #0B3B0B;
+  border-top: 0.2em solid black;
 }
 
 .Menu >li:hover a {
@@ -94,18 +87,16 @@ nav li:hover .submenu{
 }
 
 .submenu li {
-  background-color: #00cc00;
+  background-color: #b94503;
 }
 
 .submenu li:hover {
-  background-color: #009933;
+  background-color: #f7af3e;
 }
 
 .Contenu {
   background-color:   #fefff1 ;
-  margin: 0% 8% 0% 8%;
   padding: 3%;
-  border-radius: 0% 0% 5px 5px;
 }
 
 hr {
@@ -131,21 +122,6 @@ hr {
 }
 
 .Banderole {
-    background-color:  #27cb66;
+    background-color:  #333333;
     min-height: 100px;
-}
-
-@media only screen and (max-width: 720px) {
-  nav a {
-    font-size: 13px;
-  }
-  .submenu li a{
-    width: 150px;
-  }
-  .Contenu{
-    margin: 0%;
-  }
-  header{
-    margin: 0%;
-  }
 }
