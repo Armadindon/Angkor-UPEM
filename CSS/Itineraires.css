@@ -2,3 +2,15 @@ iframe {
   height: 400px;
   width: 100%;
 }
+
+table th{
+  padding-left:15px;
+}
+
+#red {
+  color:#ff5733
+}
+
+#blue {
+  color:#3b82e7
+}
