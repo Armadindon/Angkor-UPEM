@@ -3,6 +3,6 @@ table {
   width: 70%;
 }
 
-table, td, th {
+.Contenu table,.Contenu td,.Contenu th {
 border: 1px solid black;
 }

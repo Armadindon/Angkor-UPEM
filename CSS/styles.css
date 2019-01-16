@@ -103,25 +103,17 @@ hr {
   margin: 5% 0%;
 }
 
-.left {
-  position: absolute;
-  left: 10%;
-  top: 0%;
-}
-
-.right {
-  position: absolute;
-  right: 10%;
-  top: 0%;
-}
-
-.left img , .right img {
-  max-width: 100%;
-  height: auto;
-  width: auto\9; /* ie8 */
-}
 
 .Banderole {
     background-color:  #333333;
-    min-height: 100px;
+    min-height: 200px;
+    width: 100%
+}
+
+.Banderole > table {
+    width: 100%
+}
+
+#MCN {
+  width: 100px;
 }
