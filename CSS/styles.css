@@ -57,7 +57,7 @@ nav a{
 }
 
 nav > ul > li > a{
-  padding: 0.7em 0.5em; /* A regler en pourcentage */
+  padding: 0.7em 0.5em;
   color: #FFF;
 }
 
@@ -108,22 +108,14 @@ nav li:hover .submenu{
   border-radius: 0% 0% 5px 5px;
 }
 
-.diapo {
-  width: 50%;
-}
-
 hr {
   margin: 5% 0%;
 }
 
-
-p {
-  text-align: justify;
-}
-
 .left {
   position: absolute;
-  float: left;
+  left: 10%;
+  top: 0%;
 }
 
 .right {
@@ -143,16 +135,17 @@ p {
     min-height: 100px;
 }
 
-@media only screen and (max-width: 655px) {
+@media only screen and (max-width: 720px) {
   nav a {
     font-size: 13px;
   }
   .submenu li a{
     width: 150px;
   }
-}
-
-.diapo {
-  width: 100%;
-  height: 30em;
+  .Contenu{
+    margin: 0%;
+  }
+  header{
+    margin: 0%;
+  }
 }
