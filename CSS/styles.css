@@ -57,7 +57,7 @@ nav a{
 }
 
 nav > ul > li > a{
-  padding: 0.7em 0.5em; /* A regler en pourcentage */
+  padding: 0.7em 0.5em;
   color: #FFF;
 }
 
@@ -114,7 +114,8 @@ hr {
 
 .left {
   position: absolute;
-  float: left;
+  left: 10%;
+  top: 0%;
 }
 
 .right {
@@ -134,11 +135,17 @@ hr {
     min-height: 100px;
 }
 
-@media only screen and (max-width: 655px) {
+@media only screen and (max-width: 720px) {
   nav a {
     font-size: 13px;
   }
   .submenu li a{
     width: 150px;
+  }
+  .Contenu{
+    margin: 0%;
+  }
+  header{
+    margin: 0%;
   }
 }
