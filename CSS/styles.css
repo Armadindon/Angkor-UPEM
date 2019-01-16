@@ -114,7 +114,8 @@ hr {
 
 .left {
   position: absolute;
-  float: left;
+  left: 10%;
+  top: 0%;
 }
 
 .right {
