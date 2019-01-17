@@ -54,6 +54,20 @@ nav > ul > li > a{
   color: white;
 }
 
+nav > ul > li > a img {
+  width: 15px;
+}
+
+.submenu img {
+  width: 20px;
+  border-radius: 6px;
+}
+
+#language li a {
+  width: 23px;
+}
+
+
 .submenu {
   display: none;
 }
@@ -99,9 +113,6 @@ nav li:hover .submenu{
   padding: 3%;
 }
 
-iframe {
-  height:450px;
-}
 
 hr {
   margin: 5% 0%;

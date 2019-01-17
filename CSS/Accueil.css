@@ -5,6 +5,7 @@
 
 
 .Anecdote{
+  margin-top: 2%;
   padding: 0%;
   background-color: #b94503;
   border-radius: 5px 5px;
@@ -12,6 +13,12 @@
   padding: 2px;
 }
 .diapo {
+  margin-top: 2%;
   width: 100%;
   border-radius: 5px;
+}
+
+iframe {
+  height: 450px;
+  margin-bottom: 2%;
 }
