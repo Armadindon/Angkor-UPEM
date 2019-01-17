@@ -3,13 +3,13 @@
   width: 100%;
 }
 
-
+/* Creé une boite ou l'on met les anecdotes et avec une ombre */
 .Anecdote{
   margin-top: 2%;
   padding: 0%;
   background-color: #b94503;
   border-radius: 5px 5px;
-  box-shadow:0 10px 16px 0 rgba(185,68,2,0.2);
+  box-shadow:0 10px 16px 0 rgba(185,68,2,0.2); /* Ombre de la boite */
   padding: 2px;
 }
 .diapo {

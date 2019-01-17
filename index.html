@@ -1,112 +1,116 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
-  <head>
+<head>
 
- <!-- Intégrations Map-->
- <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
- <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
- <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
-<!-- Google Fonts et info générales -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-    <link rel="stylesheet" href="CSS\styles.css">
-    <link rel="stylesheet" href="CSS\Accueil.css">
-    <meta charset="utf-8">
-    <title>Site National D'Angkor</title>
-  </head>
-  <body>
+  <!-- Intégrations Map-->
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
+  <!-- Google Fonts et info générales -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/styles.css">
+  <link rel="stylesheet" href="CSS/Accueil.css">
+  <meta charset="utf-8">
+  <title>Site National D'Angkor</title>
+</head>
+<body>
 
-    <header>
-      <div class="Banderole">
-        <table>
-          <table>
-            <tr>
-              <th> <img src="CSS\Images\logo\forumunesco.png" alt=""> </th>
-              <th rowspan="2"> <h1 id="Titre" >Angkor</h1> </th>
-              <th><img src="CSS\Images\logo\upem.png" alt=""></th>
-            </tr>
-            <tr>
-              <th><img src="CSS\Images\logo\unesco.png" alt=""></th>
-              <th><img src="CSS\Images\logo\logo_MCN.png" alt="" id="MCN"></th>
-            </tr>
-          </table>
-        </table>
+  <!-- Le Header , celui-ci étant présent sur toute les pages , il sera détaillé que sur cette page -->
 
-      </div>
+  <header>
+    <div class="Banderole">
+      <!-- Banderole suppérieure du site , on affiche les logos et le titre du Site -->
+      <table>
+        <!-- création d'un tableau au bord invisible afin de garder une banderole organisés -->
+        <tr>
+          <th> <img src="CSS/Images/logo/forumunesco.png" alt=""> </th>
+          <th rowspan="2"> <h1 id="Titre" >Angkor</h1> </th><!-- La case centrale prend deux cases de hauteur puisqu'elle n'est occupé que par le nom du site -->
+          <th><img src="CSS/Images/logo/upem.png" alt=""></th>
+        </tr>
+        <tr>
+          <th><img src="CSS/Images/logo/unesco.png" alt=""></th>
+          <th><img src="CSS/Images/logo/logo_MCN.png" alt="" id="MCN"></th>
+        </tr>
+      </table>
 
-      <nav>
+    </div>
+
+    <nav> <!-- Menu Déroulant -->
+
+      <ul class="Menu">
+        <!-- Onglet pour la sélection des langues avec images de drapeaux , voir style.css -->
+        <li><a href="#"> <img src="CSS/Images/drapeaux/language.png" alt=""></a>
+          <ul class="submenu" id="language">
+            <li><a href="#"> <img src="CSS/Images/drapeaux/flag-fr.png" alt=""> </a></li>
+            <li><a href="index_eng.html"><img src="CSS/Images/drapeaux/flag-gb.png" alt=""></a></li>
+          </ul>
+        </li>
+
+        <!-- La page actuelle a son lien désactivé -->
+        <li><a href="#">Accueil</a>
+        </li>
+
+        <li><a href="#">Sur Angkor</a> <!-- le premier lien n'emmène nulle part , il est donc inactif -->
+          <ul class="submenu">
+            <!-- la sous liste imbriquée réprésente les sous onglets , ils sont cachés et apparaissent lorsque le curseur passe par dessus le premier lien -->
+            <li><a href="pages/Infos/frise.html">Frise Chronologique</a></li>
+            <li><a href="pages/Infos/systemehydro.html">Système hydraulique</a></li>
+            <li><a href="pages/Infos/monuments.html">Monuments</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#">Infos Pratiques</a>
+          <ul class="submenu">
+            <li><a href="pages/infospratique/infogenerale.html">Informations Générales</a></li>
+            <li><a href="pages/infospratique/horaires.html">Horaires D'Affluence</a></li>
+          </ul>
+        </li>
+
+        <li><a href="pages/itineraire/itineraire.html">Itinéraires</a>
+        </li>
+
+        <li><a href="#">Autour D'Angkor</a>
+          <ul class="submenu">
+            <li><a href="pages/autour/culture.html">Culture</a></li>
+            <li><a href="pages/autour/visiter.html">Que visiter ?</a></li>
+          </ul>
+        </li>
+
+        <li><a href="pages/apropos/apropos.html">A propos</a>
+        </li>
+
+      </ul>
+    </nav> <!-- Fin de la barre de navigation -->
+
+  </header>
+  <div class="Contenu"> <!-- Contenu de la page a partir de la -->
+
+    <!-- iframe d'une vidéo d'arte sur le site D'Angkor -->
+    <iframe allowfullscreen="true" style="transition-duration:0;transition-property:no;margin:0 auto;position:relative;display:block;background-color:#000000;" frameborder="0" scrolling="no" width="100%" height="100%" src="https://www.arte.tv/player/v3/index.php?json_url=https%3A%2F%2Fapi.arte.tv%2Fapi%2Fplayer%2Fv1%2Fconfig%2Ffr%2F081881-001-A%3Fautostart%3D1%26lifeCycle%3D1&amp;lang=fr_FR&amp;mute=1"></iframe>
+
+    <!-- "Boite" contenant une anecdote , a terme , celle-ci sera choisie dans une base de données -->
+    <div class="Anecdote">
+      <h3>Anecdote</h3>
+      <p>A l’équinoxe du printemps, le soleil pénètre dans un tunnel à 12h, celui-ci emmène les rayons à 30m, enterré dans le sol, dans une chambre secrète qui renferme le tombeau du roi qui a construit Angkor</p>
+
+    </div>
+
+    <!-- Carte générée a partir d'une API de chez MapBox -->
+    <hr>
+    <div id='map'></div>
+    <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYXJtYWRpbmRvbiIsImEiOiJjanFnbmN4bzUwMGNtNDJwcWI0ZjQwMzdlIn0.nXQZ0vYO6txUmUgWgiPTrw';
+    const map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/armadindon/cjqgq2lph02xw2smwm67ogld6',
+      center: [103.867,13.412],
+      zoom: 16.0
+    });
+    </script>
+
+  </div>
 
 
-        <ul class="Menu">
 
-          <li><a href="#"> <img src="CSS\Images\drapeaux\language.png" alt=""></a>
-           <ul class="submenu" id="language">
-             <li><a href="#"> <img src="CSS\Images\drapeaux\flag-fr.png" alt=""> </a></li>
-             <li><a href="index_eng.html"><img src="CSS\Images\drapeaux\flag-gb.png" alt=""></a></li>
-           </ul>
-          </li>
-
-          <li><a href="#">Accueil</a>
-          </li>
-
-          <li><a href="#">Sur Angkor</a>
-            <ul class="submenu">
-              <li><a href="pages\Infos\frise.html">Frise Chronologique</a></li>
-              <li><a href="pages\Infos\systemehydro.html">Système hydraulique</a></li>
-              <li><a href="pages\Infos\monuments.html">Monuments</a></li>
-            </ul>
-          </li>
-
-          <li><a href="#">Infos Pratiques</a>
-            <ul class="submenu">
-              <li><a href="pages\infospratique\infogenerale.html">Informations Générales</a></li>
-              <li><a href="pages\infospratique\horaires.html">Horaires D'Affluence</a></li>
-            </ul>
-          </li>
-
-          <li><a href="pages\itineraire\itineraire.html">Itinéraires</a>
-          </li>
-
-          <li><a href="#">Autour D'Angkor</a>
-            <ul class="submenu">
-              <li><a href="pages\autour\culture.html">Culture</a></li>
-              <li><a href="pages\autour\visiter.html">Que visiter ?</a></li>
-            </ul>
-          </li>
-
-          <li><a href="pages\apropos\apropos.html">A propos</a>
-          </li>
-
-        </ul>
-      </nav>
-
-    </header>
-      <div class="Contenu">
-
-
-        <iframe allowfullscreen="true" style="transition-duration:0;transition-property:no;margin:0 auto;position:relative;display:block;background-color:#000000;" frameborder="0" scrolling="no" width="100%" height="100%" src="https://www.arte.tv/player/v3/index.php?json_url=https%3A%2F%2Fapi.arte.tv%2Fapi%2Fplayer%2Fv1%2Fconfig%2Ffr%2F081881-001-A%3Fautostart%3D1%26lifeCycle%3D1&amp;lang=fr_FR&amp;mute=1"></iframe>
-
-
-        <div class="Anecdote">
-          <h3>Anecdote</h3>
-          <p>A l’équinoxe du printemps, le soleil pénètre dans un tunnel à 12h, celui-ci emmène les rayons à 30m, enterré dans le sol, dans une chambre secrète qui renferme le tombeau du roi qui a construit Angkor</p>
-
-        </div>
-
-        <hr>
-        <div id='map'></div>
-        <script>
-        mapboxgl.accessToken = 'pk.eyJ1IjoiYXJtYWRpbmRvbiIsImEiOiJjanFnbmN4bzUwMGNtNDJwcWI0ZjQwMzdlIn0.nXQZ0vYO6txUmUgWgiPTrw';
-        const map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/armadindon/cjqgq2lph02xw2smwm67ogld6',
-        center: [103.867,13.412],
-        zoom: 16.0
-        });
-        </script>
-
-      </div>
-
-
-
-  </body>
+</body>
 </html>

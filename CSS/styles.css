@@ -1,16 +1,13 @@
-/*On fait en sorte que la page prenne toute la place de l'écran*/
+/* Contrairement aux autres feuilles de styles , celle-ci est reliée a toute les pages */
 
 body {
 font-family: 'Roboto Condensed', sans-serif;
 margin: 0%;
 padding: 0%;
-background-repeat: no-repeat;
-background-position: center;
-background-attachment: fixed;
-
-/*l'image s'adapte a l'écran*/
+background-color: #fefff1;
 }
 
+/* titre "Angkor" apparaissant en haut dans le header */
 #Titre {
   padding: 5% 2% 2% 0.5%;
   margin: inherit;
@@ -21,7 +18,7 @@ background-attachment: fixed;
 nav {
   width: 100%;
   background-color:  #ea5c0d;
-  z-index: 5;
+  z-index: 5; /* la barre de navigation se met au dessus des autres éléments */
 }
 
 nav > ul {
@@ -58,33 +55,38 @@ nav > ul > li > a img {
   width: 15px;
 }
 
+/* pour la selection des langues , on met les drapeaux arrondis et petit */
 .submenu img {
   width: 20px;
   border-radius: 6px;
 }
 
+/* taille de l'élément de la sous liste */
 #language li a {
   width: 23px;
 }
 
 
+/* les sous menu ne sont pas visible de base et ne prennent pas de place sur le site */
 .submenu {
   display: none;
 }
 
+/* si on passe le curseur sur la barre , les sous menus correspondant apparaissent */
 nav li:hover .submenu{
   display: inline-block;
   position: absolute;
   top: 100%;
   left: 0px;
   padding: 0px;
-  z-index: 100000; /* On donne la priorité au menu */
+  z-index: 100000; /* On donne la priorité au menu pour l'affichage */
 }
 
 .submenu li {
-  border-bottom: 1px solid #CCC;
+  border-bottom: 1px solid #CCC; /* bordure entre les sous onglets */
 }
 
+/* taille des onglets de sous menus */
 .submenu li a{
   padding: 3% 6%;
   font-size: 13px;
@@ -100,14 +102,17 @@ nav li:hover .submenu{
   padding: 0.5em 0.5em 0.5em 0.5em
 }
 
+/* couleur de base des sous menus */
 .submenu li {
   background-color: #b94503;
 }
 
+/* couleur lorsque un curseur passe par dessus un sous menu */
 .submenu li:hover {
   background-color: #f7af3e;
 }
 
+/* conteneur principal contenant le Contenu de la page (difficile a prononcer ce commentaire) */
 .Contenu {
   background-color:   #fefff1 ;
   padding: 3%;
@@ -118,10 +123,10 @@ hr {
   margin: 5% 0%;
 }
 
-
+/* couleur et taille de la banderole en haut du site */
 .Banderole {
     background-color:  #333333;
-    min-height: 200px;
+    min-height: 200px; /* hauteur pour faire entrer les logos */
     width: 100%
 }
 

@@ -4,5 +4,5 @@ table {
 }
 
 .Contenu table,.Contenu td,.Contenu th {
-border: 1px solid black;
+border: 1px solid black; /* Bordures du tableau */
 }
