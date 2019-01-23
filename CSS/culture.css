@@ -1,0 +1,23 @@
+h4 {
+  padding-bottom:3px;
+  margin-bottom:3px;
+}
+
+.nourriture {
+  height: 200px;
+  width: 300px;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius:7px;
+}
+
+.description {
+  font-style: italic;
+  font-size: 13px;
+  text-align: center;
+}
+
+.Contenu img {
+  margin-top: 7px;
+}

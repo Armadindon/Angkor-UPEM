@@ -1,61 +1,127 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
-  <head>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-    <link rel="stylesheet" href="..\..\CSS\styles.css">
-    <meta charset="utf-8">
-    <title>Site National D'Angkor</title>
-  </head>
-  <body>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <link rel="stylesheet" href="../../CSS/styles.css">
+  <link rel="stylesheet" href="../../CSS/Itineraires.css">
+  <meta charset="utf-8">
+  <title>Site National D'Angkor</title>
+</head>
+<body>
 
-    <header>
-      <h1>Angkor</h1>
-      <nav>
+  <header>
+    <div class="Banderole">
+      <table>
+        <table>
+          <tr>
+            <th> <img src="../../CSS/Images/logo/forumunesco.png" alt=""> </th>
+            <th rowspan="2"> <h1 id="Titre" >Angkor</h1> </th>
+            <th><img src="../../CSS/Images/logo/upem.png" alt=""></th>
+          </tr>
+          <tr>
+            <th><img src="../../CSS/Images/logo/unesco.png" alt=""></th>
+            <th><img src="../../CSS/Images/logo/logo_MCN.png" alt="" id="MCN"></th>
+          </tr>
+        </table>
+      </table>
+
+    </div>
+    <nav>
 
 
-        <ul class="Menu">
+      <ul class="Menu">
+        <li><a href="#"> <img src="../../CSS/Images/drapeaux/language.png" alt=""></a>
+          <ul class="submenu" id="language">
+            <li><a href="#"> <img src="../../CSS/Images/drapeaux/flag-fr.png" alt=""> </a></li>
+            <li><a href="eng/itineraire_eng.html"><img src="../../CSS/Images/drapeaux/flag-gb.png" alt=""></a></li>
 
-          <li><a href="..\..\index.html">Accueil</a>
-          </li>
+          </ul>
+        </li>
 
-          <li><a href="#">Infos du Site</a>
-            <ul class="submenu">
-              <li><a href="..\Infos\frise.html">Frise Chronologique</a></li>
-              <li><a href="..\Infos\systemehydro.html">Système hydraulique</a></li>
-              <li><a href="..\Infos\monuments.html">Monuments</a></li>
-            </ul>
-          </li>
 
-          <li><a href="#">Infos Pratiques</a>
-            <ul class="submenu">
-              <li><a href="..\infospratique\infogenerale.html">Informations Générales</a></li>
-              <li><a href="..\infospratique\horaires.html">Horaires D'Affluence</a></li>
-            </ul>
-          </li>
+        <li><a href="../../index.html">Accueil</a>
+        </li>
 
-          <li><a href="#">Itinéraires</a>
-          </li>
+        <li><a href="#">Infos du Site</a>
+          <ul class="submenu">
+            <li><a href="../Infos/frise.html">Frise Chronologique</a></li>
+            <li><a href="../Infos/systemehydro.html">Système hydraulique</a></li>
+            <li><a href="../Infos/monuments.html">Monuments</a></li>
+          </ul>
+        </li>
 
-          <li><a href="#">Autour D'Angkor</a>
-            <ul class="submenu">
-              <li><a href="..\autour\culture.html">Culture</a></li>
-              <li><a href="..\autour\visiter.html">Que visiter ?</a></li>
-            </ul>
-          </li>
+        <li><a href="#">Infos Pratiques</a>
+          <ul class="submenu">
+            <li><a href="../infospratique/infogenerale.html">Informations Générales</a></li>
+            <li><a href="../infospratique/horaires.html">Horaires D'Affluence</a></li>
+          </ul>
+        </li>
 
-          <li><a href="..\apropos\apropos.html">A propos</a>
-          </li>
+        <li><a href="#">Itinéraires</a>
+        </li>
 
-        </ul>
-      </nav>
+        <li><a href="#">Autour D'Angkor</a>
+          <ul class="submenu">
+            <li><a href="../autour/culture.html">Culture</a></li>
+            <li><a href="../autour/visiter.html">Que visiter ?</a></li>
+          </ul>
+        </li>
 
-    </header>
-      <div class="Contenu">
+        <li><a href="../apropos/apropos.html">A propos</a>
+        </li>
 
-        <h2>Angkor Pelo</h2>
+      </ul>
+    </nav>
 
-      </div>
+  </header>
+  <div class="Contenu">
+    <!-- A terme , cette page sera sous forme d'un formulaire qui proposera un itineraire personalisé selon les réponses -->
+
+    <!-- Itinéraire fait sur google My Maps et intégré sur le site via un iframe -->
+    <h2>Itinéraires conseillés pour visiter Angkor</h2>
+    <iframe id="Itinéraires" src="https://www.google.com/maps/d/embed?mid=1q7ldLKjQDK9yM94PuQWXm2HpDjGmLYy0"></iframe>
+
+    <table> <!-- Itinéraires avec une table pour comparer les 2 trajets -->
+      <tr>
+        <th>
+          Petit trajet : Pour les plus pressés (<span id="blue">en bleu</span>)</th>
+          <th>Grand trajet : Pour les plus courageux (<span id="red">en rouge</span>)</th>
+        </tr>
+        <tr>
+          <td>
+            <ol>
+              <li>Angkor Vat</li>
+              <li>Phnom Bakheng</li>
+              <li>Temple de Bayon</li>
+              <li>Baphuon</li>
+              <li>Terrasse des Elephants</li>
+              <li>Terrasse du Roi Lépreux</li>
+              <li>Thommanon</li>
+              <li>Chau Say Tevoda</li>
+              <li>Ta Keo</li>
+              <li>Ta Phrom</li>
+              <li> Banteay Kdei</li>
+              <li>Sra Sang</li>
+              <li>Prasat Kravan</li>
+            </ol>
+          </td>
+
+          <td>
+            <ol>
+              <li>Angkor Vat</li>
+              <li>Phnom Bakheng et Baksei Chamkrong</li>
+              <li>Angkor Thom</li>
+              <li>Preah Khan</li>
+              <li>Neak Pean</li>
+              <li>Mébon Oriental</li>
+              <li>Pre Rup</li>
+              <li>Ta Som</li>
+            </ol>
+          </td>
+        </tr>
+      </table>
+    </div>
 
 
   </body>
-</html>
+  </html>
