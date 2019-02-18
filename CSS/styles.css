@@ -2,9 +2,10 @@
 
 body {
 font-family: 'Roboto Condensed', sans-serif;
+color: white;
 margin: 0%;
 padding: 0%;
-background-color: #fefff1;
+background-color: #333333;
 }
 
 /* titre "Angkor" apparaissant en haut dans le header */
@@ -19,6 +20,7 @@ nav {
   width: 100%;
   background-color:  #ea5c0d;
   z-index: 5; /* la barre de navigation se met au dessus des autres éléments */
+  position: fixed;
 }
 
 nav > ul {
@@ -114,7 +116,7 @@ nav li:hover .submenu{
 
 /* conteneur principal contenant le Contenu de la page (difficile a prononcer ce commentaire) */
 .Contenu {
-  background-color:   #fefff1 ;
+  background-color:   #333333 ;
   padding: 3%;
 }
 
@@ -124,16 +126,3 @@ hr {
 }
 
 /* couleur et taille de la banderole en haut du site */
-.Banderole {
-    background-color:  #333333;
-    min-height: 200px; /* hauteur pour faire entrer les logos */
-    width: 100%
-}
-
-.Banderole > table {
-    width: 100%
-}
-
-#MCN {
-  width: 100px;
-}
