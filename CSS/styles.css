@@ -8,112 +8,123 @@ padding: 0%;
 background-color: #333333;
 }
 
-/* titre "Angkor" apparaissant en haut dans le header */
-#Titre {
-  padding: 5% 2% 2% 0.5%;
-  margin: inherit;
-  text-align: center;
-  color: white;
-}
-
 nav {
+  position:fixed;
+  z-index: 1000;
+  background-color: #ea5c0d;
   width: 100%;
-  background-color:  #ea5c0d;
-  z-index: 5; /* la barre de navigation se met au dessus des autres éléments */
-  position: fixed;
 }
 
-nav > ul {
-  margin: 0px;
-  padding: 0px;
+nav .main-navigation{
+  background-color:#ea5c0d;
+  width : 100%;
 }
 
-nav  li {
-  list-style-type: none;
+nav ul{
+  margin:0; //reset
+  padding:0;
 }
 
-nav > ul > li {
-  float: left;
-  position: relative;
+.menu{
+  display:flex;
+  flex-direction:column;
+}
+.menu li{
+    display:block;
+    list-style-type:none;
+    text-transform:uppercase;
+  }
+
+ .menu li a{
+    display:flex;
+    text-align:center;
+    text-decoration:none;
+    color:white;
+    padding:1rem;
+  }
+
+ nav .menu li a:hover{
+    background:#b94503;
+    color:#fff;
+  }
+
+
+@media (min-width: 800px) {
+    nav .menu{
+      flex-direction:row;
+      justify-content:space-between;
+    }
+
 }
 
-nav > ul::after {
-  content: "";
-  display: block;
-  clear: both;
+nav .menu-item-has-children > a:after{
+  font-family:'Genericons';
+  content: '\f431';
+  padding:1px;
 }
 
-nav a{
-  display: inline-block;
-  text-decoration: none;
+nav ul ul {
+    display: none;
 }
 
-nav > ul > li > a{
-  padding: 0.7em 0.5em;
-  color: white;
+@media (min-width: 800px) {
+  nav ul ul {
+    display: none;
+    position:absolute;
+  }
 }
 
-nav > ul > li > a img {
-  width: 15px;
+nav ul li:hover > ul {
+  display:block;
+  color:#b94503;
+  padding-left:2rem;
 }
 
-/* pour la selection des langues , on met les drapeaux arrondis et petit */
-.submenu img {
-  width: 20px;
-  border-radius: 6px;
+@media (max-width: 800px){
+  nav{
+    position:relative;
+  }
 }
 
-/* taille de l'élément de la sous liste */
-#language li a {
-  width: 23px;
+@media (min-width: 800px) {
+  nav ul li:hover > ul {
+    padding-left:0;
+    background:#ea5c0d;
+  }
+
+  nav ul li:hover > ul a{
+    color:#fff;
+  }
+
+  .sub-menu{
+    li{
+      display:flex;
+      padding-right:2em;
+    }
+
+    li:hover, li a:hover{
+      background:#b94503;
+      color:#fff;
+    }
+  }
+
+ nav ul ul ul{
+    margin:0 0 0 100%;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+  }
+
+.menu-item-has-children .menu-item-has-children > a:after{
+    font-family:'Genericons';
+    content: '\f431';
+    padding:1px;
+    transform: rotate(-90deg);
+  }
+
 }
 
-
-/* les sous menu ne sont pas visible de base et ne prennent pas de place sur le site */
-.submenu {
-  display: none;
+#Ptit {
+  opacity : 0;
 }
-
-/* si on passe le curseur sur la barre , les sous menus correspondant apparaissent */
-nav li:hover .submenu{
-  display: inline-block;
-  position: absolute;
-  top: 100%;
-  left: 0px;
-  padding: 0px;
-  z-index: 100000; /* On donne la priorité au menu pour l'affichage */
-}
-
-.submenu li {
-  border-bottom: 1px solid #CCC; /* bordure entre les sous onglets */
-}
-
-/* taille des onglets de sous menus */
-.submenu li a{
-  padding: 3% 6%;
-  font-size: 13px;
-  color: white;
-  width: 200px;
-}
-
-.Menu > li:hover {
-  border-top: 0.2em solid black;
-}
-
-.Menu >li:hover a {
-  padding: 0.5em 0.5em 0.5em 0.5em
-}
-
-/* couleur de base des sous menus */
-.submenu li {
-  background-color: #b94503;
-}
-
-/* couleur lorsque un curseur passe par dessus un sous menu */
-.submenu li:hover {
-  background-color: #f7af3e;
-}
-
 /* conteneur principal contenant le Contenu de la page (difficile a prononcer ce commentaire) */
 .Contenu {
   background-color:   #333333 ;
@@ -126,3 +137,9 @@ hr {
 }
 
 /* couleur et taille de la banderole en haut du site */
+.menu img {
+  width: 20%;
+  height: 20%;
+  padding:0;
+  margin:0;
+}
