@@ -10,49 +10,39 @@
 <body>
 
   <header>
-    <nav>
+    <nav class="main-navigation">
+    <ul class="menu">
+      <li class="menu-item-has-children" id="lang-button"><a href="#"> <img src="CSS/Images/drapeaux/language.png" alt=""></a>
+            <ul class="sub-menu" id="language">
+              <li><a href="index.html"> <img src="CSS/Images/drapeaux/flag-fr.png" alt=""> </a></li>
+              <li><a href="index_eng.html"><img src="CSS/Images/drapeaux/flag-gb.png" alt=""></a></li>
+            </ul>
+          </li>
 
-      <ul class="Menu">
-        <li><a href="#"> <img src="../../../CSS/Images/drapeaux/language.png" alt=""></a>
-          <ul class="submenu" id="language">
-            <li><a href="../visiter.html"> <img src="../../../CSS/Images/drapeaux/flag-fr.png" alt=""> </a></li>
-            <li><a href="#"><img src="../../../CSS/Images/drapeaux/flag-gb.png" alt=""></a></li>
-          </ul>
-        </li>
-
-        <li><a href="../../../index_eng.html">Home</a>
-        </li>
-
-        <li><a href="#">About Angkor</a>
-          <ul class="submenu">
-            <li><a href="../../Infos/eng/frise_eng.html">Historical timeline</a></li>
-            <li><a href="../../Infos/eng/systemehydro_eng.html">Hydrolic system</a></li>
-            <li><a href="../../Infos/eng/monuments_eng.html">Monuments</a></li>
-          </ul>
-        </li>
-
-        <li><a href="#">Useful info</a>
-          <ul class="submenu">
-            <li><a href="../../infospratique/eng/infogenerale_eng.html">General info</a></li>
-            <li><a href="../../infospratique/eng/horaires_eng.html">Schedules of affluence</a></li>
-          </ul>
-        </li>
-
-        <li><a href="../../itineraire/eng/itineraire_eng.html">Itineraries</a>
-        </li>
-
-        <li><a href="#">Around Angkor</a>
-          <ul class="submenu">
-            <li><a href="culture_eng.html">Culture</a></li>
-            <li><a href="#">What to visit ?</a></li>
-          </ul>
-        </li>
-
-        <li><a href="../../apropos/eng/apropos_eng.html">About us</a>
-        </li>
-
-      </ul>
-    </nav>
+      <!-- La page actuelle a son lien désactivé -->
+      <li><a href="index.html">Accueil</a></li>
+      <li class="menu-item-has-children"><a href="#">Sur Angkor <img src="CSS/Images/logo/chevron_down.png"  class="chevron"></a><ul class="sub-menu"> <!-- le premier lien n'emmène nulle part , il est donc inactif -->
+        <!-- la sous liste imbriquée réprésente les sous onglets , ils sont cachés et apparaissent lorsque le curseur passe par dessus le premier lien -->
+          <li><a href="pages/Infos/frise.html">Frise Chronologique</a></li>
+          <li><a href="pages/Infos/systemehydro.html">Système Hydraulique</a></li>
+        <li><a href="pages/Infos/monuments.html">Monuments</a></li>
+        </ul></li>
+      <li class="menu-item-has-children"><a href="#">Informations Pratiques <img src="CSS/Images/logo/chevron_down.png"  class="chevron"></a>
+        <ul class="sub-menu">
+          <li><a href="pages/infospratique/infogenerale.html">Informations Générales</a></li>
+          <li><a href="pages/infospratique/horaires.html">Horaires D'Affluence</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Itinéraires</a></li>
+      <li class="menu-item-has-children"><a href="#">Autour D'Angkor <img src="CSS/Images/logo/chevron_down.png"  class="chevron"></a>
+        <ul class="sub-menu">
+          <li><a href="pages/autour/culture.html">Culture</a></li>
+          <li><a href="pages/autour/visiter.html">Que Visiter <div id="Ptit">aaaaaaa</div></a></li>
+        </ul>
+      </li>
+      <li><a href="pages/apropos/apropos.html">A propos</a></li>
+    </ul>
+</nav> <!-- Fin de la barre de navigation -->
 
   </header>
 
