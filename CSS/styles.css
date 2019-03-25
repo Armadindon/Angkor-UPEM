@@ -51,7 +51,6 @@ nav ul{
     color:#fff;
   }
 
-
 @media (min-width: 800px) {
     nav .menu{
       flex-direction:row;
@@ -82,13 +81,10 @@ nav ul li:hover > ul {
   padding-left:2rem;
 }
 
-@media (max-width: 800px){
-  nav{
-    position:relative;
-  }
-}
+
 
 @media (min-width: 800px) {
+
   nav ul li:hover > ul {
     padding-left:0;
     background:#ea5c0d;
@@ -136,9 +132,6 @@ hr {
   margin: 5% 0%;
 }
 
-/* couleur et taille de la banderole en haut du site */
-
-
 
 #language img {
   display:block;
@@ -168,4 +161,16 @@ hr {
 .chevron {
   width: 20px;
   height: 20px;
+}
+
+@media (max-width: 800px){
+  nav{
+    position:relative;
+  }
+ #lang-button img {
+  margin-left: 0;
+}
+#language a{
+  width: 100vw;
+}
 }
