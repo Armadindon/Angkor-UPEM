@@ -65,6 +65,7 @@
 
 /* CSS Modal Box*/
 .Modal {
+  color: black;
   position: fixed;
   z-index: 99999; /* On l'affiche par dessus tout le reste */
   top: 0;
