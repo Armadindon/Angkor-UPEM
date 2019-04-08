@@ -6,6 +6,18 @@
   transition: 0.5s;
 }
 
+#Monuments{
+  -webkit-columns: 4;
+  -moz-columns: 4;
+  columns: 4;
+}
+
+#MonumentsSecondaires{
+  -webkit-columns: 5;
+  -moz-columns: 5;
+  columns: 5;
+}
+
 .container {
   position: relative;
   text-align: center;
@@ -43,6 +55,7 @@
   width: 100%;
   filter: grayscale(0%);
   transition: 0.5s;
+  border-radius: 20px;
 }
 
 /* on arrondi les coins pour chaque coin du tableau */
@@ -129,4 +142,22 @@ transition: all 0.4s ease-in-out;
 
 .droite{
   float: right;
+}
+
+h2{
+  width: 100%;
+}
+
+@media (max-width: 800px){
+  #Monuments{
+    -webkit-columns: 1;
+    -moz-columns: 1;
+    columns: 1;
+  }
+
+  #MonumentsSecondaires{
+    -webkit-columns: 1;
+    -moz-columns: 1;
+    columns: 1;
+  }
 }
