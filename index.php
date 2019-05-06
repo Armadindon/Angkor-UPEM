@@ -28,14 +28,14 @@
           </li>
 
       <!-- La page actuelle a son lien désactivé -->
-      <li><a href="index.html">Accueil</a></li>
+      <li><a href="index.php">Accueil</a></li>
       <li class="menu-item-has-children"><a href="#">Sur Angkor <img src="CSS/Images/logo/chevron_down.png"  class="chevron"></a><ul class="sub-menu"> <!-- le premier lien n'emmène nulle part , il est donc inactif -->
         <!-- la sous liste imbriquée réprésente les sous onglets , ils sont cachés et apparaissent lorsque le curseur passe par dessus le premier lien -->
           <li><a href="pages/Infos/frise.html">Frise Chronologique</a></li>
           <li><a href="pages/Infos/systemehydro.html">Système Hydrauliques</a></li>
         <li><a href="pages/Infos/monuments.html">Monuments</a></li>
         </ul></li>
-      <li class="menu-item-has-children"><a href="#"> <img src="CSS/Images/logo/chevron_down.png"  class="chevron"></a>
+      <li class="menu-item-has-children"><a href="#">Informations Pratiques<img src="CSS/Images/logo/chevron_down.png"  class="chevron"></a>
         <ul class="sub-menu">
           <li><a href="pages/infospratique/infogenerale.html">Informations pratiques</a></li>
           <li><a href="pages/infospratique/horaires.html">Horaires d'affluence</a></li>
