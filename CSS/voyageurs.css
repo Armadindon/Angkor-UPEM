@@ -1,0 +1,30 @@
+img {
+  width: 300px;
+  height:400px;
+  float:left;
+  margin-right : 30px;
+  margin-bottom : 20px;
+}
+
+p {
+  text-align: justify;
+}
+
+.gras {
+  font-weight: bold;
+}
+a {
+  color: #e1c0c0;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom:2px;
+}
+
+.italic {
+  font-style: italic;
+}
