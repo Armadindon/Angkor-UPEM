@@ -14,3 +14,75 @@ table th{
 #blue {
   color:#3b82e7
 }
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+/* cache les anciens boutons*/
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Créé des boutons radios */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* ajoute un background lorsqu'on passe dessus */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* Le background quand on clique dessus */
+.container input:checked ~ .checkmark {
+  background-color: #ea5c0d;
+}
+
+/* le petit point */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/*  le petit point */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* le style du point */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+.submit {
+
+  background-color: #ea5c0d;
+  border:none;
+  color: white;
+  text-decoration: none;
+  margin: 4px 2px;
+  padding: 16px 32px;
+  font-size: 22px;
+  cursor: pointer;
+}
