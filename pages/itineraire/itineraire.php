@@ -47,48 +47,42 @@
     </ul>
 </nav> <!-- Fin de la barre de navigation -->
 
-  </header>
-  <div class="Contenu">
-      <h2>Itinéraires</h2>
-      <p>Cet onglet a pour but de préparer pour vous un itinéraire de visite d'Angkor.</p>
-      <br>
-      <h3>Questionnaire</h3>
-      <h5>Répondez aux questions suivantes</h5>
-    <form action="itineraire2.php" method="post">
-        <p>Une visite sur ...</p>
-        <input type="radio" name="famous" value="1" id="f1" checked>
-        <label for="f1"> les temples les plus visités</label>
-        <br>
-        <input type="radio" name="famous" value="0" id="f2">
-        <label for="f1"> les temples moins touristiques</label>
-        <br>
-        <br>
-        
-        <p>Une visite sur les aspects ...</p>
-        <input type="radio" name="aspects" value="0" id="a1" checked>
-        <label for="a1"> environnementaux</label>
-        <br>
-        <input type="radio" name="aspects" value="1" id="a2">
-        <label for="a2"> architecturaux</label>
-        
-        <br>
-        <br>
-        <p>Une visite qui dure ...</p>
-        <input type="radio" name="time" value="1" id="t1" checked>
-        <label for="t1"> 1 jour</label>
-        <br>
-        <input type="radio" name="time" value="0" id="t2">
-        <label for="t2"> entre 3 et 7 jours</label>
-        <br>
-        <br>
-        <input type="submit" name="submit" value="submit">
-    </form>
-    <!-- Itinéraire fait sur google My Maps et intégré sur le site via un iframe -->
-    <br>
-
-    
-    </div>
 
 
-  </body>
-  </html>
+      <?php if (isset($_POST["submit"])) {
+            $score = $_POST["time"]+$_POST["famous"]+$_POST["aspects"]; ?>
+            <h2>Itinéraire conseillé pour visiter Angkor</h2>
+      <?php 
+            if ($score >= $score/3) { ?>
+                <iframe id="Itinéraires" src="https://www.google.com/maps/d/embed?mid=1q7ldLKjQDK9yM94PuQWXm2HpDjGmLYy0"></iframe>
+                <p>Petit trajet : Pour les plus pressés (<span id="blue">en bleu</span>)</p>
+                <ol>
+                  <li>Angkor Vat</li>
+                  <li>Phnom Bakheng</li>
+                  <li>Temple de Bayon</li>
+                  <li>Baphuon</li>
+                  <li>Terrasse des Elephants</li>
+                  <li>Terrasse du Roi Lépreux</li>
+                  <li>Thommanon</li>
+                  <li>Chau Say Tevoda</li>
+                  <li>Ta Keo</li>
+                  <li>Ta Phrom</li>
+                  <li> Banteay Kdei</li>
+                  <li>Sra Sang</li>
+                  <li>Prasat Kravan</li>
+                </ol>
+            <?php } else { ?>
+                <iframe id="Itinéraires" src="https://www.google.com/maps/d/embed?mid=1q7ldLKjQDK9yM94PuQWXm2HpDjGmLYy0"></iframe>
+                <p>Grand trajet : Pour les plus courageux (<span id="red">en rouge</span>)</p>
+                <ol>
+                  <li>Angkor Vat</li>
+                  <li>Phnom Bakheng et Baksei Chamkrong</li>
+                  <li>Angkor Thom</li>
+                  <li>Preah Khan</li>
+                  <li>Neak Pean</li>
+                  <li>Mébon Oriental</li>
+                  <li>Pre Rup</li>
+                  <li>Ta Som</li>
+                </ol>
+            <?php } 
+} ?>
