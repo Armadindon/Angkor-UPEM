@@ -164,6 +164,10 @@ hr {
 }
 
 @media (max-width: 800px){
+  .Contenu {
+    margin-left: 0;
+    margin-right: 0;
+  }
   nav{
     position:relative;
   }
@@ -180,6 +184,6 @@ header {
 }
 
 .Contenu {
-  margin-left: 20%;
-  margin-right:20%;
+  margin-left: 10%;
+  margin-right:10%;
 }
