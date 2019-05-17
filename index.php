@@ -10,6 +10,16 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
   <link rel="stylesheet" href="CSS/styles.css">
   <link rel="stylesheet" href="CSS/Accueil.css">
+  <!-- JS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.slider').bxSlider();
+    });
+  </script>
+
   <meta charset="utf-8">
   <title>Site National D'Angkor</title>
 </head>
@@ -54,9 +64,14 @@
 
   </header>
   <div class="Contenu"> <!-- Contenu de la page a partir de la -->
-
     <!-- iframe d'une vidéo d'arte sur le site D'Angkor -->
-    <iframe allowfullscreen="true" style="transition-duration:0;transition-property:no;margin:0 auto;position:relative;display:block;background-color:#000000;" frameborder="0" scrolling="no" width="100%" height="100%" src="https://www.arte.tv/player/v3/index.php?json_url=https%3A%2F%2Fapi.arte.tv%2Fapi%2Fplayer%2Fv1%2Fconfig%2Ffr%2F081881-001-A%3Fautostart%3D1%26lifeCycle%3D1&amp;lang=fr_FR&amp;mute=1"></iframe>
+    <div class="slider">
+      <div class="">
+        <p>YEEEEEEEEEEEEEEEEEEEEEEEEEEEES</p>
+      </div>
+    <div><iframe allowfullscreen="true" style="transition-duration:0;transition-property:no;margin:0 auto;position:relative;display:block;background-color:#000000;" frameborder="0" scrolling="no" width="100%" height="100%" src="https://www.arte.tv/player/v3/index.php?json_url=https%3A%2F%2Fapi.arte.tv%2Fapi%2Fplayer%2Fv1%2Fconfig%2Ffr%2F081881-001-A%3Fautostart%3D1%26lifeCycle%3D1&amp;lang=fr_FR&amp;mute=1"></iframe></div>
+
+  </div>
 
     <!-- "Boite" contenant une anecdote , a terme , celle-ci sera choisie dans une base de données -->
     <div class="Anecdote">
