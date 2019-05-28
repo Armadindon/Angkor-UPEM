@@ -1,3 +1,4 @@
+<?php include("php/connexion.inc.php"); ?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
@@ -77,12 +78,16 @@
     <div class="Anecdote">
       <h3>Anecdote</h3>
       <?php
-      $req1 = "SELECT COUNT(*) FROM anecdote";
-      $index = $dbh->query($req1);
-      $nbRandom = rand(0, $index-1);
-      $req2 = "SELECT texte FROM anecdote WHERE idAnecdote=$index";
-      $anecdote = $dbh->query($req2)["texte"];
-      echo "<p>".$anecdote."</p>";
+      try {
+        $req1 = "SELECT texte FROM anecdote;";
+        $index = $dbh->query($req1)->fetchall();
+
+        echo "<p>".$index[3]["texte"]."</p>";
+      } catch (\Exception $e) {
+        echo "ALED";
+      }
+
+
        ?>
     </div>
 
