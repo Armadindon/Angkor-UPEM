@@ -16,8 +16,8 @@
     <ul class="menu">
       <li class="menu-item-has-children" id="lang-button"><a href="#"> <img src="../../CSS/Images/drapeaux/language.png" alt=""></a>
             <ul class="sub-menu" id="language">
-              <li><a href="index.php"> <img src="../../CSS/Images/drapeaux/flag-fr.png" alt=""> </a></li>
-              <li><a href="index_eng.html"><img src="../../CSS/Images/drapeaux/flag-gb.png" alt=""></a></li>
+              <li><a href="#"> <img src="../../CSS/Images/drapeaux/flag-fr.png" alt=""> </a></li>
+              <li><a href="eng/itineraire_eng.html"><img src="../../CSS/Images/drapeaux/flag-gb.png" alt=""></a></li>
             </ul>
           </li>
 
@@ -52,7 +52,7 @@
       <?php if (isset($_POST["submit"])) {
             $score = $_POST["time"]+$_POST["famous"]+$_POST["aspects"]; ?>
             <h2>Itinéraire conseillé pour visiter Angkor</h2>
-      <?php 
+      <?php
             if ($score >= $score/3) { ?>
                 <iframe id="Itinéraires" src="https://www.google.com/maps/d/embed?mid=1q7ldLKjQDK9yM94PuQWXm2HpDjGmLYy0"></iframe>
                 <p>Petit trajet : Pour les plus pressés (<span id="blue">en bleu</span>)</p>
@@ -84,5 +84,5 @@
                   <li>Pre Rup</li>
                   <li>Ta Som</li>
                 </ol>
-            <?php } 
+            <?php }
 } ?>

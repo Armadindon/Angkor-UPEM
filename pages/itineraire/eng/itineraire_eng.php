@@ -5,6 +5,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
   <link rel="stylesheet" href="../../../CSS/styles.css">
+  <link rel="stylesheet" href="../../../CSS/Itineraires.css">
   <meta charset="utf-8">
   <title>National Site of Angkor</title>
 </head>
@@ -15,13 +16,13 @@
     <ul class="menu">
       <li class="menu-item-has-children" id="lang-button"><a href="#"> <img src="../../../CSS/Images/drapeaux/language.png" alt=""></a>
             <ul class="sub-menu" id="language">
-              <li><a href="../infogenerale.html"> <img src="../../../CSS/Images/drapeaux/flag-fr.png" alt=""> </a></li>
+              <li><a href="../itineraire.html"> <img src="../../../CSS/Images/drapeaux/flag-fr.png" alt=""> </a></li>
               <li><a href="#"><img src="../../../CSS/Images/drapeaux/flag-gb.png" alt=""></a></li>
             </ul>
           </li>
 
       <!-- La page actuelle a son lien désactivé -->
-      <li><a href="../../../index_eng.html">Home</a></li>
+      <li><a href="../../../index_eng.php">Home</a></li>
       <li class="menu-item-has-children"><a href="#">About Angkor <img src="../../../CSS/Images/logo/chevron_down.png"  class="chevron"></a><ul class="sub-menu"> <!-- le premier lien n'emmène nulle part , il est donc inactif -->
         <!-- la sous liste imbriquée réprésente les sous onglets , ils sont cachés et apparaissent lorsque le curseur passe par dessus le premier lien -->
           <li><a href="../../Infos/eng/frise_eng.html">Historical timeline</a></li>
@@ -30,11 +31,11 @@
         </ul></li>
       <li class="menu-item-has-children"><a href="#">Useful Info <img src="../../../CSS/Images/logo/chevron_down.png"  class="chevron"></a>
         <ul class="sub-menu">
-          <li><a href="#">General Info</a></li>
+          <li><a href="../../infospratique/eng/infogenerale_eng.html">General Info</a></li>
           <li><a href="../../infospratique/eng/horaires_eng.html">Schedules of affluence</a></li>
         </ul>
       </li>
-      <li><a href="../../itineraire_eng.html">Itineraries</a></li>
+      <li><a href="itineraire_eng.php">Itineraries</a></li>
       <li class="menu-item-has-children"><a href="#">Around Angkor <img src="../../../CSS/Images/logo/chevron_down.png"  class="chevron"></a>
         <ul class="sub-menu">
           <li><a href="../../autour/eng/culture_eng.html">Culture</a></li>
@@ -46,37 +47,40 @@
     </ul>
 </nav> <!-- Fin de la barre de navigation -->
 
-  </header>
-
-  <div class="Contenu">
-
-    <h2>How to get to Angkor:</h2>
-    <p>The most convenient means of transportation to Angkor from Siem Reap are tuk-tuk and motorbike. The bicycle is also a good solution for the most courageous travelers. It is very pleasant to walk between the temples of Angkor, even if the distances are sometimes long. Renting a tuk-tuk for the day to circulate inside the site of Angkor thus allows to preserve its forces.</p>
-    <h2>Opening time:</h2>
-    <p>
-      The Archaeological Park will have as a timetable: From 7:30 to 17:30.
-      Angkor Wat : 5:00 – 17:30 (the central part where you can climb will be open at 7:30).<br>
-      Srah Sang : 5:00 – 17:30 <br>
-      Phnom Bakheng : 5:00 – 19:00 <br>
-      Pre Ru : 5:00 – 19:00 <br>
-      Watching the sunset will only be possible at Phnom Bakeng and Pre Rup by arriving early and at Angkor Wat, but watch out because the sunrise attracts many visitors.
-    </p>
-    <h2>Pricing:</h2>
-    <p>
-      pass 1 day : 37$ <br>
-      pass 3 consecutive days  : 62$ <br>
-      pass 7 consecutive days : 72$ <br>
-      The pass does not cover the temples located more than 10km, so you will have to pay again to visit them. <br>
-      Temples not included in the pass : <br>
-      Beng Melea : 5$ (price of tuk-tuk : 35$) <br>
-      Koh Ker : 10$ <br>
-      Kulen Mountain : 20$ ( + 2,50 $ if you want to ride a car on the mountain) <br>
-      Preah Vihear : 10$
-    </p>
-
-
-  </div>
-
-
-</body>
-</html>
+<?php if (isset($_POST["submit"])) {
+      $score = $_POST["time"]+$_POST["famous"]+$_POST["aspects"]; ?>
+      <h2>Itinéraire conseillé pour visiter Angkor</h2>
+<?php
+      if ($score >= $score/3) { ?>
+          <iframe id="Itinéraires" src="https://www.google.com/maps/d/embed?mid=1q7ldLKjQDK9yM94PuQWXm2HpDjGmLYy0"></iframe>
+          <p>Petit trajet : Pour les plus pressés (<span id="blue">en bleu</span>)</p>
+          <ol>
+            <li>Angkor Vat</li>
+            <li>Phnom Bakheng</li>
+            <li>Temple de Bayon</li>
+            <li>Baphuon</li>
+            <li>Terrasse des Elephants</li>
+            <li>Terrasse du Roi Lépreux</li>
+            <li>Thommanon</li>
+            <li>Chau Say Tevoda</li>
+            <li>Ta Keo</li>
+            <li>Ta Phrom</li>
+            <li> Banteay Kdei</li>
+            <li>Sra Sang</li>
+            <li>Prasat Kravan</li>
+          </ol>
+      <?php } else { ?>
+          <iframe id="Itinéraires" src="https://www.google.com/maps/d/embed?mid=1q7ldLKjQDK9yM94PuQWXm2HpDjGmLYy0"></iframe>
+          <p>Grand trajet : Pour les plus courageux (<span id="red">en rouge</span>)</p>
+          <ol>
+            <li>Angkor Vat</li>
+            <li>Phnom Bakheng et Baksei Chamkrong</li>
+            <li>Angkor Thom</li>
+            <li>Preah Khan</li>
+            <li>Neak Pean</li>
+            <li>Mébon Oriental</li>
+            <li>Pre Rup</li>
+            <li>Ta Som</li>
+          </ol>
+      <?php }
+} ?>

@@ -23,7 +23,7 @@
       <li class="menu-item-has-children" id="lang-button"><a href="#"> <img src="CSS/Images/drapeaux/language.png" alt=""></a>
             <ul class="sub-menu" id="language">
               <li><a href="index.php"> <img src="CSS/Images/drapeaux/flag-fr.png" alt=""> </a></li>
-              <li><a href="index_eng.html"><img src="CSS/Images/drapeaux/flag-gb.png" alt=""></a></li>
+              <li><a href="index_eng.php"><img src="CSS/Images/drapeaux/flag-gb.png" alt=""></a></li>
             </ul>
           </li>
 
