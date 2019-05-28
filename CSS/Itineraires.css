@@ -86,3 +86,7 @@ table th{
   font-size: 22px;
   cursor: pointer;
 }
+
+.menu {
+  top:0px;
+}
