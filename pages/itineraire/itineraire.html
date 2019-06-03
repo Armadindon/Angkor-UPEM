@@ -35,7 +35,7 @@
           <li><a href="../infospratique/horaires.html">Horaires D'Affluence</a></li>
         </ul>
       </li>
-      <li><a href="#">Itinéraires</a></li>
+      <li><a href="../itineraire/itineraire.html">Itinéraires</a></li>
       <li class="menu-item-has-children"><a href="#">Autour D'Angkor <img src="../../CSS/Images/logo/chevron_down.png"  class="chevron"></a>
         <ul class="sub-menu">
           <li><a href="../autour/culture.html">Culture</a></li>
@@ -43,6 +43,7 @@
         </ul>
       </li>
       <li><a href="../voyageur/voyageurs.html">Voyageurs</a></li>
+      <li><a href="../commentaires.php">Commentaires</a></li>
       <li><a href="../apropos/apropos.html">A propos</a></li>
     </ul>
 </nav> <!-- Fin de la barre de navigation -->
@@ -62,10 +63,11 @@
           <input type="radio" checked="checked" name="famous" value="1">
           <span class="checkmark"></span>
         </label>
-        <label class="container">tous les temples
-          <input type="radio" checked="checked" name="famous" value="0">
+        <label class="container">les temples peu connus
+          <input type="radio" name="famous" value="0">
           <span class="checkmark"></span>
         </label>
+
         <br>
 
         <p>Une visite sur les aspects ...</p>
@@ -74,18 +76,22 @@
           <span class="checkmark"></span>
         </label>
         <label class="container">architecturaux
-          <input type="radio" checked="checked" name="aspects" value="1">
+          <input type="radio" name="aspects" value="1">
           <span class="checkmark"></span>
         </label>
 
         <br>
-        <p>Une visite qui dure ...</p>
-        <label class="container">1 jour
+        <p>Une visite ...</p>
+        <label class="container">courte
           <input type="radio" checked="checked" name="time" value="0">
           <span class="checkmark"></span>
         </label>
-        <label class="container">entres 3 et 7 jours
-          <input type="radio" checked="checked" name="time" value="0">
+        <label class="container">moyennement longue
+          <input type="radio" name="time" value="1">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">longue
+          <input type="radio" name="time" value="2">
           <span class="checkmark"></span>
         </label>
         <br>

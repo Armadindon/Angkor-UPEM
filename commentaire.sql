@@ -71,21 +71,27 @@ CREATE TABLE `commentaire` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `marche`
+-- Structure de la table `Admin`
 --
 
-CREATE TABLE `marche` (
-  `ticker` varchar(20) NOT NULL,
-  `nomIndice` varchar(100) NOT NULL
+CREATE TABLE `ADMIN` (
+  `idAdmin` int(11) NOT NULL,
+  `login` varchar(50) NOT NULL UNIQUE,
+  `mdp` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Contenu de la table `marche`
+-- Contenu de la table `ADMIN`
 --
 
-INSERT INTO `marche` (`ticker`, `nomIndice`) VALUES
-('EPA', 'CAC 40'),
-('NASDAQ', 'National Association of Securities Dealers Automated Quotations');
+INSERT INTO `ADMIN` (`idAdmin`,`login`, `mdp`) VALUES
+(1,"bperrin",SHA1("mdpAdmin")),
+(2,"ctia",SHA1("mdpAdmin")),
+(3,"tperreira",SHA1("mdpAdmin")),
+(4,"qsinh",SHA1("mdpAdmin"));
+
+
+-- --------------------------------------------------------
 
 --
 -- Index pour les tables exportées
@@ -104,10 +110,10 @@ ALTER TABLE `commentaire`
   ADD PRIMARY KEY (`idCommentaire`);
 
 --
--- Index pour la table `marche`
+-- Index pour la table `ADMIN`
 --
-ALTER TABLE `marche`
-  ADD PRIMARY KEY (`ticker`);
+ALTER TABLE `ADMIN`
+  ADD PRIMARY KEY (`idAdmin`);
 
 --
 -- AUTO_INCREMENT pour les tables exportées
@@ -118,6 +124,13 @@ ALTER TABLE `marche`
 --
 ALTER TABLE `anecdote`
   MODIFY `idAnecdote` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT pour la table `anecdote`
+--
+ALTER TABLE `ADMIN`
+  MODIFY `idAdmin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
 --
 -- AUTO_INCREMENT pour la table `commentaire`
 --

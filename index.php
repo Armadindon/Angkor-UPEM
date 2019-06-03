@@ -1,10 +1,12 @@
-<?php include("php/connexion.inc.php"); ?>
+<?php include("php/connexion.inc.php");
+ ?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
 
   <!-- Intégrations Map-->
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
   <!-- Google Fonts et info générales -->
@@ -52,13 +54,15 @@
           <li><a href="pages/infospratique/horaires.html">Horaires d'affluence</a></li>
         </ul>
       </li>
-      <li><a href="pages/itineraire/itineraire.html">Itinéraire</a></li>
+      <li><a href="pages/itineraire/itineraire.html">Itinéraires</a></li>
       <li class="menu-item-has-children"><a href="#">Autour d'Angkor<img src="CSS/Images/logo/chevron_down.png"  class="chevron"></a>
         <ul class="sub-menu">
           <li><a href="pages/autour/culture.html">Culture</a></li>
           <li><a href="pages/autour/visiter.html">Que visiter<div id="Ptit">aaaaaaa</div></a></li>
         </ul>
       </li>
+      <li><a href="pages/voyageur/voyageurs.html">Voyageurs</a></li>
+      <li><a href="pages/commentaires.php">Commentaires</a></li>
       <li><a href="pages/apropos/apropos.html">A Propos</a></li>
     </ul>
 </nav> <!-- Fin de la barre de navigation -->
@@ -82,7 +86,7 @@
         $req1 = "SELECT texte FROM anecdote;";
         $index = $dbh->query($req1)->fetchall();
 
-        echo "<p>".$index[3]["texte"]."</p>";
+        echo  utf8_encode("<p>".$index[rand(0,count($index)-1)]["texte"]."</p>");
       } catch (\Exception $e) {
         echo "ALED";
       }

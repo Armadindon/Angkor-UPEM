@@ -1,0 +1,6 @@
+th, td {
+  border-bottom: 1px solid #ddd;
+}
+.comm{
+  word-break: break-all;
+}
