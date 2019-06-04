@@ -75,6 +75,8 @@
       <ul>
       <ul>
         <li><a href="gestionComm.php">Gérer les commentaires</a></li>
+        <li><a href="changePassword.php">Changer de mot de passe</a></li>
+        <li><a href="addAdmin.php">Ajouter un autre admin</a></li>
       </ul>
       <?php
     }else{ ?>
