@@ -55,13 +55,13 @@
               $famous = $_POST["famous"];
               $time = $_POST["time"];
               ?>
-            <h2>Recommended itinerary to visit Angkor</h2>
+            <h2>Itinéraire conseillé pour visiter Angkor</h2>
       <?php
           if ($famous == 1) {
             if ($time==0) { ?>
               <iframe src="https://www.google.com/maps/d/embed?mid=1q7ldLKjQDK9yM94PuQWXm2HpDjGmLYy0"></iframe>
-              <p></p>
-              <p>Small trip</p>
+              <p>Well known Temples</p>
+              <p>Little Journey</p>
               <ol>
                 <li>Angkor Vat</li>
                 <li>Phnom Bakheng</li>
@@ -81,8 +81,8 @@
             <?php }
             elseif ($time == 1) { ?>
               <iframe src="https://www.google.com/maps/d/embed?mid=1kcugqxNTBbI0RjU18jW1NbCw7pyLBjrb"></iframe>
-              <p>Known Temples</p>
-              <p>Medium Trip</p>
+              <p>Well known Temples</p>
+              <p>Medium Journey</p>
               <ol>
                 <li>Angkor Vat</li>
                 <li>Preah Khan</li>
@@ -96,10 +96,12 @@
                 <li>Srah Srang</li>
               </ol>
             <?php }
-            else { ?>
-              <p>Known Temples</p>
-              <iframe src="https://www.google.com/maps/d/embed?mid=1Y3mDBszsPq9OQAOIS_g74SsVOUogPLiN"</iframe>
-              <p>Giant trip</p>
+            else if ($time==2) {?>
+
+              <iframe src="https://www.google.com/maps/d/embed?mid=1Y3mDBszsPq9OQAOIS_g74SsVOUogPLiN"></iframe>
+
+                <p>Well known Temples</p>
+              <p>Big trip</p>
               <ol>
                 <li>Angkor Wat</li>
                 <li>Ta Prohm Kel Temple</li>
@@ -135,7 +137,7 @@
             <?php }
           } else { ?>
               <iframe src="https://www.google.com/maps/d/embed?mid=1fka2l9gHIU87ys7tjWKZ2VYPUDRpKb-a"></iframe>
-                <p>Little-known temples</p>
+                <p>Little kwown Temples</p>
                 <ol>
                   <li>Sambor Prei Kuk</li>
                   <li>Phnom Santuk</li>

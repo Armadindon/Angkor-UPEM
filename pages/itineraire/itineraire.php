@@ -95,10 +95,12 @@
                 <li>Phnom Bakheng</li>
                 <li>Srah Srang</li>
               </ol>
-            <?php }<li><a href="../commentaires.php">Commentaires</a></li>
-            else { ?>
-              <p>Temples connus</p>
-              <iframe src="https://www.google.com/maps/d/embed?mid=1Y3mDBszsPq9OQAOIS_g74SsVOUogPLiN"</iframe>
+            <?php }
+            else if ($time==2) {?>
+
+              <iframe src="https://www.google.com/maps/d/embed?mid=1Y3mDBszsPq9OQAOIS_g74SsVOUogPLiN"></iframe>
+
+                <p>Temples connus</p>
               <p>Grand trajet</p>
               <ol>
                 <li>Angkor Wat</li>
