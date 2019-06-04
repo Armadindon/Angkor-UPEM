@@ -66,30 +66,26 @@
 </nav> <!-- Fin de la barre de navigation -->
 
   </header>
+  <?php if (isset($_SESSION["login"])) {
+    if (isset($_POST["submit"])) {
+      $login = $_POST["login"];
+      $password = sha1($_POST["mdp"]);
+      $req = $dbh->query("INSERT INTO ADMIN ('login', 'mdp') VALUES('$login', '$password')");
+      try {
+        $req->fetch();
+      } catch (Exception $e) {
+        echo "<p>Erreur, problème</p>";
+      }
+    } ?>
 
-  <div class="Contenu">
-    <?php
-      if(isset($_SESSION["login"])){
-        if (isset($_POST["submit"])) {
-          $password = $_POST["pass"];
-          $confirmation = $_POST["confirmation"];
-          $log = $_SESSION["login"];
-          if ($password == $confirmation) {
-            $p = sha1($password);
-            $req = "UPDATE ADMIN SET mdp='$p' WHERE login LIKE '$log'";
-          }
-        } ?>
+    <div class="Contenu">
+      <form method="post">
+        <p>Login</p><input type="text" name="login" required>
+        <p>Mot de passe</p><input type="password" name="mdp" required><br>
+        <button type="submit" name="button">Se connecter</button>
+    </form>
 
-        <form method="post" action="">
-          <p>Nouveau mot de passe</p><input type="password" name="pass" required>
-          <p>Confirmation mot de passe</p><input type="password" name="confirmation" required><br>
-          <button type="submit" name="button">Se connecter</button>
-        </form>
-    <?php  } ?>
-
-
-
-
+<?php  } ?>
 
 
 

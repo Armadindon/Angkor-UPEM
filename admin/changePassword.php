@@ -66,10 +66,31 @@
 </nav> <!-- Fin de la barre de navigation -->
 
 <div class="Contenu">
-  <form method="post">
-    
-    <input type="password">
-  </form>
+  <?php
+    if(isset($_SESSION["login"])){
+      if (isset($_POST["submit"])) {
+        $password = $_POST["pass"];
+        $confirmation = $_POST["confirmation"];
+        $log = $_SESSION["login"];
+        if ($password == $confirmation) {
+          $p = sha1($password);
+          $req = $dbh->query("UPDATE ADMIN SET mdp='$p' WHERE login LIKE '$log'");
+          try {
+            $req->fetch();
+          } catch (Exception $e) {
+            echo "<p>Erreur, mot de passe non modifié</p>";
+          }
+
+        }
+      } ?>
+
+      <form method="post" action="">
+        <p>Nouveau mot de passe</p><input type="password" name="pass" required>
+        <p>Confirmation mot de passe</p><input type="password" name="confirmation" required><br>
+        <button type="submit" name="button">Se connecter</button>
+      </form>
+  <?php  } ?>
 </div>
+
 
   </header>
