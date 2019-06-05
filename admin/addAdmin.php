@@ -61,6 +61,8 @@
           <li><a href="../pages/autour/visiter.html">Que visiter<div id="Ptit">aaaaaaa</div></a></li>
         </ul>
       </li>
+      <li><a href="../pages/voyageur/voyageurs.html">Voyageur</a></li>
+      <li><a href="../pages/commentaires.php">Commentaires</a></li>
       <li><a href="../pages/apropos/apropos.html">A Propos</a></li>
     </ul>
 </nav> <!-- Fin de la barre de navigation -->
@@ -70,21 +72,19 @@
     if (isset($_POST["submit"])) {
       $login = $_POST["login"];
       $password = sha1($_POST["mdp"]);
-      $req = $dbh->query("INSERT INTO ADMIN ('login', 'mdp') VALUES('$login', '$password')");
-      try {
-        $req->fetch();
-      } catch (Exception $e) {
-        echo "<p>Erreur, problème</p>";
+      $req = "INSERT INTO ADMIN (login, mdp) VALUES ('$login', '$password')";
+      if ($dbh->query($req)) {
+        header("Location: index.php");
+      } else {
+        echo "<p>Erreur</p>";
       }
     } ?>
-
     <div class="Contenu">
       <form method="post">
         <p>Login</p><input type="text" name="login" required>
         <p>Mot de passe</p><input type="password" name="mdp" required><br>
-        <button type="submit" name="button">Se connecter</button>
+        <input type="submit" name="submit" value="Valider">
     </form>
-
 <?php  } ?>
 
 

@@ -74,9 +74,10 @@
         $log = $_SESSION["login"];
         if ($password == $confirmation) {
           $p = sha1($password);
-          $req = $dbh->query("UPDATE ADMIN SET mdp='$p' WHERE login LIKE '$log'");
+
           try {
-            $req->fetch();
+            $req = $dbh->query("UPDATE ADMIN SET mdp='$p' WHERE login LIKE '$log'");
+            header("Location: index.php");
           } catch (Exception $e) {
             echo "<p>Erreur, mot de passe non modifié</p>";
           }
@@ -87,7 +88,7 @@
       <form method="post" action="">
         <p>Nouveau mot de passe</p><input type="password" name="pass" required>
         <p>Confirmation mot de passe</p><input type="password" name="confirmation" required><br>
-        <button type="submit" name="button">Se connecter</button>
+        <button type="submit" name="submit" value="submit">VALIDER</button>
       </form>
   <?php  } ?>
 </div>
