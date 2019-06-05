@@ -21,7 +21,6 @@
             </ul>
           </li>
 
-      <!-- La page actuelle a son lien désactivé -->
       <li><a href="../../index.php">Accueil</a></li>
       <li class="menu-item-has-children"><a href="#">Sur Angkor <img src="../../CSS/Images/logo/chevron_down.png"  class="chevron"></a><ul class="sub-menu"> <!-- le premier lien n'emmène nulle part , il est donc inactif -->
         <!-- la sous liste imbriquée réprésente les sous onglets , ils sont cachés et apparaissent lorsque le curseur passe par dessus le premier lien -->
@@ -52,11 +51,12 @@
 <div class="Contenu">
 
       <?php if (isset($_POST["submit"])) {
-              $famous = $_POST["famous"];
-              $time = $_POST["time"];
+              $famous = $_POST["famous"]; // $famous permet de savoir si l'utilisateur veut visiter des temples connus ou non
+              $time = $_POST["time"]; // $time contient le temps que l'utilisateur a pour visiter le site
               ?>
             <h2>Itinéraire conseillé pour visiter Angkor</h2>
       <?php
+      //Plusieurs itinéraires selon les réponses de l'utilisateur 
           if ($famous == 1) {
             if ($time==0) { ?>
               <iframe src="https://www.google.com/maps/d/embed?mid=1q7ldLKjQDK9yM94PuQWXm2HpDjGmLYy0"></iframe>

@@ -1,4 +1,6 @@
-<?php session_start();
+<?php
+// Destruction de session lors de déconnexion
+session_start();
  session_unset();
 
  session_destroy();
