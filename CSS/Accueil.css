@@ -27,3 +27,10 @@ iframe {
   height: 450px;
   margin-bottom: 2%;
 }
+
+.slider img{
+  height: 450px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
