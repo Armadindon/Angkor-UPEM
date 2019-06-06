@@ -22,7 +22,7 @@
   position: relative;
   text-align: center;
   color: white;
-  font-size: 17px;
+  font-size: 25px;
   width: 100%;
   border-radius: 100px;
   filter: grayscale(0%);
@@ -110,7 +110,8 @@
 
 /* pour le contenu de la modal Box */
 .Modal > div {
-max-width: 600px;
+  font-size: 1em;
+max-width: 75%;
 position: relative;
 padding: 0.5em;
 margin: 1% auto;
@@ -149,6 +150,11 @@ h2{
 }
 
 @media (max-width: 800px){
+  .Modal > div {
+    font-size: 0.7em;
+  max-width: 100%;
+  }
+  
   #Monuments{
     -webkit-columns: 1;
     -moz-columns: 1;

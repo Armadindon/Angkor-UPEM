@@ -38,8 +38,8 @@ if(isset($_POST["nom"])){
     <ul class="menu">
       <li class="menu-item-has-children" id="lang-button"><a href="#"> <img src="../CSS/Images/drapeaux/language.png" alt=""></a>
             <ul class="sub-menu" id="language">
-              <li><a href="commentaires.php"> <img src="../CSS/Images/drapeaux/flag-fr.png" alt=""> </a></li>
-              <li><a href="commentaires.php"><img src="../CSS/Images/drapeaux/flag-gb.png" alt=""></a></li>
+              <li><a href="index.php"> <img src="../CSS/Images/drapeaux/flag-fr.png" alt=""> </a></li>
+              <li><a href="index_eng.html"><img src="../CSS/Images/drapeaux/flag-gb.png" alt=""></a></li>
             </ul>
           </li>
 
@@ -81,8 +81,6 @@ if(isset($_POST["nom"])){
       <?php
     }
      ?>
-
-     <!-- Envoyer un commentaire -->
     <form class="" method="post">
       <table>
         <tr>
@@ -91,15 +89,13 @@ if(isset($_POST["nom"])){
         </tr>
         <tr>
           <td><h3>Commentaire</h3></td>
-          <td><textarea name="commentaire" rows="8" cols="80" required style="margin-left:2%;"></textarea></td>
+          <td><textarea name="commentaire" rows="8" cols="80" required style="margin-left:2%;width:100%"></textarea></td>
         </tr>
       </table>
       <button type="submit" name="button" style="margin-top:2%;">Envoyer votre commentaire</button>
     </form>
     <hr>
 
-
-    <!-- Affiche les commentaires déjà validés -->
     <?php
     $req = $dbh->query("SELECT nomAuteur,texte,date FROM commentaire WHERE statut=\"ACCEPTE\";");
     while ($ligne=$req->fetch()) {
@@ -107,7 +103,7 @@ if(isset($_POST["nom"])){
       <div class="Commentaire">
         <?php
         echo "<h5>".$ligne[0]." le ".$ligne[2]."</h5>";
-        echo $ligne[1];
+        echo "<p>".$ligne[1]."</p>";
          ?>
       </div>
       <?php

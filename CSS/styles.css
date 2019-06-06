@@ -54,12 +54,12 @@
 /* Contrairement aux autres feuilles de styles , celle-ci est reliée a toute les pages */
 
 body {
-font-family: 'Cicle',sans-serif;
-font-size: 1.25em;
-color: white;
-margin: 0%;
-padding: 0%;
-background-color: #333333;
+  font-family: 'Cicle',sans-serif;
+  font-size: 1.25em;
+  color: white;
+  margin: 0%;
+  padding: 0%;
+  background-color: #333333;
 }
 
 h1, h2, h3,h4,h5{
@@ -90,32 +90,32 @@ nav ul{
   font-family: "Dyno","Cicle";
 }
 .menu li{
-    display:block;
-    list-style-type:none;
-    text-transform:uppercase;
-    width:100%;
-  }
+  display:block;
+  list-style-type:none;
+  text-transform:uppercase;
+  width:100%;
+}
 
- .menu li a{
-    display:flex;
-    text-align:center;
-    text-decoration:none;
-    color:white;
-    padding:1rem;
+.menu li a{
+  display:flex;
+  text-align:center;
+  text-decoration:none;
+  color:white;
+  padding:1rem;
 
-  }
+}
 
 
- nav .menu li a:hover{
-    background:#b94503;
-    color:#fff;
-  }
+nav .menu li a:hover{
+  background:#b94503;
+  color:#fff;
+}
 
 @media (min-width: 800px) {
-    nav .menu{
-      flex-direction:row;
-      justify-content:space-between;
-    }
+  nav .menu{
+    flex-direction:row;
+    justify-content:space-between;
+  }
 
 }
 
@@ -125,7 +125,7 @@ nav .menu-item-has-children > a:after{
 }
 
 nav ul ul {
-    display: none;
+  display: none;
 }
 
 @media (min-width: 800px) {
@@ -166,12 +166,12 @@ nav ul li:hover > ul {
     }
   }
 
- nav ul ul ul{
+  nav ul ul ul{
     margin:0 0 0 100%;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
   }
 
-.menu-item-has-children .menu-item-has-children > a:after{
+  .menu-item-has-children .menu-item-has-children > a:after{
     font-family:'Genericons';
     padding:1px;
   }
@@ -228,15 +228,25 @@ hr {
     margin-left: 0;
     margin-right: 0;
   }
+
   nav{
     position:relative;
   }
- #lang-button img {
-  margin-left: 0;
-}
-#language a{
-  width: 100vw;
-}
+
+  #lang-button img {
+    margin-left: 0;
+  }
+
+  #language a{
+    width: 100vw;
+  }
+
+  img{
+    display: block;
+    left: auto;
+    right: auto;
+  }
+
 }
 
 header {
