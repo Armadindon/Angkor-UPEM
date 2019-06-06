@@ -42,6 +42,7 @@
         </ul>
       </li>
       <li><a href="../../voyageur/eng/voyageurs_eng.html">Travelers</a></li>
+      <li><a href="../../commentaires.php">Comments</a></li>
       <li><a href="../../apropos/eng/apropos_eng.html">About us</a></li>
     </ul>
 </nav> <!-- Fin de la barre de navigation -->
@@ -56,9 +57,9 @@
               $time = $_POST["time"];
               // $time contient le temps que l'utilisateur a pour visiter le site
               ?>
-            <h2>Itinéraire conseillé pour visiter Angkor</h2>
+            <h2>Adviced Itineraries for Angkor</h2>
       <?php
-      //Plusieurs itinéraires selon les réponses de l'utilisateur 
+      //Plusieurs itinéraires selon les réponses de l'utilisateur
           if ($famous == 1) {
 
             if ($time==0) { ?>

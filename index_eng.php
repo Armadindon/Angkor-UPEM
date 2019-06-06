@@ -1,3 +1,5 @@
+<?php include("php/connexion.inc.php");
+?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
@@ -10,8 +12,31 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
   <link rel="stylesheet" href="CSS/styles.css">
   <link rel="stylesheet" href="CSS/Accueil.css">
+
+  <!-- CARROUSSEL -->
+  <!--CSS-->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+
+
+  <!--JS-->
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('.slider').slick({
+      infinite: true,
+      autoplay:true
+    });
+  });
+  </script>
+
+
   <meta charset="utf-8">
-  <title>Site National D'Angkor</title>
+  <title>National Site of Angkor</title>
 </head>
 <body>
 
@@ -40,34 +65,50 @@
         </ul>
       </li>
       <li><a href="pages/itineraire/eng/itineraire_eng.html">Itineraries</a></li>
-      <li class="menu-item-has-children"><a href="#">Around Angkor <img src="../../../CSS/Images/logo/chevron_down.png"  class="chevron"></a>
+      <li class="menu-item-has-children"><a href="#">Around Angkor <img src="CSS/Images/logo/chevron_down.png"  class="chevron"></a>
         <ul class="sub-menu">
           <li><a href="pages/autour/eng/culture_eng.html">Culture</a></li>
           <li><a href="pages/autour/eng/visiter_eng.html">What to visit <div id="Ptit">aaaaaaa</div></a></li>
         </ul>
       </li>
       <li><a href="pages/voyageur/eng/voyageurs_eng.html">Travelers</a></li>
-      <li><a href="pages/²apropos/eng/apropos_eng.html">About us</a></li>
+      <li><a href="pages/commentaires.php">Comments</a></li>
+      <li><a href="pages/apropos/eng/apropos_eng.html">About us</a></li>
     </ul>
 </nav> <!-- Fin de la barre de navigation -->
 
 </header>
 <div class="Contenu"> <!-- Contenu de la page a partir de la -->
-
+  <div class="slider">
+    <?php
+    $req = $dbh->query("SELECT * FROM Slider;");
+    while ($ligne = $req->fetch()) {
+      if ($ligne[2]==null) {
+        echo "<div>".$ligne[1]."</div>";
+      }else{
+        echo "<div><img src=\"".utf8_encode($ligne[3])."\"></div>";
+      }
+    }
+     ?>
+  </div>
   <!-- iframe d'une vidéo d'arte sur le site D'Angkor -->
-  <iframe allowfullscreen="true" style="transition-duration:0;transition-property:no;margin:0 auto;position:relative;display:block;background-color:#000000;" frameborder="0" scrolling="no" width="100%" height="100%" src="https://www.arte.tv/player/v3/index.php?json_url=https%3A%2F%2Fapi.arte.tv%2Fapi%2Fplayer%2Fv1%2Fconfig%2Ffr%2F081881-001-A%3Fautostart%3D1%26lifeCycle%3D1&amp;lang=fr_FR&amp;mute=1"></iframe>
+
 
   <!-- "Boite" contenant une anecdote , a terme , celle-ci sera choisie dans une base de données -->
   <div class="Anecdote">
     <h3>Anecdote</h3>
     <?php
-    $req1 = "SELECT COUNT(*) FROM anecdote";
-    $index = $dbh->query($req1);
-    $nbRandom = rand(0, $index-1);
-    $req2 = "SELECT texte FROM anecdote WHERE idAnecdote=$index";
-    $anecdote = $dbh->query($req2)["texte"];
-    echo "<p>".$anecdote."</p>";
-     ?>
+    try {
+      $req1 = "SELECT texte FROM anecdote;";
+      $index = $dbh->query($req1)->fetchall();
+
+      echo  utf8_encode("<p>".$index[rand(0,count($index)-1)]["texte"]."</p>");
+    } catch (\Exception $e) {
+      echo "ALED";
+    }
+
+
+    ?>
   </div>
 
   <!-- Carte générée a partir d'une API de chez MapBox -->

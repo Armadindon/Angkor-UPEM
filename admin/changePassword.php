@@ -33,6 +33,15 @@
   <header>
     <nav class="main-navigation">
     <ul class="menu">
+      <?php if (isset($_SESSION["login"])) { ?>
+          <li><a href="index.php">Accueil</a></li>
+          <li><a href="gestionComm.php">Gérer les commentaires</a></li>
+          <li><a href="changePassword.php">Changer de mot de passe</a></li>
+          <li><a href="addAdmin.php">Gérer les admins</a></li>
+          <li><a href="gestionSlider.php">Gérer le slider de l'acceuil</a></li>
+          <li><a href="../index.php">Retour vers le site</a></li>
+          <li><a href="../php/disconnect.php">Déconnexion</a></li>
+      <?php } else { ?>
       <li class="menu-item-has-children" id="lang-button"><a href="#"> <img src="../CSS/Images/drapeaux/language.png" alt=""></a>
             <ul class="sub-menu" id="language">
               <li><a href="index.php"> <img src="../CSS/Images/drapeaux/flag-fr.png" alt=""> </a></li>
@@ -61,14 +70,19 @@
           <li><a href="../pages/autour/visiter.html">Que visiter<div id="Ptit">aaaaaaa</div></a></li>
         </ul>
       </li>
+      <li><a href="../pages/voyageurs/voyageurs.html">Voyageurs</a></li>
+      <li><a href="../pages/commentaires.php">Commentaires</a></li>
       <li><a href="../pages/apropos/apropos.html">A Propos</a></li>
+    <?php } ?>
     </ul>
 </nav> <!-- Fin de la barre de navigation -->
+</header>
 
-<div class="Contenu">
   <?php
-    if(isset($_SESSION["login"])){
-      if (isset($_POST["submit"])) {
+    if(isset($_SESSION["login"])){ ?>
+      <div class="Contenu">
+      <h1>Bienvenue sur la page de modification de mot de passe</h1>
+      <?php if (isset($_POST["submit"])) {
         $password = $_POST["pass"];
         $confirmation = $_POST["confirmation"];
         $log = $_SESSION["login"];
@@ -77,21 +91,20 @@
 
           try {
             $req = $dbh->query("UPDATE ADMIN SET mdp='$p' WHERE login LIKE '$log'");
-            header("Location: index.php");
+            echo "<p>Mot de passe modifié !</p>";
+            header("refresh:1; url=index.php");
           } catch (Exception $e) {
             echo "<p>Erreur, mot de passe non modifié</p>";
           }
 
         }
-      } ?>
+      } else { ?>
 
       <form method="post" action="">
         <p>Nouveau mot de passe</p><input type="password" name="pass" required>
         <p>Confirmation mot de passe</p><input type="password" name="confirmation" required><br>
-        <button type="submit" name="submit" value="submit">VALIDER</button>
+        <br>
+        <input type="submit" name="submit" value="Valider">
       </form>
-  <?php  } ?>
+  <?php  }} ?>
 </div>
-
-
-  </header>

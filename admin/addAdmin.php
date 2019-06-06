@@ -33,6 +33,15 @@
   <header>
     <nav class="main-navigation">
     <ul class="menu">
+      <?php if (isset($_SESSION["login"])) { ?>
+          <li><a href="index.php">Accueil</a></li>
+          <li><a href="gestionComm.php">Gérer les commentaires</a></li>
+          <li><a href="changePassword.php">Changer de mot de passe</a></li>
+          <li><a href="addAdmin.php">Gérer les admins</a></li>
+          <li><a href="gestionSlider.php">Gérer le slider de l'acceuil</a></li>
+          <li><a href="../index.php">Retour vers le site</a></li>
+          <li><a href="../php/disconnect.php">Déconnexion</a></li>
+      <?php } else { ?>
       <li class="menu-item-has-children" id="lang-button"><a href="#"> <img src="../CSS/Images/drapeaux/language.png" alt=""></a>
             <ul class="sub-menu" id="language">
               <li><a href="index.php"> <img src="../CSS/Images/drapeaux/flag-fr.png" alt=""> </a></li>
@@ -61,40 +70,77 @@
           <li><a href="../pages/autour/visiter.html">Que visiter<div id="Ptit">aaaaaaa</div></a></li>
         </ul>
       </li>
-      <li><a href="../pages/voyageur/voyageurs.html">Voyageur</a></li>
+      <li><a href="../pages/voyageurs/voyageurs.html">Voyageurs</a></li>
       <li><a href="../pages/commentaires.php">Commentaires</a></li>
       <li><a href="../pages/apropos/apropos.html">A Propos</a></li>
+    <?php } ?>
     </ul>
 </nav> <!-- Fin de la barre de navigation -->
 
-  </header>
-  <?php if (isset($_SESSION["login"])) {
-    if (isset($_POST["submit"])) {
+</header>
+    <?php if (isset($_SESSION["login"])) { ?>
+      <div class="Contenu">
+    <?php if (isset($_POST["submit"])) {
       $login = $_POST["login"];
       $password = sha1($_POST["mdp"]);
       $req = "INSERT INTO ADMIN (login, mdp) VALUES ('$login', '$password')";
-      if ($dbh->query($req)) {
-        header("Location: index.php");
-      } else {
-        echo "<p>Erreur</p>";
+      try {
+        $dbh->query($req);
+        echo "<p>Nouvel admin ajouté !</p>";
+        header("refresh:1; url=index.php");
+      } catch (Exception $e) {
+        echo "<p>Erreur, le nouvel admin n'a pas pu être ajouté</p>";
       }
-    } ?>
-    <div class="Contenu">
+    } elseif (isset($_POST["submitDelete"])) {
+      $log = $_POST["delete"];
+      $req = "DELETE FROM ADMIN WHERE login LIKE '$log'";
+      try {
+        $dbh->query($req);
+        echo "<p>Admin supprimé !</p>";
+        header("refresh:1; url=index.php");
+      } catch (Exception $e) {
+        echo "<p>Erreur, l'admin n'a pas pu être supprimé</p>";
+        header("refresh:1; url=addAdmin.php");
+      }
+    }
+
+
+    else {?>
+
+      <h2>Bienvenue sur la page d'administration des admins</h2>
+      <h2>Vous êtes connecté <?php echo $_SESSION["login"]; ?></h2>
+
+      <h3>Ajouter un admin</h3>
       <form method="post">
-        <p>Login</p><input type="text" name="login" required>
-        <p>Mot de passe</p><input type="password" name="mdp" required><br>
+        <p>Login du nouvel admin</p><input type="text" name="login" required>
+        <p>Mot de passe du nouvel admin</p><input type="password" name="mdp" required><br>
+        <br>
         <input type="submit" name="submit" value="Valider">
     </form>
-<?php  } ?>
+      <br>
+      <br>
+      <h3>Supprimer un admin</h3>
+      <form method="post">
+        <p>Login</p>
+        <select name="delete">
+        <?php
+        $req = "SELECT login FROM ADMIN";
+        $reponse = $dbh->query($req);
+          while($ligne = $reponse->fetch()) { ?>
+            <option value="<?php echo $ligne[0];?>"><?php echo $ligne[0]; ?></option>
+          <?php }
+          echo "blabla"?>
+        </select>
 
-
-
-
-  </div>
-
+        <br><br>
+        <input type="submit" name="submitDelete" value="Valider">
+      </form>
+      </div>
+<?php  }} ?>
 
 
 
 
 </body>
+
 </html>

@@ -33,6 +33,15 @@
   <header>
     <nav class="main-navigation">
     <ul class="menu">
+      <?php if (isset($_SESSION["login"])) { ?>
+          <li><a href="index.php">Accueil</a></li>
+          <li><a href="gestionComm.php">Gérer les commentaires</a></li>
+          <li><a href="changePassword.php">Changer de mot de passe</a></li>
+          <li><a href="addAdmin.php">Ajouter un autre admin</a></li>
+          <li><a href="gestionSlider.php">Gérer le slider de l'acceuil</a></li>
+          <li><a href="../index.php">Retour vers le site</a></li>
+          <li><a href="../php/disconnect.php">Déconnexion</a></li>
+      <?php } else { ?>
       <li class="menu-item-has-children" id="lang-button"><a href="#"> <img src="../CSS/Images/drapeaux/language.png" alt=""></a>
             <ul class="sub-menu" id="language">
               <li><a href="index.php"> <img src="../CSS/Images/drapeaux/flag-fr.png" alt=""> </a></li>
@@ -61,7 +70,10 @@
           <li><a href="../pages/autour/visiter.html">Que visiter<div id="Ptit">aaaaaaa</div></a></li>
         </ul>
       </li>
+      <li><a href="../pages/voyageurs/voyageurs.html">Voyageurs</a></li>
+      <li><a href="../pages/commentaires.php">Commentaires</a></li>
       <li><a href="../pages/apropos/apropos.html">A Propos</a></li>
+    <?php } ?>
     </ul>
 </nav> <!-- Fin de la barre de navigation -->
 
@@ -71,14 +83,8 @@
     <?php if(isset($_SESSION["login"])){
       ?>
       <h2>Vous êtes connecté <?php echo $_SESSION["login"]; ?></h2>
-      <form method="post" action="../php/disconnect.php"> <button type="submit" name="button">Se deconnecter</button> </form>
-      <ul>
-      <ul>
-        <li><a href="gestionComm.php">Gérer les commentaires</a></li>
-        <li><a href="changePassword.php">Changer de mot de passe</a></li>
-        <li><a href="addAdmin.php">Ajouter un autre admin</a></li>
-        <li><a href="gestionSlider.php">Gérer le slider de l'acceuil</a></li>
-      </ul>
+      <p>Cette partie permet d'administrer les commentaires et admin </p>
+
       <?php
     }else{ ?>
 
@@ -87,6 +93,7 @@
     <form method="post">
       <p>Login</p><input type="text" name="login" required>
       <p>Mot de passe</p><input type="password" name="mdp" required><br>
+      <br>
       <button type="submit" name="button">Se connecter</button>
     </form>
   <?php } ?>

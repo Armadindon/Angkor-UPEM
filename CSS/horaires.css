@@ -1,8 +1,9 @@
 table {
   border-collapse: collapse;
   width: 70%;
+  border-color:white;
 }
 
 .Contenu table,.Contenu td,.Contenu th {
-border: 1px solid black; /* Bordures du tableau */
+border: 1px solid white; /* Bordures du tableau */
 }
