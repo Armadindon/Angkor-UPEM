@@ -7,10 +7,11 @@
       case 'accept':
       $dbh->query("UPDATE `commentaire` SET statut=\"ACCEPTE\" WHERE idCommentaire = ".$_POST["id"].";");
         break;
-
-
   }
-} ?>
+}
+if(!isset($_SESSION["login"])){
+  header("location: ../index.php");
+}  ?>
 
 
 <!DOCTYPE html>

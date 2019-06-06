@@ -1,12 +1,6 @@
 <?php include("../php/connexion.inc.php");?>
-<?php if(isset($_POST["login"])){
-  $req = $dbh -> query("SELECT * FROM ADMIN WHERE login=\"".$_POST["login"]."\" AND mdp=SHA1(\"".$_POST["mdp"]."\");");
-  if($req->rowCount() > 0){
-    $_SESSION["login"] = $req->fetch()[1];
-    $status = 0;
-  }else{
-    $status = 1;
-  }
+<?php if(!isset($_SESSION["login"])){
+  header("location: ../index.php");
 }  ?>
 
 

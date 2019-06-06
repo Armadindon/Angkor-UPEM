@@ -1,6 +1,7 @@
 <?php include("../php/connexion.inc.php");
-error_reporting(E_ALL);
-ini_set("display_errors", 1);
+if(!isset($_SESSION["login"])){
+  header("location: ../index.php");
+} 
 ?>
 <?php if (isset($_POST["num"])) {
   $dbh->query("DELETE FROM Slider WHERE numSlide=".$_POST["num"].";");
