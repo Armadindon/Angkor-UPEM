@@ -64,6 +64,8 @@ if(isset($_POST["nom"])){
           <li><a href="autour/visiter.html">Que visiter<div id="Ptit">aaaaaaa</div></a></li>
         </ul>
       </li>
+      <li><a href="voyageur/voyageurs.html">Voyageurs</a></li>
+      <li><a href="commentaires.php">Commentaires</a></li>
       <li><a href="apropos/apropos.html">A Propos</a></li>
     </ul>
 </nav> <!-- Fin de la barre de navigation -->

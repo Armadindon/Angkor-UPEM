@@ -101,14 +101,10 @@
     <div class="Anecdote">
       <h3>Anecdote</h3>
       <?php
-      try {
-        $req1 = "SELECT texte FROM anecdote;";
+        $req1 = "SELECT texte FROM anecdote WHERE language=\"FR\";";
         $index = $dbh->query($req1)->fetchall();
 
         echo  utf8_encode("<p>".$index[rand(0,count($index)-1)]["texte"]."</p>");
-      } catch (\Exception $e) {
-        echo "ALED";
-      }
 
 
       ?>
