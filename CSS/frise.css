@@ -122,3 +122,13 @@ transition: all 0.4s ease-in-out;
 .Modal > div .btn {
   float:right;
 }
+
+.Contenu a {
+  color:white;
+  text-decoration: none;
+}
+
+.Contenu a:hover {
+    color: #ddc9c9;
+    text-decoration: none;
+}

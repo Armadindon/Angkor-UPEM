@@ -13,9 +13,15 @@ p {
 .gras {
   font-weight: bold;
 }
-a {
+a:link, a:active, a:visited {
   color: #e1c0c0;
+  text-decoration: none;
 }
+
+ a:hover {
+   color: #d0a790;
+   text-decoration: none;
+ }
 
 ul {
   list-style: none;
