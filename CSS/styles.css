@@ -1,11 +1,69 @@
+/*Installation des polices*/
+
+/*Dyno*/
+@font-face {
+  font-family: "Dyno";
+  src: url("./fonts/DynoBold.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Dyno";
+  src: url("./fonts/DynoBold.ttf");
+  font-weight: bold;
+}
+
+
+@font-face {
+  font-family: "Dyno";
+  src: url("./fonts/DynoItalic.ttf");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Dyno";
+  src: url("./fonts/DynoBoldItalic.ttf");
+  font-style: italic;
+  font-weight: bold;
+}
+
+/*Cicle*/
+@font-face {
+  font-family: "Cicle";
+  src: url("./fonts/CicleFina.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Cicle";
+  src: url("./fonts/CicleFinaItalic.ttf");
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Cicle";
+  src: url("./fonts/CicleGordita.ttf");
+  font-style: normal;
+  font-weight: bold;
+}
+
+
+
 /* Contrairement aux autres feuilles de styles , celle-ci est reliée a toute les pages */
 
 body {
-font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Cicle',sans-serif;
 color: white;
 margin: 0%;
 padding: 0%;
 background-color: #333333;
+}
+
+h1, h2, h3,h4,h5{
+  font-family: 'Dyno',sans-serif;
+
 }
 
 nav {
