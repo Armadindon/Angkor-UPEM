@@ -28,6 +28,10 @@ iframe {
   margin-bottom: 2%;
 }
 
+.slider{
+  margin-top: 2%;
+}
+
 .slider img{
   height: 450px;
   display: block;

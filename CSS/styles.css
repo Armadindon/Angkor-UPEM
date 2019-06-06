@@ -55,6 +55,7 @@
 
 body {
 font-family: 'Cicle',sans-serif;
+font-size: 1.25em;
 color: white;
 margin: 0%;
 padding: 0%;
@@ -86,6 +87,7 @@ nav ul{
 .menu{
   display:flex;
   flex-direction:column;
+  font-family: "Dyno","Cicle";
 }
 .menu li{
     display:block;
