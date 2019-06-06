@@ -29,7 +29,7 @@ if(isset($_POST["nom"])){
     <ul class="menu">
       <li class="menu-item-has-children" id="lang-button"><a href="#"> <img src="../CSS/Images/drapeaux/language.png" alt=""></a>
             <ul class="sub-menu" id="language">
-              <li><a href="index.php"> <img src="../CSS/Images/drapeaux/flag-fr.png" alt=""> </a></li>
+              <li><a href="commentaires.php"> <img src="../CSS/Images/drapeaux/flag-fr.png" alt=""> </a></li>
               <li><a href="#"><img src="../CSS/Images/drapeaux/flag-gb.png" alt=""></a></li>
             </ul>
           </li>
@@ -63,13 +63,13 @@ if(isset($_POST["nom"])){
 
 </header>
   <div class="Contenu"> <!-- Contenu de la page a partir de la -->
-    <h1>Commentaires</h1>
-    <p>Vous avez visité Angkor , et/ou vous avez des conseils, anecdotes ou autres ? laissez nous des commentaires et affichez les sur le site !</p>
+    <h1>Comments</h1>
+    <p>You have visited Angkor ? And tou advices/Fun Facts to share ? Send us a comment !</p>
     <?php
     if(isset($_POST["nom"])){
       ?>
       <div class="Commentaire" style="background-color:blue;">
-        <p>Votre Commentaire a été envoyé , il sera inspecté par un administrateur</p>
+        <p>Your comment has been submited, it will be check by an admin soon !</p>
       </div>
       <?php
     }
@@ -77,15 +77,15 @@ if(isset($_POST["nom"])){
     <form class="" method="post">
       <table>
         <tr>
-          <td><h3>Nom</h3></td>
+          <td><h3>Name</h3></td>
           <td><input type="text" name="nom" required style="margin-left:2%;"></td>
         </tr>
         <tr>
-          <td><h3>Commentaire</h3></td>
+          <td><h3>Comment</h3></td>
           <td><textarea name="commentaire" rows="8" cols="80" required style="margin-left:2%;width:100%"></textarea></td>
         </tr>
       </table>
-      <button type="submit" name="button" style="margin-top:2%;">Envoyer votre commentaire</button>
+      <button type="submit" name="button" style="margin-top:2%;">Send your comment</button>
     </form>
     <hr>
 

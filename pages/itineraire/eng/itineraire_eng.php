@@ -42,7 +42,7 @@
         </ul>
       </li>
       <li><a href="../../voyageur/eng/voyageurs_eng.html">Travelers</a></li>
-      <li><a href="../../commentaires.php">Comments</a></li>
+      <li><a href="../../commentaires_eng.php">Comments</a></li>
       <li><a href="../../apropos/eng/apropos_eng.html">About us</a></li>
     </ul>
 </nav> <!-- Fin de la barre de navigation -->

@@ -151,14 +151,19 @@ h2{
 
 @media (max-width: 800px){
   .Modal > div {
-    font-size: 0.7em;
-  max-width: 100%;
+    font-size: 0.6em;
+    max-width: 100%;
   }
-  
+
   #Monuments{
     -webkit-columns: 1;
     -moz-columns: 1;
     columns: 1;
+
+  }
+
+  .container{
+    margin-top: 2%;
   }
 
   #MonumentsSecondaires{

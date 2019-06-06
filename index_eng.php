@@ -72,7 +72,7 @@
         </ul>
       </li>
       <li><a href="pages/voyageur/eng/voyageurs_eng.html">Travelers</a></li>
-      <li><a href="pages/commentaires.php">Comments</a></li>
+      <li><a href="pages/commentaires_eng.php">Comments</a></li>
       <li><a href="pages/apropos/eng/apropos_eng.html">About us</a></li>
     </ul>
 </nav> <!-- Fin de la barre de navigation -->
