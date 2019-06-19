@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
   <link rel="stylesheet" href="../../CSS/styles.css">
   <link rel="stylesheet" href="../../CSS/apropos.css">
@@ -10,68 +12,41 @@
 <body>
 
   <header>
-    <div class="Banderole">
-      <table>
-        <table>
-          <tr>
-            <th> <img src="../../CSS/Images/logo/forumunesco.png" alt=""> </th>
-            <th rowspan="2"> <h1 id="Titre" >Angkor</h1> </th>
-            <th><img src="../../CSS/Images/logo/upem.png" alt=""></th>
-          </tr>
-          <tr>
-            <th><img src="../../CSS/Images/logo/unesco.png" alt=""></th>
-            <th><img src="../../CSS/Images/logo/logo_MCN.png" alt="" id="MCN"></th>
-          </tr>
-        </table>
-      </table>
-    </div>
-    <nav>
+    <nav class="main-navigation">
+    <ul class="menu">
+      <li class="menu-item-has-children" id="lang-button"><a href="#"> <img src="../../CSS/Images/drapeaux/language.png" alt=""></a>
+            <ul class="sub-menu" id="language">
+              <li><a href="#"> <img src="../../CSS/Images/drapeaux/flag-fr.png" alt=""> </a></li>
+              <li><a href="eng/apropos_eng.html"><img src="../../CSS/Images/drapeaux/flag-gb.png" alt=""></a></li>
+            </ul>
+          </li>
 
 
-      <ul class="Menu">
-        <li><a href="#"> <img src="../../CSS/Images/drapeaux/language.png" alt=""></a>
-          <ul class="submenu" id="language">
-            <li><a href="#"> <img src="../../CSS/Images/drapeaux/flag-fr.png" alt=""> </a></li>
-
-            <li><a href="eng/apropos_eng.html"><img src="../../CSS/Images/drapeaux/flag-gb.png" alt=""></a></li>
-
-          </ul>
-        </li>
-
-
-        <li><a href="../../index.html">Accueil</a>
-        </li>
-
-        <li><a href="#">Sur Angkor</a>
-          <ul class="submenu">
-            <li><a href="../Infos/frise.html">Frise Chronologique</a></li>
-            <li><a href="../Infos/systemehydro.html">Système hydraulique</a></li>
-            <li><a href="../Infos/monuments.html">Monuments</a></li>
-          </ul>
-        </li>
-
-        <li><a href="#">Infos Pratiques</a>
-          <ul class="submenu">
-            <li><a href="../infospratique/infogenerale.html">Informations Générales</a></li>
-            <li><a href="../infospratique/horaires.html">Horaires D'Affluence</a></li>
-          </ul>
-        </li>
-
-        <li><a href="../itineraire/itineraire.html">Itinéraires</a>
-        </li>
-
-        <li><a href="#">Autour D'Angkor</a>
-          <ul class="submenu">
-            <li><a href="../autour/culture.html">Culture</a></li>
-            <li><a href="../autour/visiter.html">Que visiter ?</a></li>
-          </ul>
-        </li>
-
-        <li><a href="#">A propos</a>
-        </li>
-
-      </ul>
-    </nav>
+      <li><a href="../../index.php">Accueil</a></li>
+      <li class="menu-item-has-children"><a href="#">Sur Angkor <img src="../../CSS/Images/logo/chevron_down.png"  class="chevron"></a><ul class="sub-menu"> <!-- le premier lien n'emmène nulle part , il est donc inactif -->
+        <!-- la sous liste imbriquée réprésente les sous onglets , ils sont cachés et apparaissent lorsque le curseur passe par dessus le premier lien -->
+          <li><a href="../Infos/frise.html">Frise Chronologique</a></li>
+          <li><a href="../Infos/systemehydro.html">Système Hydraulique</a></li>
+        <li><a href="../Infos/monuments.html">Monuments</a></li>
+        </ul></li>
+      <li class="menu-item-has-children"><a href="#">Informations Pratiques <img src="../../CSS/Images/logo/chevron_down.png"  class="chevron"></a>
+        <ul class="sub-menu">
+          <li><a href="../infospratique/infogenerale.html">Informations Générales</a></li>
+          <li><a href="../infospratique/horaires.html">Horaires D'Affluence</a></li>
+        </ul>
+      </li>
+      <li><a href="../itineraire/itineraire.html">Itinéraires</a></li>
+      <li class="menu-item-has-children"><a href="#">Autour D'Angkor <img src="../../CSS/Images/logo/chevron_down.png"  class="chevron"></a>
+        <ul class="sub-menu">
+          <li><a href="../autour/culture.html">Culture</a></li>
+          <li><a href="../autour/visiter.html">Que Visiter <div id="Ptit">aaaaaaa</div></a></li>
+        </ul>
+      </li>
+      <li><a href="../voyageur/voyageurs.html">Voyageurs</a></li>
+      <li><a href="../commentaires.php">Commentaires</a></li>
+      <li><a href="../itineraire/itineraire.html">A propos</a></li>
+    </ul>
+</nav> <!-- Fin de la barre de navigation -->
 
   </header>
   <div class="Contenu">
@@ -79,7 +54,8 @@
       <h2>Contexte</h2>
       <p>Ce site a été créé en partenariat avec l'UNESCO.</p>
       <p>Le site a pour but de promouvoir le patrimoine culturel cambodgien: Angkor.</p>
-      <p>Ce projet est dirigé par M. Ettayeb, enseignant en Communication à l'UPEM.</p>
+      <p>Ce site fait parti du projet UNESCO.</p>
+      <p>Ce site a pour source principale les archives D'ICOMOS.</p>
     </div>
     <div class="Equipe">
       <h2>Equipe</h2>
@@ -87,34 +63,53 @@
         <div class="ens">
           <img src="../../CSS/Images/equipe/Celine.png" alt="Photo">
           <h3 class="Nom">TIA Céline</h3>
-          <h4 class="role">Responsable documentation</h4>
+          <h4 class="role">Documentation Manager</h4>
+          <!-- lien vers la page linkedIn -->
           <a class="desc" href="https://www.linkedin.com/in/c%C3%A9line-tia-53b0b1175/" target="_blank"><img src="../../CSS/Images/equipe/LinkedIn_logo_initials.png" alt="logo linkedin"></a>
         </div class="ens">
         <div class="ens">
           <img src="../../CSS/Images/equipe/Tony.JPG" alt="Photo">
           <h3 class="Nom">PEREIRA Tony</h3>
-          <h4 class="role">Assistant documentation</h4>
+          <h4 class="role">Documentation Assistant</h4>
+          <!-- lien vers la page linkedIn -->
           <a class="desc" href="https://www.linkedin.com/in/tony-emmanuel-pereira-198a42135/" target="_blank"><img src="../../CSS/Images/equipe/LinkedIn_logo_initials.png" alt="logo linkedin"></a>
         </div class="ens">
         <div class="ens">
           <img src="../../CSS/Images/equipe/Baptiste.JPG" alt="Photo">
           <h3 class="Nom">PERRIN Baptiste</h3>
-          <h4 class="role">Chef De Projet</h4>
+          <h4 class="role">Project Manager</h4>
+          <!-- lien vers la page linkedIn -->
           <a class="desc" href="https://www.linkedin.com/in/baptiste-perrin-532881174/" target="_blank"><img src="../../CSS/Images/equipe/LinkedIn_logo_initials.png" alt="logo linkedin"></a>
         </div>
         <div class="ens">
           <img src="../../CSS/Images/equipe/Laurine.JPG" alt="Photo">
           <h3 class="Nom">PLIML Laurine</h3>
-          <h4 class="role">Responsable modélisation</h4>
+          <h4 class="role">Modeling Manager</h4>
+          <!-- lien vers la page linkedIn -->
           <a class="desc" href="https://www.linkedin.com/in/laurine-pliml-1745ab145/" target="_blank"><img src="../../CSS/Images/equipe/LinkedIn_logo_initials.png" alt="logo linkedin"></a>
         </div>
         <div class="ens">
           <img src="../../CSS/Images/equipe/Quentin.JPG" alt="Photo">
           <h3 class="Nom">SINH Quentin</h3>
-          <h4 class="role">Développeur</h4>
+          <h4 class="role">Developer</h4>
+          <!-- lien vers la page linkedIn -->
           <a class="desc" href="https://www.linkedin.com/in/quentin-sinh-96a0b0175/" target="_blank"><img src="../../CSS/Images/equipe/LinkedIn_logo_initials.png" alt="logo linkedin"></a>
         </div>
       </div>
+    </div>
+
+      <div class="partenaires">
+        <h2>Our Partners</h2>
+        <!-- logos des partenaires -->
+        <img src="../../CSS/Images/logo/upem.png" class="logo">
+        <img src="../../CSS/Images/logo/mcn.png" class="logo">
+        <img src="../../CSS/Images/logo/idea.png" class="logo">
+        <img src="../../CSS/Images/logo/logo_unesco.png" class="logo">
+        <img src="../../CSS/Images/logo/anr.png" class="logo">
+        <img src="../../CSS/Images/logo/forumunesco.png" class="logo">
+        <img src="../../CSS/Images/logo/investissement.png" class="logo">
+      </div>
+    </div>
 
     </body>
     </html>

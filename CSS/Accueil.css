@@ -12,6 +12,11 @@
   box-shadow:0 10px 16px 0 rgba(185,68,2,0.2); /* Ombre de la boite */
   padding: 2px;
 }
+
+.Anecdote p{
+  margin-bottom: 1%;
+}
+
 .diapo {
   margin-top: 2%;
   width: 100%;
@@ -21,4 +26,15 @@
 iframe {
   height: 450px;
   margin-bottom: 2%;
+}
+
+.slider{
+  margin-top: 2%;
+}
+
+.slider img{
+  height: 450px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

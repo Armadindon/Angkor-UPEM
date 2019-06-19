@@ -6,11 +6,23 @@
   transition: 0.5s;
 }
 
+#Monuments{
+  -webkit-columns: 4;
+  -moz-columns: 4;
+  columns: 4;
+}
+
+#MonumentsSecondaires{
+  -webkit-columns: 5;
+  -moz-columns: 5;
+  columns: 5;
+}
+
 .container {
   position: relative;
   text-align: center;
   color: white;
-  font-size: 17px;
+  font-size: 25px;
   width: 100%;
   border-radius: 100px;
   filter: grayscale(0%);
@@ -43,6 +55,7 @@
   width: 100%;
   filter: grayscale(0%);
   transition: 0.5s;
+  border-radius: 20px;
 }
 
 /* on arrondi les coins pour chaque coin du tableau */
@@ -65,6 +78,7 @@
 
 /* CSS Modal Box*/
 .Modal {
+  color: black;
   position: fixed;
   z-index: 99999; /* On l'affiche par dessus tout le reste */
   top: 0;
@@ -96,7 +110,8 @@
 
 /* pour le contenu de la modal Box */
 .Modal > div {
-max-width: 600px;
+  font-size: 1em;
+max-width: 75%;
 position: relative;
 padding: 0.5em;
 margin: 1% auto;
@@ -128,4 +143,32 @@ transition: all 0.4s ease-in-out;
 
 .droite{
   float: right;
+}
+
+h2{
+  width: 100%;
+}
+
+@media (max-width: 800px){
+  .Modal > div {
+    font-size: 0.6em;
+    max-width: 100%;
+  }
+
+  #Monuments{
+    -webkit-columns: 1;
+    -moz-columns: 1;
+    columns: 1;
+
+  }
+
+  .container{
+    margin-top: 2%;
+  }
+
+  #MonumentsSecondaires{
+    -webkit-columns: 1;
+    -moz-columns: 1;
+    columns: 1;
+  }
 }

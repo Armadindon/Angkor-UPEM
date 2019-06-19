@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
   <link rel="stylesheet" href="../../../CSS/styles.css">
   <link rel="stylesheet" href="../../../CSS/monuments.css">
@@ -10,66 +12,41 @@
 <body>
 
   <header>
-    <div class="Banderole">
-      <table>
-        <table>
-          <tr>
-            <th> <img src="../../../CSS/Images/logo/forumunesco.png" alt=""> </th>
-            <th rowspan="2"> <h1 id="Titre" >Angkor</h1> </th>
-            <th><img src="../../../CSS/Images/logo/upem.png" alt=""></th>
-          </tr>
-          <tr>
-            <th><img src="../../../CSS/Images/logo/unesco.png" alt=""></th>
-            <th><img src="../../../CSS/Images/logo/logo_MCN.png" alt="" id="MCN"></th>
-          </tr>
-        </table>
-      </table>
-    </div>
-    <nav>
+    <nav class="main-navigation">
+    <ul class="menu">
+      <li class="menu-item-has-children" id="lang-button"><a href="#"> <img src="../../../CSS/Images/drapeaux/language.png" alt=""></a>
+            <ul class="sub-menu" id="language">
+              <li><a href="../monuments.html"> <img src="../../../CSS/Images/drapeaux/flag-fr.png" alt=""> </a></li>
+              <li><a href="#"><img src="../../../CSS/Images/drapeaux/flag-gb.png" alt=""></a></li>
+            </ul>
+          </li>
 
 
-      <ul class="Menu">
-
-        <li><a href="#"> <img src="../../../CSS/Images/drapeaux/language.png" alt=""></a>
-          <ul class="submenu" id="language">
-            <li><a href="../monuments.html"> <img src="../../../CSS/Images/drapeaux/flag-fr.png" alt=""> </a></li>
-            <li><a href="#"><img src="../../../CSS/Images/drapeaux/flag-gb.png" alt=""></a></li>
-          </ul>
-        </li>
-
-        <li><a href="../../../index_eng.html">Home</a>
-        </li>
-
-        <li><a href="#">About Angkor</a>
-          <ul class="submenu">
-            <li><a href="frise_eng.html">Historical timeline</a></li>
-            <li><a href="systemehydro_eng.html">Hydrolic system</a></li>
-            <li><a href="#">Monuments</a></li>
-          </ul>
-        </li>
-
-        <li><a href="#">Useful info</a>
-          <ul class="submenu">
-            <li><a href="../../infospratique/eng/infogenerale_eng.html">General info</a></li>
-            <li><a href="../../infospratique/eng/horaires_eng.html">Schedules of affluence</a></li>
-          </ul>
-        </li>
-
-        <li><a href="../../itineraire/itineraire_eng.html">Itineraries</a>
-        </li>
-
-        <li><a href="#">Around Angkor</a>
-          <ul class="submenu">
-            <li><a href="../../autour/eng/culture_eng.html">Culture</a></li>
-            <li><a href="../../autour/eng/visiter_eng.html">What to visit ?</a></li>
-          </ul>
-        </li>
-
-        <li><a href="../../apropos/eng/apropos_eng.html">About us</a>
-        </li>
-
-      </ul>
-    </nav>
+      <li><a href="../../../index_eng.php">Home</a></li>
+      <li class="menu-item-has-children"><a href="#">About Angkor <img src="../../../CSS/Images/logo/chevron_down.png"  class="chevron"></a><ul class="sub-menu"> <!-- le premier lien n'emmène nulle part , il est donc inactif -->
+        <!-- la sous liste imbriquée réprésente les sous onglets , ils sont cachés et apparaissent lorsque le curseur passe par dessus le premier lien -->
+          <li><a href="../../Infos/eng/frise_eng.html">Historical timeline</a></li>
+          <li><a href="../../Infos/eng/systemehydro_eng.html"> Hydrolic system</a></li>
+        <li><a href="#">Monuments</a></li>
+        </ul></li>
+      <li class="menu-item-has-children"><a href="#">Useful Info <img src="../../../CSS/Images/logo/chevron_down.png"  class="chevron"></a>
+        <ul class="sub-menu">
+          <li><a href="../../infospratique/eng/infogenerale_eng.html">General Info</a></li>
+          <li><a href="../../infospratique/eng/horaires_eng.html">Schedules of affluence</a></li>
+        </ul>
+      </li>
+      <li><a href="../../itineraire/eng/itineraire_eng.html">Itineraries</a></li>
+      <li class="menu-item-has-children"><a href="#">Around Angkor <img src="../../../CSS/Images/logo/chevron_down.png"  class="chevron"></a>
+        <ul class="sub-menu">
+          <li><a href="../../autour/eng/culture_eng.html">Culture</a></li>
+          <li><a href="../../autour/eng/visiter_eng.html">What to visit <div id="Ptit">aaaaaaa</div></a></li>
+        </ul>
+      </li>
+      <li><a href="../../voyageur/eng/voyageurs_eng.html">Travelers</a></li>
+      <li><a href="../../commentaires_eng.php">Comments</a></li>
+      <li><a href="../../apropos/eng/apropos_eng.html">About us</a></li>
+    </ul>
+</nav> <!-- Fin de la barre de navigation -->
 
   </header>
 
@@ -77,100 +54,114 @@
 
     <h2>Main monuments</h2>
 
-    <table id="Monuments">
-      <tr>
-        <td> <a href="#AngkorVat"> <div class="container"><img src="../../../CSS/Images/Miniatures/angkor_vat.jpg" alt=""> <div class="centered">
+    <!-- Dans cette table ont met les Miniatures des bâtiments cliquable afin d'ouvrir une modal box avec l'id du batîment -->
+    <div id="Monuments">
+
+         <a href="#AngkorVat"> <div class="container"><img src="../../../CSS/Images/Miniatures/angkor_vat.jpg" alt=""> <div class="centered">
           <b>Angkor Vat</b>
-        </div> </div> </a> </td>
-        <td><a href="#AngkorThom"><div class="container"><img src="../../../CSS/Images/Miniatures/angkor_thom.jpg" alt=""> <div class="centered">
+        </div> </div> </a>
+        <a href="#AngkorThom"><div class="container"><img src="../../../CSS/Images/Miniatures/angkor_thom.jpg" alt=""> <div class="centered">
           <b>Angkor Thom</b>
-        </div> </div></a> </td>
-        <td><a href="#TaProhm"><div class="container"><img src="../../../CSS/Images/Miniatures/ta_prohm.jpg" alt="" class="Test"> <div class="centered">
+        </div> </div></a>
+        <a href="#TaProhm"><div class="container"><img src="../../../CSS/Images/Miniatures/ta_prohm.jpg" alt="" class="Test"> <div class="centered">
           <b>Ta Prohm</b>
-        </div> </div> </a> </td>
-        <td><a href="#Bayon"><div class="container"><img src="../../../CSS/Images/Miniatures/bayon_1.jpg" alt="" class="Test"> <div class="centered">
+        </div> </div> </a>
+        <a href="#Bayon"><div class="container"><img src="../../../CSS/Images/Miniatures/bayon_1.jpg" alt="" class="Test"> <div class="centered">
           <b>Bayon</b>
-        </div> </div></a> </td>
-      </tr>
-    </table>
+        </div> </div></a>
 
-    <h2>"Secondary" monuments</h2>
-    <!-- On affiche 15 des 33 bâtiments secondaires en vue miniature -->
-    <table id="MonumentsSecondaires">
+    </div>
+    <h2>"Secondary monuments"</h2>
 
-      <tr>
-        <td><a href="#PreahKhan"><div class="container"><img src="../../../CSS/Images/Miniatures/preah_khan.jpg" alt="" id="CoinGaucheHaut"> <div class="centered">
+    <div id="MonumentsSecondaires">
+    <!-- On affiche 15 batiments sur le même pricipe d'au dessus -->
+        <a href="#PreahKhan"><div class="container"><img src="../../../CSS/Images/Miniatures/preah_khan.jpg" alt="" id="CoinGaucheHaut"> <div class="centered">
           <b>Preah Kan</b>
-        </div> </div></a> </td>
-        <td><a href="#BanteaySrei"><div class="container"><img src="../../../CSS/Images/Miniatures/banteay_srei.jpg" alt=""> <div class="centered">
+        </div> </div></a>
+        <a href="#BanteaySrei"><div class="container"><img src="../../../CSS/Images/Miniatures/banteay_srei.jpg" alt=""> <div class="centered">
           <b>Banteay Srei</b>
-        </div> </div></a> </td>
-        <td><a href="#PreRup"><div class="container"><img src="../../../CSS/Images/Miniatures/preah_khan.jpg" alt=""> <div class="centered">
+        </div> </div></a>
+        <a href="#PreRup"><div class="container"><img src="../../../CSS/Images/Miniatures/preRup.jpeg" alt=""> <div class="centered">
           <b>Pre Rup</b>
-        </div> </div> </a></td>
-        <td><a href="#BanteaySamre"><div class="container"><img src="../../../CSS/Images/Miniatures/angkor_thom.jpg" alt=""> <div class="centered">
+        </div> </div> </a>
+        <a href="#BanteaySamre"><div class="container"><img src="../../../CSS/Images/Miniatures/angkor_thom.jpg" alt=""> <div class="centered">
           <b>Banteay Samre</b>
-        </div> </div> </a></td>
-        <td><a href="#BanteayKdei"><div class="container"><img src="../../../CSS/Images/Miniatures/banteay_kdei.jpg" alt="" class="Test" id="CoinDroiteHaut" > <div class="centered">
+        </div> </div> </a>
+        <a href="#BanteayKdei"><div class="container"><img src="../../../CSS/Images/Miniatures/banteay_kdei.jpg" alt="" class="Test" id="CoinDroiteHaut" > <div class="centered">
           <b>Banteay Kdei</b>
-        </div> </div> </a></td>
-      </tr>
-      <tr>
-        <td><a href="#Bakong"><div class="container"><img src="../../../CSS/Images/Miniatures/bakong.jpg" alt=""> <div class="centered">
-          <b>Bakong</b>
-        </div> </div> </a> </td>
-        <td><a href="#PalaisRoyal"><div class="container"><img src="../../../CSS/Images/Miniatures/angkor_vat.jpg" alt=""> <div class="centered">
-          <b>Palais Royal</b>
-        </div> </div> </a></td>
-        <td><a href="#TaSom"><div class="container"><img src="../../../CSS/Images/Miniatures/ta_som.jpg" alt=""> <div class="centered">
-          <b>Ta som</b>
-        </div> </div> </a></td>
-        <td><a href="#Lolei"><div class="container"><img src="../../../CSS/Images/Miniatures/lolei.jpg" alt=""> <div class="centered">
-          <b>Lolei</b>
-        </div> </div> </a></td>
-        <td><a href="#PhnomBakheng"><div class="container"><img src="../../../CSS/Images/Miniatures/phnom_bakheng.jpg" alt="" class="Test"> <div class="centered">
-          <b>Phnom Bakheng</b>
-        </div> </div></a> </td>
-      </tr>
-      <tr>
-        <td><a href="#TerrasseElephants"><div class="container"><img src="../../../CSS/Images/Miniatures/terrasse_des_elephants.jpg" alt="" id="CoinGaucheBas"> <div class="centered">
-          <b>Terrasse des Elephants</b>
-        </div> </div> </a></td>
-        <td><a href="#TaKeo"><div class="container"><img src="../../../CSS/Images/Miniatures/ta_keo.jpg" alt=""> <div class="centered">
-          <b>Ta Keo</b>
-        </div> </div> </a></td>
-        <td><a href="#PrasatKravan"><div class="container"><img src="../../../CSS/Images/Miniatures/prasat_kravan.jpg" alt=""> <div class="centered">
-          <b>Prasat Kravan</b>
-        </div> </div> </a></td>
-        <td><a href="#TerrasseRoi"><div class="container"><img src="../../../CSS/Images/Miniatures/terrasse_du_roi_lepreux.jpg" alt=""> <div class="centered">
-          <b>Terasse du Roi Lépreux</b>
-        </div> </div> </a></td>
-        <td><a href="#Thommanon"><div class="container"><img src="../../../CSS/Images/Miniatures/thommanon.jpg" alt="" class="Test"id="CoinDroiteBas"> <div class="centered">
-          <b>Thommanon</b>
-        </div> </div> </a></td>
-      </tr>
+        </div> </div> </a>
 
-    </table>
+
+        <a href="#Bakong"><div class="container"><img src="../../../CSS/Images/Miniatures/bakong.jpg" alt=""> <div class="centered">
+          <b>Bakong</b>
+        </div> </div> </a>
+        <a href="#PalaisRoyal"><div class="container"><img src="../../../CSS/Images/Miniatures/phimeanakas.jpg" alt=""> <div class="centered">
+          <b>Palais Royal</b>
+        </div> </div> </a>
+        <a href="#TaSom"><div class="container"><img src="../../../CSS/Images/Miniatures/ta_som.jpg" alt=""> <div class="centered">
+          <b>Ta som</b>
+        </div> </div> </a>
+        <a href="#Lolei"><div class="container"><img src="../../../CSS/Images/Miniatures/lolei.jpg" alt=""> <div class="centered">
+          <b>Lolei</b>
+        </div> </div> </a>
+        <a href="#PhnomBakheng"><div class="container"><img src="../../../CSS/Images/Miniatures/phnom_bakheng.jpg" alt="" class="Test"> <div class="centered">
+          <b>Phnom Bakheng</b>
+        </div> </div></a>
+
+
+        <a href="#TerrasseElephants"><div class="container"><img src="../../../CSS/Images/Miniatures/terrasse_des_elephants.jpg" alt="" id="CoinGaucheBas"> <div class="centered">
+          <b>Elephant Terrace</b>
+        </div> </div> </a>
+        <a href="#TaKeo"><div class="container"><img src="../../../CSS/Images/Miniatures/ta_keo.jpg" alt=""> <div class="centered">
+          <b>Ta Keo</b>
+        </div> </div> </a>
+        <a href="#PrasatKravan"><div class="container"><img src="../../../CSS/Images/Miniatures/prasat_kravan.jpg" alt=""> <div class="centered">
+          <b>Prasat Kravan</b>
+        </div> </div> </a>
+        <a href="#TerrasseRoi"><div class="container"><img src="../../../CSS/Images/Miniatures/terrasse_du_roi_lepreux.jpg" alt=""> <div class="centered">
+          <b>Leper King's Terrace </b>
+        </div> </div> </a>
+        <a href="#Thommanon"><div class="container"><img src="../../../CSS/Images/Miniatures/thommanon.jpg" alt="" class="Test"id="CoinDroiteBas"> <div class="centered">
+          <b>Thommanon</b>
+        </div> </div> </a>
     <br>
+    </div>
+    <!-- Modal Box , lorsque son id est sélectionné dans la barre d'url , elle apparait et affiche les informations du monument -->
     <div class="Modal" id="AngkorVat">
+      <!-- informations sur les temples -->
       <div class="">
         <header>
+          <!-- Permet de fermer la modal box avec le bouton renvoyant a la page d'Accueil en rajoutant # a la fin de l'url -->
           <a href="#" title="Fermer la fenêtre" class="droite">X</a>
           <h2>Angkor Vat</h2>
         </header>
         <div>
-          <p><b>Date : </b>XIIème siècle</p>
-          <p><b>Description : </b>Le temple d’Angkor Vat (ប្រាសាទអង្គរវត្ត ) était initialement consacré au dieu Vishnu avant de devenir un temple bouddhiste.<br> Il a été construit à la demande du roi Suryavarman II de l’an 1113 jusqu’environ 1150. Angkor combine deux techniques architecturales khmer : temple-montagne et temple à galeries. Il contient 4 enceintes orientés à l’Ouest :<br>
+          <p><b>Date : </b>12th century</p>
+          <p><b>Description : </b>The Angkor Wat Temple (ប្រាសាទអង្គរវត្គរវត្គរវត) was initially
+            dedicated to the god Vishnu before becoming a Buddhist temple.
+It was built at the behest of King Suryavarman II from 1113 to about 1150,
+and it combines two Khmer architectural techniques: Mountain temple and temple with galleries.
+It contains 4 enclosure facing West:
+<br>
             <ol>
-              <li>L’enceinte I au troisième étage se distingue un soubassement (une base) à deux niveaux avec trois escaliers par face, une galerie ouverte sur l’intérieur avec fenêtres du côté externe, un portique, des tours d’angles, quatre gopura et des passages menant à la tour centrale</li>
-              <li>L’enceinte II, au deuxième étage, possède un gopura à trois entrées à l’Ouest . Les différents gopura sont reliées aux tours d’angle par des galeries avec fenêtres du côté intérieur</li>
-              <li>L’enceinte III, au premier étage, possède une grand galerie décorée de bas-reliefs, ouverte sur l’extérieur ainsi que quatre pavillons d’angles et quatre pavillons d’entrée.Ces bas-reliefs sont des représentations de récits mythologiques hindouistes (Ramayana, le barattage de la mer de lait, le récit épique Mahabharata ou encore les devata ou Apsaras)   On retrouve également deux bibliothèque situé dans les secteurs Nord-Ouest</li>
-              <li>L’enceinte IV est constitué d’un mur en latérite et entourée d’une douve, la partie centrale du gopura Ouest comporte trois entrées et est encadrée par des galeries, on y trouve également deux bibliothèques.</li>
-              <li>  On peut encore aujourd’hui observé des traces de couleurs sur les murs du temple ce qui nous confirme donc qu’ Angkor Vat était autrefois recouvert de couleurs, certains chercheurs affirme que les murs étaient recouvert de peinture blanche et les toits dorés.</li>
+              <li>Enclosure I on the third floor features a two-storey basement  with three staircases per face, an interior gallery with windows on the outside, a portico,
+                 corner towers, four gopuras (a type of Hindu architecture, representing a
+                 structure through which one enters the successive enclosures of a temple) and passages
+                  leading to the central tower.</li>
+              <li>Enclosure II, on the second floor, has a gopura with three entrances to the west.
+                The various gopuras are connected to the corner towers by galleries with windows on the inside.</li>
+              <li>Enclosure III, on the first floor, has a large gallery decorated with bas-reliefs,
+                open to the outside world, as well as four corner pavilions and four entrance pavilions,
+                which are representations of Hindu mythological stories (Ramayana,
+                the churning of the sea of milk, the epic Mahabharata story or the devata or Apsaras).</li>
+              <li>Enclosure IV consists of a laterite wall and surrounded by a moat,
+                the central part of the western gopura has three entrances and is framed by galleries,
+                 there are also two libraries.</li>
+              <li>Traces of color can still be seen on the temple walls today, which confirms that Angkor Wat was once covered with colours, some researchers say that the wall were covered with white paint and the roof were golden.</li>
             </ol>
 
           </p>
-          <p><b>Matériaux :</b> grès, latérite</p>
+          <p><b>Matierals :</b> sandstone, laterite</p>
         </div>
       </div>
     </div>
@@ -182,11 +173,14 @@
           <h2>Angkor Thom</h2>
         </header>
         <div>
-          <p><b>Date : </b>XIIème siècle</p>
-          <p><b>Description : </b>Angkor Thom(អង្គរធំ) possède une muraille qui forme un carré de 3 km de côté enfermant un espace de 900 hectares, d’une hauteur avoisinant les 8 m construite en latérite et bordée à l’extérieur par une douve de 100 mètres de large. Cette muraille est interrompue par cinq portes monumentales (tours à visages) et bordée par une balustrade de statues de géants portant le corps de serpent.<br>
-
+          <p><b>Date : </b>12th century</p>
+          <p><b>Description : </b>Angkor Thom (អង្គរធំ) has a wall that forms a 3 km square
+            with a surface area of 900 hectares, approximately 8 m high,
+            built laterite and bordered on the outside by a 100 m wide moat.
+            This wall is interrupted by five monumental gates (face towers) and bordered by
+            a balustrade of statues of giants carrying the snake body.
           </p>
-          <p><b>Matériaux :</b>grès (portes), latérite (enceinte)</p>
+          <p><b>Materials :</b>sandstone (doors), laterite (enclosure)</p>
         </div>
       </div>
     </div>
@@ -199,18 +193,25 @@
         </header>
         <div>
           <p><b>Date : </b>1186 </p>
-          <p><b>Description : </b>Ta Prohm (khmer : ប្រាសាទតាព្រហ្ម, originellement appelé រាជវិហារ, Rājavihara) est un temple composé à cinq enceintes :<br>
+          <p><b>Description : </b>Ta Prohm (Khmer: ប្រាសាទតាព្រហ្ម, originally called រាជវិហារ, Rājavihara)
+            is a five-enclosure temple:<br>
             <ol>
-              <li>La première enceinte se compose d’une galerie avec gopura (type d’architecture hindouiste, représente une construction par laquelle on pénètre dans les enceintes successives d’un temple) axiaux et pavillons d’angle. La tour centrale est reliée par des structures couvertes aux gopura I Est et I Ouest. </li>
-              <li>La deuxième enceinte est constitué d’un mur en latérite avec un portique intérieur, ainsi que de multiples ouvertures dans le côté Est</li>
-              <li>La troisième enceinte est constitué par une galerie ouverte sur l’extérieur avec gopura et pavillons d’angles. </li>
-              <li>La quatrième enceinte se distingue par  un mur en latérite et quatre gopura ainsi que par des cellules en briques ruinées avec une douve
+              <li>The first enclosure is a gallery with gopura
+                (a type of Hindu architecture, representing a structure through
+                which one enters the successive enclosures of a temple) axial and corner pavilions.
+                The central tower is connected by covered structures to gopura I East and I West.</li>
+              <li>The second enclosure consists of a laterite wall with an inner portico, as well as multiple openings in the east side.</li>
+              <li>The third enclosure consists of a
+                gallery open to the outside with gopura and corner pavilions.</li>
+              <li>The fourth enclosure is distinguished by a laterite wall
+                and four gopuras as well as by ruined brick cells with a moat
               </li>
-              <li>La cinquième enceinte est caractérisée par un mur en latérite à crêtes décorées de Bouddha ainsi que par quatre gopura cardinaux avec tours à visages</li>
+              <li>The fifth enclosure is characterized by a laterite wall with ridges
+                decorated with Buddha and four cardinal gopuras with face towers.</li>
             </ol>
 
           </p>
-          <p><b>Matériaux :</b> grès, latérite, brique (cellule)</p>
+          <p><b>Materials :</b> sandstone, laterite, brick</p>
         </div>
       </div>
     </div>
@@ -222,17 +223,20 @@
           <h2>Bayon</h2>
         </header>
         <div>
-          <p><b>Date : </b>fin du XIIème siècle </p>
-          <p><b>Description : </b>Bayon (ប្រាសាទបាយ័ន) est le dernier des “temple-montagnes” du site d’Angkor à 3 enceintes:<br>
+          <p><b>Date : </b>end of the 12th century </p>
+          <p><b>Description : </b>Bayon (ប្រាសាទបាទបាយ័ន) is the latest of the
+            "temple-mountains" of the three-enclosure Angkor site:<br>
             <ol>
-              <li>la première enceinte présente une tour à visage dédié par le Jayavarman VII au Bouddha, deux “bibliothèques”et une galerie de passage </li>
-              <li>la deuxième enceinte présente de nombreuses tours à visages, deux “bibliothèques” et une citerne</li>
-              <li>La troisième enceinte présente un grand massif central à visage, avec 4 tours et 6 édifices latéraux. </li>
+              <li>The first enclosure has a tower with a face dedicated by Jayavarman VII
+                to the Buddha, two "libraries" and a gallery passage.</li>
+              <li>The second enclosure has numerous facial towers, two "libraries" and a cistern</li>
+              <li>The third enclosure has a large central massif with a face,
+                with four towers and six side buildings.</li>
 
             </ol>
 
           </p>
-          <p><b>Matériaux :</b> grès hétérogène, latérite </p>
+          <p><b>Materials :</b> sandstone, laterite </p>
         </div>
       </div>
     </div>
@@ -244,18 +248,22 @@
           <h2>Banteay Srei</h2>
         </header>
         <div>
-          <p><b>Date : </b>seconde moitié du Xème siècle</p>
-          <p><b>Description : </b>Ce temple se compose de trois enceintes <br>
+          <p><b>Date : </b>second half of the 10th century</p>
+          <p><b>Description : </b>This temple consists of three enclosures <br>
             <ol>
-              <li>La première enceinte contient deux gopura de taille réduite. La cour est occupée par trois tours-sanctuaires ouvertes à l’Est, un pavillon axial et par deux “bibliothèques”
+              <li>The first speaker contains two small gopuras.
+                The courtyard is occupied by three sanctuary towers open to the East,
+                an axial pavilion and two "libraries".
               </li>
-              <li>La deuxième enceinte est occupée par un bassin-fossé à gradins en latérite qui sépare le mur de la deuxième enceinte de celui de la troisième et qui est coupé par une chaussée aboutissant aux gopura Est et Ouest.
+              <li>The second enclosure is occupied by a laterite stepped ditch basin
+                that separates the wall of the second enclosure from that of the third
+                and is intersected by a causeway leading to the east and west gopura.
               </li>
 
             </ol>
 
           </p>
-          <p><b>Matériaux :</b> grès, latérite, brique </p>
+          <p><b>Materials :</b> sandstone, laterite, brick </p>
         </div>
       </div>
     </div>
@@ -267,11 +275,11 @@
           <h2>Pre Rup</h2>
         </header>
         <div>
-          <p><b>Date : </b>Xème siècle</p>
-          <p><b>Description : </b>Prè Rup ( ប្រាសាទប្រែរូប) est un temple à une disposition carrée avec 4 gopuras de plan cruciforme qui mènent vers la tour centrale  <br>
+          <p><b>Date : </b>10th century</p>
+          <p><b>Description : </b>Prè Rup ( ប្រាសាទបាទបាទប្រែរែរូប) is a temple with a square layout with 4 gopuras of cruciform plan that lead to the central tower<br>
 
           </p>
-          <p><b>Matériaux :</b> latérite, grès, brique</p>
+          <p><b>Materials :</b> laterite, sandstone, brick</p>
         </div>
       </div>
     </div>
@@ -283,11 +291,13 @@
           <h2>Banteay Samré</h2>
         </header>
         <div>
-          <p><b>Date : </b>XIIeme siècle</p>
-          <p><b>Description : </b>Banteay Samré(ប្រាសាទបន្ទាយសំរែ) est un temple avec une tour centrale dans le style d’Angkor Vat. Il est entouré par deux murs concentriques regroupant deux enceintes intérieures, 4 gopuras, une salle et deux bibliothèques <br>
+          <p><b>Date : </b>12th century</p>
+          <p><b>Description : </b>Banteay Samré (ប្រាសាទបនាទបន្ទាយសំរែ) is a temple with a central tower in the style of Angkor Wat.
+            It is surrounded by two concentric walls containing two inner enclosures,
+            4 gopuras, a room and two libraries<br>
 
           </p>
-          <p><b>Matériaux :</b> latérite, grès</p>
+          <p><b>Materials :</b> laterite, sandstone</p>
         </div>
       </div>
     </div>
@@ -296,22 +306,23 @@
       <div class="">
         <header>
           <a href="#" title="Fermer la fenêtre" class="droite">X</a>
-          <h2>Ta Prohm</h2>
+          <h2>Banteay Kdei</h2>
         </header>
         <div>
-          <p><b>Date : </b>XII siècle </p>
-          <p><b>Description : </b>Banteay Kdei (ប្រាសាទបន្ទាយក្) est un temple qui comporte trois enceintes intérieures et une enceinte extérieure :
+          <p><b>Date : </b>12th century </p>
+          <p><b>Description : </b> Banteay Kdei (ប្រាសាទបន្ទ្ទាយក្) is a temple with three inner and
+            one outer enclosures:
+
             <br>
             <ol>
-              <li>La première enceinte comporte 4 gopuras avec galeries reliant au sanctuaire principal. Le sanctuaire est une enceinte carrée </li>
-              <li>la deuxième enceinte fait partie du temple principal avec gopura construit comme une galerie avec un mur et double rangée de piliers. </li>
-              <li>la troisième enceinte est un gopura avec un plan cruciforme et un accès menant au sanctuaire principal ainsi qu’une “Salle des danseurs”</li>
-              <li>l’enceinte extérieure comporte 4 gopura </li>
-              <li>La cinquième enceinte est caractérisée par un mur en latérite à crêtes décorées de Bouddha ainsi que par quatre gopura cardinaux avec tours à visages</li>
+              <li>The first enclosure includes 4 gopuras with galleries connecting to the main sanctuary. The sanctuary is a square enclosure</li>
+              <li>The second enclosure is part of the main temple with gopura built as a gallery with a wall and double row of pillars.</li>
+              <li>The third enclosure is a gopura with a cruciform plan and an access to the main sanctuary as well as a "Dancers' Hall".</li>
+              <li>The external enclosure has 4 gopura</li>
             </ol>
 
           </p>
-          <p><b>Matériaux :</b> grès, latérite</p>
+          <p><b>Materials :</b> sandstone, laterite</p>
         </div>
       </div>
     </div>
@@ -320,15 +331,15 @@
       <div class="">
         <header>
           <a href="#" title="Fermer la fenêtre" class="droite">X</a>
-          <h2>Phiméanakas (ou Palais Royal)</h2>
+          <h2>Phiméanakas (or Royal Palace)</h2>
         </header>
         <div>
-          <p><b>Date : </b>fin Xème siècle , début XIème siècle</p>
+          <p><b>Date : </b>end of 10th century, beginning of 11th century</p>
           <p><b>Description : </b>
-            Phiméanakas (ប្រាសាទភិមានអាកាស, “le temple céleste”) un ensemble clos dont le mur d’enceinte haut de 5 mètres est doublé d’un second mur ayant une date plus récente. A l’Est, on retrouve un vaste pavillon d’entrée et sur chacune de ses faces Nord et Sud deux pavillons d’entrée plus simple.  <br>
-            Au centre de cette enceinte se trouve le Phimeanakas, un temple-montagne à trois gradins, construit en latérite et très étroits, au sommet se trouve une galerie voûtée et une tour centrale en ruine construites toutes deux en grès
+            Phiméanakas (ប្រាសាទភាទភាទភិមានអាកាស, "the celestial temple") an enclosed complex whose 5-metre high perimeter wall is doubled by a second wall with a more recent date. To the east, there is a large entrance pavilion and on each of its north and south sides two simpler entrance pavilions.<br>
+            In the centre of this enclosure is the Phimeanakas, a three-tiered mountain temple, built in laterite and very narrow, at the top is a vaulted gallery and a central tower in ruins, both built in sandstone
           </p>
-          <p><b>Matériaux :</b> latérite, grès</p>
+          <p><b>Materials :</b> laterite, sandstone</p>
         </div>
       </div>
     </div>
@@ -341,18 +352,21 @@
           <h2>Ta Som</h2>
         </header>
         <div>
-          <p><b>Date : </b>fin du XIIème siècle </p>
-          <p><b>Description : </b>Ce temple est composé de trois enceintes:<br>
+          <p><b>Date : </b>end of the 12th century</p>
+          <p><b>Description : </b>This temple is composed of three enclosures:<br>
             <ol>
-              <li>La première enceinte comporte une tour-sanctuaire de 20 mètres sur 30. A l’intérieur, on retrouve aussi une galerie, des pavillons d’angle à croisée de voûtes et fausses-portes moulurées et de quatre gopura. Deux bibliothèques ouvertes sont placés dans la cour intérieure.
-                Le sanctuaire central à quatre avant-corps avec des ouvertures sur les quatre faces</li>
-                <li>La deuxième enceinte dont le mur en latérite est coupé à l’Est comme à l’Ouest par un gopura de plan cruciforme </li>
-                <li>La troisième enceinte est formée par un latérite avec des gopura comportant des tours à visages</li>
+              <li>The first enclosure includes a 20 x 30 metre sanctuary tower.
+                 Inside, there is also a gallery, corner pavilions with crossed vaults and
+                 molded false doors and four gopuras. Two open libraries are located in the inner courtyard.
+                The central sanctuary with four forebodies and openings on all four sides</li>
+                <li>The second enclosure,
+                  whose laterite wall is cut off to the east and west by a gopura with a cruciform plan</li>
+                <li>The third enclosure is formed by a laterite with gopuras with face towers.</li>
 
               </ol>
 
             </p>
-            <p><b>Matériaux :</b> grès, latérite</p>
+            <p><b>Materials :</b> sandstone, laterite</p>
           </div>
         </div>
       </div>
@@ -364,14 +378,15 @@
             <h2>Lolei</h2>
           </header>
           <div>
-            <p><b>Date : </b>fin du IXème siècle </p>
+            <p><b>Date : </b>end of the 9th century </p>
             <p><b>Description : </b>
-              Ce monument est édifié au milieu du Baray de Lolei (Indratataka), avec une grande pièce d’eau.
-              Le temple est connu pour ses éléments décoratifs (portes aveugles, devata et Dvarapala, le dieu du ciel Indra ou encore Vishnu).
-              Lolei se compose de quatre tours de briques groupés sur une terrasse à deux niveaux en latérite,
-              l’une d’elles s’est effondrée dans les années 1960.
+              This monument is built in the middle of the Baray de Lolei (Indratataka),
+              with a large body of water. The temple is known for its decorative elements
+              (blind doors, devata and Dvarapala, the god of heaven Indra or Vishnu).
+              Lolei consists of four brick towers grouped on a two-storey laterite terrace, one of which collapsed in the 1960s.
+
             </p>
-            <p><b>Matériaux :</b> latérite, grès</p>
+            <p><b>Materials :</b> laterite, sandstone</p>
           </div>
         </div>
       </div>
@@ -383,13 +398,17 @@
             <h2>Phnom Bakheng (Yaśodhragiri)</h2>
           </header>
           <div>
-            <p><b>Date : </b> fin du IXème, début du Xème siècle </p>
+            <p><b>Date : </b> end of the 9th century, beginning of the 10th century </p>
             <p><b>Description : </b>
-              Phnom Bakheng (ប្រាសាទភ្នំបាខែង) un temple-montagne bâti au sommet d’une colline que gravissent des escaliers axiaux. La pyramide compte 5 gradins et possède à son sommet des tours en quinconce sur une terrasse commune. Il existe des petites tours sur les gradins de la pyramide, la base est entourée de briques.
-              On retrouve également deux “bibliothèques” situés à l’Est Les quatre gopura axiaux et l’enceinte en latérite sont ruinées.
+              Phnom Bakheng (ប្រាសាទភាទភ្នំបំបាខែង) a mountain temple built on the top of a hill
+              with axial stairs.
+               The pyramid has 5 tiers and has staggered towers at its top on a common terrace.
+               There are small towers on the steps of the pyramid, the base is surrounded by bricks.
+               There are also two "libraries" located to the east.
+              The four axial gopuras and the laterite enclosure are ruined.
 
             </p>
-            <p><b>Matériaux :</b> grès, briques, latérite</p>
+            <p><b>Materials :</b> sandstone, bricks, laterite</p>
           </div>
         </div>
       </div>
@@ -398,15 +417,19 @@
         <div class="">
           <header>
             <a href="#" title="Fermer la fenêtre" class="droite">X</a>
-            <h2>Terrasse des éléphants</h2>
+            <h2>Elephant Terrace</h2>
           </header>
           <div>
-            <p><b>Date : </b> XIIIème siècle </p>
+            <p><b>Date : </b> 13th century </p>
             <p><b>Description : </b>
-              La Terrasse des éléphants (ព្រះលានជល់ដំរី) est située devant le Palais Royal, allongée Nord-Sud avec à l’Est trois perrons majeurs et deux perrons secondaires. C’est une terrase d’apparat décorés de structures en bois aujourd’hui disparues. Son nom vient des éléphants en haut-reliefs très découpés décorant les escaliers secondaires. La face Est du mur de soutènement est décorée de représentations d’éléphants et de garuda.
+            The Elephant Terrace (ព្រះលានជលានជល់ដំរំរី) is located in front of the Royal Palace,
+            elongated North-South with three major and two secondary steps to the east.
+            It is a ceremonial terrace decorated with wooden structures that have now disappeared.
+            Its name comes from the elephants in very cut-out high reliefs decorating the secondary stairs.
+            The east side of the retaining wall is decorated with representations of elephants and garuda.
 
             </p>
-            <p><b>Matériaux :</b> latérite</p>
+            <p><b>Materials :</b> laterite</p>
           </div>
         </div>
       </div>
@@ -418,21 +441,22 @@
             <h2>Ta Keo</h2>
           </header>
           <div>
-            <p><b>Date : </b>Pas de date connue</p>
-            <p><b>Description : </b>Ta Keo (ប្រាសាទតាកែវ)est le premier temple construit uniquement en grès, avec 5 enceintes :<br>
+            <p><b>Date : </b>No known date</p>
+            <p><b>Description : </b>Ta Keo (ប្រាសែវាទតាកែវ) is the first temple built exclusively in sandstone, with 5 enclosures :
+<br>
               <ol>
-                <li>la première enceinte présente deux longues galeries dont les toits sont en bois et en tuiles, avec fenêtres et mur de grès à base de latérite
+                <li>The first enclosure has two long galleries with wooden and tiled roofs, with laterite-based windows and sandstone wall
                 </li>
-                <li>la seconde enceinte contient un gopura aux quatre points cardinaux  contenant trois passerelles et une tour centrale
+                <li>The second enclosure contains a gopura with four cardinal points containing three footbridges and a central tower
                 </li>
-                <li>la troisième enceinte présente une galerie interne et est purement décoratif </li>
-                <li>la quatrième enceinte présente une terrasse et deux “bibliothèques” </li>
-                <li>la cinquième enceinte présente la tour centrale avec quatre escaliers qui mènent au sommet </li>
+                <li>The third enclosure has an internal gallery and is purely decorative</li>
+                <li>The fourth enclosure has a terrace and two "libraries".</li>
+                <li>The fifth enclosure has the central tower with four stairs leading to the top</li>
 
               </ol>
 
             </p>
-            <p><b>Matériaux :</b> grès</p>
+            <p><b>Materials :</b> sandstone</p>
           </div>
         </div>
       </div>
@@ -444,12 +468,12 @@
             <h2>Prasat Kravan</h2>
           </header>
           <div>
-            <p><b>Date : </b> Xème siècle </p>
+            <p><b>Date : </b> 10th century </p>
             <p><b>Description : </b>
-              Prasat Kravan(ក្រវាន់) est composé de cinq tours en brique dédié à Vishnu dans la tour centrale.
+              Prasat Kravan (ក្រវានាន់) consists of five brick towers dedicated to Vishnu in the central tower.
 
             </p>
-            <p><b>Matériaux :</b> latérite, brique</p>
+            <p><b>Materials :</b> laterite, brick</p>
           </div>
         </div>
       </div>
@@ -458,14 +482,15 @@
         <div class="">
           <header>
             <a href="#" title="Fermer la fenêtre" class="droite">X</a>
-            <h2>Terrasse du Roi lépreux (Preah Lean Sdach Kumlung)</h2>
+            <h2>Leper King's Terrace (Preah Lean Sdach Kumlung)</h2>
           </header>
           <div>
-            <p><b>Date : </b> XIIIème siècle </p>
+            <p><b>Date : </b> 13th century </p>
             <p><b>Description : </b>
-              La Terrasse du Roi Lépreux (ព្រះលានស្តេចគម្លង់) est situé au Nord de la Terrasse des éléphants et est constituée par un massif en maçonnerie d’environ 25  mètres de coté pour 6 mètres de haut. Ses faces sont entièrement sculptées de personnages répartis sur 7 registres représentant le panthéon hindouiste dont  nāgas (serpent), garuḍaset(aigle) et kumbhandás.
+              The Leprosy King's Terrace (ព្រះលានសានស្តេចគមេចគម្លង់) is located to the north of the Elephants' Terrace and consists of a masonry massif about 25 metres wide and 6 metres high.
+               Its faces are entirely carved with characters spread over 7 registers representing the Hindu pantheon, including nāgas (snake), garuḍaset (eagle) and kumbhandás.
             </p>
-            <p><b>Matériaux :</b> grès</p>
+            <p><b>Materials :</b> sandstone</p>
           </div>
         </div>
       </div>
@@ -477,12 +502,14 @@
             <h2>Thommanon</h2>
           </header>
           <div>
-            <p><b>Date : </b> XIIème siècle</p>
+            <p><b>Date : </b> 12th century</p>
             <p><b>Description : </b>
-              Thommanon (ប្រាសាទធម្មនន្) est  un temple à une seule enceinte orienté vers l’Est. Le groupe central comprend une tour à faux étages et avant-corps reliée par un passage couvert à un pavillon allongé .
-              L’enceinte en latérite est complètement détruite et est bordée à l’extérieur par une douve
+              Thommanon (ប្រាសាទធមាទធម្មនន្) is a single enclosure temple facing east.
+              The central group includes a false-storey tower and front building connected by a
+              covered passage to an elongated pavilion.
+              The laterite enclosure is completely destroyed and is bordered on the outside by a moat.
             </p>
-            <p><b>Matériaux :</b> latérite</p>
+            <p><b>Materials :</b> laterite</p>
           </div>
         </div>
       </div>
@@ -495,17 +522,20 @@
             <h2>Bakong</h2>
           </header>
           <div>
-            <p><b>Date : </b>fin du IXème siècle</p>
+            <p><b>Date : </b>end of the 9th century</p>
             <p><b>Description : </b>
-              Le temple est composé d’un pyramide à cinq gradins entourée de trois enceintes :
+              The temple is composed of a five-storey pyramid surrounded by three enclosures:
 
             </p>
             <ol>
-              <li>La première enceinte forme un grand rectangle (160m * 120m) et comporte quatre gopura cruciforme. C’est au centre de cette enceinte que se trouve la pyramide à cinq gradins dont la quatrième porte porte douze petites tours en grès. Au sommet se trouve une tour en grès et autour de la pyramide se trouvent huit tours en briques ainsi que différents édifices. </li>
-              <li>Le mur de la deuxième enceinte est coupé à l’Ouest et à l’Est par des gopura cruciformes </li>
-              <li>La troisième enceinte abrite de nombreuses tours en briques</li>
+              <li>The first enclosure forms a large rectangle (160m * 120m) and includes four cruciform gopura.
+                It is in the centre of this enclosure that the five-storey pyramid is located,
+                 the fourth gate of which carries twelve small sandstone towers.
+                 At the top is a sandstone tower and around the pyramid are eight brick towers and various buildings.</li>
+              <li>The wall of the second enclosure is cut off to the west and east by cruciform gopura</li>
+              <li>The third enclosure houses many brick towers</li>
             </ol>
-            <p><b>Matériaux :</b> latérite</p>
+            <p><b>Materials :</b> laterite</p>
           </div>
         </div>
       </div>
@@ -514,21 +544,23 @@
         <div class="">
           <header>
             <a href="#" title="Fermer la fenêtre" class="droite">X</a>
-            <h2>PreahKhan</h2>
+            <h2>Preah Khan</h2>
           </header>
           <div>
-            <p><b>Date : </b>seconde moitié du XIIème siècle</p>
+            <p><b>Date : </b>second half of the 12th century</p>
             <p><b>Description : </b>
-              Ce temple est un grand ensemble formant un rectangle de 700 mètre sur 800, il couvre une superficie de 56 hectares. On y trouve quelques similitudes avec Ta Prohm mais Prah Khan ne comporte que quatre enceintes :
+            This temple is a large complex forming a rectangle of 700 meters by 800 meters, it covers an area of 56 hectares. There are some similarities with Ta Prohm but Prah Khan has only four enclosure:
             </p>
             <ol>
-              <li>la première enceinte est interrompue par quatre gopura, à l’intérieur se trouve un nombre important de galeries et de sanctuaires. La tour principale de plan cruciforme possède quatre avant corps avec de nombreuses constructions en voûte notamment.  </li>
-              <li>La deuxième enceinte est une galerie ouverte sur l’extérieur avec six petites tours alignés sur le côté Est  </li>
-              <li>La troisième enceinte est coupée par quatre gopura, celui de l’Est est particulièrement important puisqu'il abrite la “Salle aux danseuses”, un édifice à colonne et des dispositifs en cloître
+              <li>The first enclosure is interrupted by four gopuras, inside there are a large number of galleries and sanctuaries. The main tower with a cruciform plan has four front bodies with numerous vaulted constructions.</li>
+              <li>The second enclosure is an open gallery to the outside with six small towers aligned on the east side</li>
+              <li>The third enclosure is  cut off by four gopuras, the eastern one is particularly important as it houses the "Dancer's Hall", a column building and cloistered structures.
               </li>
-              <li>La quatrième enceinte à la particularité d’avoir un gopura Est à trois tours. A l’intérieur se trouve un gîte d’étape . Elle est entourée par une douve franchie par quatre chaussée à géants précédés d’allées de bornes.  </li>
+              <li>The fourth enclosure has the particularity of having a gopura East with three towers.
+                 Inside is a stopover gîte.
+                It is surrounded by a moat crossed by four giant carriageways preceded by bollard alleys.</li>
             </ol>
-            <p><b>Matériaux :</b> grès, latérite</p>
+            <p><b>Materials :</b> sandstone, laterite</p>
           </div>
         </div>
       </div>
@@ -540,22 +572,22 @@
             <h2>Banteay Kdei</h2>
           </header>
           <div>
-            <p><b>Date : </b>XIIème siècle</p>
+            <p><b>Date : </b>12th century</p>
             <p><b>Description : </b>
-              Banteay Kdei (ប្រាសាទបន្ទាយក្) est un temple qui comporte trois enceintes intérieures et une enceinte extérieure :
+              Banteay Kdei (ប្រាសាទបន្ទ្ទាយក្) is a temple with three inner and one outer enclosures:
 
             </p>
             <ol>
-              <li>La première enceinte comporte 4 gopuras avec galeries reliant au sanctuaire principal. Le sanctuaire est une enceinte carrée
+              <li>The first enclosure includes 4 gopuras with galleries connecting to the main sanctuary. The sanctuary is a square enclosure
               </li>
-              <li>la deuxième enceinte fait partie du temple principal avec gopura construit comme une galerie avec un mur et double rangée de piliers.
+              <li>The second enclosure is part of the main temple with gopura built as a gallery with a wall and double row of pillars.
               </li>
-              <li>la troisième enceinte est un gopura avec un plan cruciforme et un accès menant au sanctuaire principal ainsi qu’une “Salle des danseurs”
+              <li>The third enclosure is a gopura with a cruciform plan and an access to the main sanctuary as well as a "Dancers' Hall".
 
               </li>
-              <li>l’enceinte extérieure comporte 4 gopura</li>
+              <li>The external enclosure has 4 gopura</li>
             </ol>
-            <p><b>Matériaux :</b> grès, latérite</p>
+            <p><b>Materials :</b> sandstone, laterite</p>
           </div>
         </div>
       </div>

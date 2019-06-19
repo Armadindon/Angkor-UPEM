@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
   <link rel="stylesheet" href="../../../CSS/styles.css">
   <link rel="stylesheet" href="../../../CSS/horaires.css">
@@ -10,106 +12,82 @@
 <body>
 
   <header>
-    <div class="Banderole">
-      <table>
-        <table>
-          <tr>
-            <th> <img src="../../../CSS/Images/logo/forumunesco.png" alt=""> </th>
-            <th rowspan="2"> <h1 id="Titre" >Angkor</h1> </th>
-            <th><img src="../../../CSS/Images/logo/upem.png" alt=""></th>
-          </tr>
-          <tr>
-            <th><img src="../../../CSS/Images/logo/unesco.png" alt=""></th>
-            <th><img src="../../../CSS/Images/logo/logo_MCN.png" alt="" id="MCN"></th>
-          </tr>
-        </table>
-      </table>
-    </div>
-    <nav>
+    <nav class="main-navigation">
+    <ul class="menu">
+      <li class="menu-item-has-children" id="lang-button"><a href="#"> <img src="../../../CSS/Images/drapeaux/language.png" alt=""></a>
+            <ul class="sub-menu" id="language">
+              <li><a href="../horaires.html"> <img src="../../../CSS/Images/drapeaux/flag-fr.png" alt=""> </a></li>
+              <li><a href="#"><img src="../../../CSS/Images/drapeaux/flag-gb.png" alt=""></a></li>
+            </ul>
+          </li>
 
 
-      <ul class="Menu">
-        <li><a href="#"> <img src="../../../CSS/Images/drapeaux/language.png" alt=""></a>
-          <ul class="submenu" id="language">
-            <li><a href="../horaires.html"> <img src="../../../CSS/Images/drapeaux/flag-fr.png" alt=""> </a></li>
-            <li><a href="#"><img src="../../../CSS/Images/drapeaux/flag-gb.png" alt=""></a></li>
-          </ul>
-        </li>
-        <li><a href="../../../index_eng.html">Home</a>
-        </li>
-
-        <li><a href="#">About Angkor</a>
-          <ul class="submenu">
-            <li><a href="../../Infos/eng/frise_eng.html">Historical timeline</a></li>
-            <li><a href="../../Infos/eng/systemehydro_eng.html">Hydrolic system</a></li>
-            <li><a href="../../Infos/eng/monuments_eng.html">Monuments</a></li>
-          </ul>
-        </li>
-
-        <li><a href="#">Useful info</a>
-          <ul class="submenu">
-            <li><a href="infogenerale_eng.html">General info</a></li>
-            <li><a href="#">Schedules of affluence</a></li>
-          </ul>
-        </li>
-
-        <li><a href="../../itineraire/eng/itineraire_eng.html">Itineraries</a>
-        </li>
-
-        <li><a href="#">Around Angkor</a>
-          <ul class="submenu">
-            <li><a href="../../autour/eng/culture_eng.html">Culture</a></li>
-            <li><a href="../../autour/eng/visiter_eng.html">What to visit ?</a></li>
-          </ul>
-        </li>
-
-        <li><a href="../../apropos/eng/apropos_eng.html">About us</a>
-        </li>
-
-      </ul>
-    </nav>
+      <li><a href="../../../index_eng.html">Home</a></li>
+      <li class="menu-item-has-children"><a href="#">About Angkor <img src="../../../CSS/Images/logo/chevron_down.png"  class="chevron"></a><ul class="sub-menu"> <!-- le premier lien n'emmène nulle part , il est donc inactif -->
+        <!-- la sous liste imbriquée réprésente les sous onglets , ils sont cachés et apparaissent lorsque le curseur passe par dessus le premier lien -->
+          <li><a href="../../Infos/eng/frise_eng.html">Historical timeline</a></li>
+          <li><a href="../../Infos/eng/systemehydro_eng.html"> Hydrolic system</a></li>
+        <li><a href="../../Infos/eng/monuments_eng.html">Monuments</a></li>
+        </ul></li>
+      <li class="menu-item-has-children"><a href="#">Useful Info <img src="../../../CSS/Images/logo/chevron_down.png"  class="chevron"></a>
+        <ul class="sub-menu">
+          <li><a href="../../infospratique/eng/infogenerale_eng.html">General Info</a></li>
+          <li><a href="#">Schedules of affluence</a></li>
+        </ul>
+      </li>
+      <li><a href="../../itineraire/eng/itineraire_eng.html">Itineraries</a></li>
+      <li class="menu-item-has-children"><a href="#">Around Angkor <img src="../../../CSS/Images/logo/chevron_down.png"  class="chevron"></a>
+        <ul class="sub-menu">
+          <li><a href="../../autour/eng/culture_eng.html">Culture</a></li>
+          <li><a href="../../autour/eng/visiter_eng.html">What to visit <div id="Ptit">aaaaaaa</div></a></li>
+        </ul>
+      </li>
+      <li><a href="../../voyageur/eng/voyageurs_eng.html">Travelers</a></li>
+      <li><a href="../../commentaires_eng.php">Comments</a></li>
+      <li><a href="../../apropos/eng/apropos_eng.html">About us</a></li>
+    </ul>
+</nav> <!-- Fin de la barre de navigation -->
 
   </header>
 
   <div class="Contenu">
-
+    <!-- Page sur les horaires d'Angkor -->
     <h2>Period to travel to Cambodia</h2>
-    <p>Au Cambodge, il existe deux saisons: La saison des pluies et la saison sèche.
-      La saison des pluies commence en mai et se termine en octobre.
-      Cette période de l'année est déconseillée pour partir au Cambodge. En effet, durant période, les pluies sont abondantes et accompagnées
-      de vent et d'une autour avoisinant les 35°C</p>
-      La saison sèche commence en novembre et se termine en avril.
-      La température se rafraichit durant cette période et les pluies sont beaucoup plus rares.</p>
-      <p>La période de novembre à mars est donc la période optimale pour partir au Cambodge.</p>
-      <p>Le tourisme est très présent à Angkor.
-        C'est pourquoi, nous vous avons préparé un tableau récapitulant les horaires optimales pour visiter les différents temples.</p>
+    <p>In Cambodia, there are two seasons : the rainy season and the dry season.
+      The rainy season starts in May and ends in October.
+      This time of year is not recommended to visit Cambodia. Indeed, during the period, the rains are abundant and accompanied with wind and the temperature is around 35 °C</p>
+      The dry season starts in November and ends in April.
+      The temperature is cooler during this period and the rains are much more rare.</p>
+      <p>The period from November to March is therefore the optimal period to go to Cambodia.</p>
+      <p>Tourism is very present in Angkor.
+        That is why we have prepared a table summarizing the best times to visit the different temples.</p>
 
         <h2>Schedules for visiting the monuments</h2>
         <table>
           <tr>
             <th>Temples</th>
-            <th>Meilleurs créneaux horaires</th>
-            <th>Horaires à éviter</th>
+            <th>Best time slots</th>
+            <th>Time slots to avoid</th>
           </tr>
           <tr>
             <td>Angkor Vat</td>
-            <td>entre 14h et 14h, après 16h30, après le coucher du soleil</td>
-            <td>Lever du matin, entre 9h et 11h</td>
+            <td>between 2:00 pm and 2:00 pm, after 4:30 pm, after the sunset</td>
+            <td>Morning sunrise, between 9:00 am et 11:00 am</td>
           </tr>
           <tr>
             <td>Angkor Thom</td>
-            <td>très tôt le matin ou entre 12h et 14h</td>
-            <td>entre 8h et 11h</td>
+            <td>very early in the morning or between 12:00 am and 2:00 pm</td>
+            <td>between 8:00 am and 11:00 am</td>
           </tr>
           <tr>
             <td>Ta Prohm</td>
-            <td>très tot le matin, entre 12h et 14h</td>
-            <td>entre 10h et 11h</td>
+            <td>very early in the morning, between 12:00 am and 2:00 am</td>
+            <td>between 10:00 am and 11:00 am</td>
           </tr>
           <tr>
             <td>Banteay Srei</td>
-            <td>entre 12h et 14h</td>
-            <td>très tôt le matin</td>
+            <td>between 12:00 am and 2:00 pm</td>
+            <td>very early in the morning</td>
           </tr>
         </table>
 

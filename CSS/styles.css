@@ -1,120 +1,189 @@
+/*Installation des polices*/
+
+/*Dyno*/
+@font-face {
+  font-family: "Dyno";
+  src: url("./fonts/DynoBold.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Dyno";
+  src: url("./fonts/DynoBold.ttf");
+  font-weight: bold;
+}
+
+
+@font-face {
+  font-family: "Dyno";
+  src: url("./fonts/DynoItalic.ttf");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Dyno";
+  src: url("./fonts/DynoBoldItalic.ttf");
+  font-style: italic;
+  font-weight: bold;
+}
+
+/*Cicle*/
+@font-face {
+  font-family: "Cicle";
+  src: url("./fonts/CicleFina.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Cicle";
+  src: url("./fonts/CicleFinaItalic.ttf");
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Cicle";
+  src: url("./fonts/CicleGordita.ttf");
+  font-style: normal;
+  font-weight: bold;
+}
+
+
+
 /* Contrairement aux autres feuilles de styles , celle-ci est reliée a toute les pages */
 
 body {
-font-family: 'Roboto Condensed', sans-serif;
-margin: 0%;
-padding: 0%;
-background-color: #fefff1;
+  font-family: 'Cicle',sans-serif;
+  font-size: 1.25em;
+  color: white;
+  margin: 0%;
+  padding: 0%;
+  background-color: #333333;
 }
 
-/* titre "Angkor" apparaissant en haut dans le header */
-#Titre {
-  padding: 5% 2% 2% 0.5%;
-  margin: inherit;
-  text-align: center;
-  color: white;
+h1, h2, h3,h4,h5{
+  font-family: 'Dyno',sans-serif;
+
 }
 
 nav {
+  position:fixed;
+  z-index: 1000;
+  background-color: #ea5c0d;
   width: 100%;
-  background-color:  #ea5c0d;
-  z-index: 5; /* la barre de navigation se met au dessus des autres éléments */
 }
 
-nav > ul {
-  margin: 0px;
-  padding: 0px;
+nav .main-navigation{
+  background-color:#ea5c0d;
+  width : 100%;
 }
 
-nav  li {
-  list-style-type: none;
+nav ul{
+  margin:0; //reset
+  padding:0;
 }
 
-nav > ul > li {
-  float: left;
-  position: relative;
+.menu{
+  display:flex;
+  flex-direction:column;
+  font-family: "Dyno","Cicle";
+}
+.menu li{
+  display:block;
+  list-style-type:none;
+  text-transform:uppercase;
+  width:100%;
 }
 
-nav > ul::after {
-  content: "";
-  display: block;
-  clear: both;
-}
+.menu li a{
+  display:flex;
+  text-align:center;
+  text-decoration:none;
+  color:white;
+  padding:1rem;
 
-nav a{
-  display: inline-block;
-  text-decoration: none;
-}
-
-nav > ul > li > a{
-  padding: 0.7em 0.5em;
-  color: white;
-}
-
-nav > ul > li > a img {
-  width: 15px;
-}
-
-/* pour la selection des langues , on met les drapeaux arrondis et petit */
-.submenu img {
-  width: 20px;
-  border-radius: 6px;
-}
-
-/* taille de l'élément de la sous liste */
-#language li a {
-  width: 23px;
 }
 
 
-/* les sous menu ne sont pas visible de base et ne prennent pas de place sur le site */
-.submenu {
+nav .menu li a:hover{
+  background:#b94503;
+  color:#fff;
+}
+
+@media (min-width: 800px) {
+  nav .menu{
+    flex-direction:row;
+    justify-content:space-between;
+  }
+
+}
+
+nav .menu-item-has-children > a:after{
+  font-family:'Genericons';
+  padding:1px;
+}
+
+nav ul ul {
   display: none;
 }
 
-/* si on passe le curseur sur la barre , les sous menus correspondant apparaissent */
-nav li:hover .submenu{
-  display: inline-block;
-  position: absolute;
-  top: 100%;
-  left: 0px;
-  padding: 0px;
-  z-index: 100000; /* On donne la priorité au menu pour l'affichage */
+@media (min-width: 800px) {
+  nav ul ul {
+    display: none;
+    position:absolute;
+  }
 }
 
-.submenu li {
-  border-bottom: 1px solid #CCC; /* bordure entre les sous onglets */
+nav ul li:hover > ul {
+  display:block;
+  color:#b94503;
+  padding-left:2rem;
 }
 
-/* taille des onglets de sous menus */
-.submenu li a{
-  padding: 3% 6%;
-  font-size: 13px;
-  color: white;
-  width: 200px;
+
+
+@media (min-width: 800px) {
+
+  nav ul li:hover > ul {
+    padding-left:0;
+    background:#ea5c0d;
+  }
+
+  nav ul li:hover > ul a{
+    color:#fff;
+  }
+
+  .sub-menu{
+    li{
+      display:flex;
+      padding-right:2em;
+    }
+
+    li:hover, li a:hover{
+      background:#b94503;
+      color:#fff;
+    }
+  }
+
+  nav ul ul ul{
+    margin:0 0 0 100%;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+  }
+
+  .menu-item-has-children .menu-item-has-children > a:after{
+    font-family:'Genericons';
+    padding:1px;
+  }
+
 }
 
-.Menu > li:hover {
-  border-top: 0.2em solid black;
+#Ptit {
+  opacity : 0;
 }
-
-.Menu >li:hover a {
-  padding: 0.5em 0.5em 0.5em 0.5em
-}
-
-/* couleur de base des sous menus */
-.submenu li {
-  background-color: #b94503;
-}
-
-/* couleur lorsque un curseur passe par dessus un sous menu */
-.submenu li:hover {
-  background-color: #f7af3e;
-}
-
 /* conteneur principal contenant le Contenu de la page (difficile a prononcer ce commentaire) */
 .Contenu {
-  background-color:   #fefff1 ;
+  background-color:   #333333 ;
   padding: 3%;
 }
 
@@ -123,17 +192,68 @@ hr {
   margin: 5% 0%;
 }
 
-/* couleur et taille de la banderole en haut du site */
-.Banderole {
-    background-color:  #333333;
-    min-height: 200px; /* hauteur pour faire entrer les logos */
-    width: 100%
+
+#language img {
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1.5em;
+  height: 1.5em;
 }
 
-.Banderole > table {
-    width: 100%
+#lang-button img {
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1.5em;
+  height: 1.5em;
 }
 
-#MCN {
-  width: 100px;
+#language {
+  width:10em;
+}
+
+.menu-item-has-children img {
+  margin-left:0px;
+  padding-top: 0px;
+}
+
+.chevron {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 800px){
+  .Contenu {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  nav{
+    position:relative;
+  }
+
+  #lang-button img {
+    margin-left: 0;
+  }
+
+  #language a{
+    width: 100vw;
+  }
+
+  img{
+    display: block;
+    left: auto;
+    right: auto;
+  }
+
+}
+
+header {
+  padding-bottom:3%;
+}
+
+.Contenu {
+  margin-left: 10%;
+  margin-right:10%;
 }

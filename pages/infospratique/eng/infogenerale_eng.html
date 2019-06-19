@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
   <link rel="stylesheet" href="../../../CSS/styles.css">
   <meta charset="utf-8">
@@ -9,91 +11,68 @@
 <body>
 
   <header>
-    <div class="Banderole">
-      <table>
-        <table>
-          <tr>
-            <th> <img src="../../../CSS/Images/logo/forumunesco.png" alt=""> </th>
-            <th rowspan="2"> <h1 id="Titre" >Angkor</h1> </th>
-            <th><img src="../../../CSS/Images/logo/upem.png" alt=""></th>
-          </tr>
-          <tr>
-            <th><img src="../../../CSS/Images/logo/unesco.png" alt=""></th>
-            <th><img src="../../../CSS/Images/logo/logo_MCN.png" alt="" id="MCN"></th>
-          </tr>
-        </table>
-      </table>
-    </div>
-    <nav>
+    <nav class="main-navigation">
+    <ul class="menu">
+      <li class="menu-item-has-children" id="lang-button"><a href="#"> <img src="../../../CSS/Images/drapeaux/language.png" alt=""></a>
+            <ul class="sub-menu" id="language">
+              <li><a href="../infogenerale.html"> <img src="../../../CSS/Images/drapeaux/flag-fr.png" alt=""> </a></li>
+              <li><a href="#"><img src="../../../CSS/Images/drapeaux/flag-gb.png" alt=""></a></li>
+            </ul>
+          </li>
 
 
-      <ul class="Menu">
-        <li><a href="#"> <img src="../../../CSS/Images/drapeaux/language.png" alt=""></a>
-          <ul class="submenu" id="language">
-            <li><a href="../infogeneral.html"> <img src="../../../CSS/Images/drapeaux/flag-fr.png" alt=""> </a></li>
-            <li><a href="#"><img src="../../../CSS/Images/drapeaux/flag-gb.png" alt=""></a></li>
-          </ul>
-        </li>
-        <li><a href="../../../index_eng.html">Home</a>
-        </li>
-
-        <li><a href="#">About Angkor</a>
-          <ul class="submenu">
-            <li><a href="../../Infos/eng/frise_eng.html">Historical timeline</a></li>
-            <li><a href="../../Infos/eng/systemehydro_eng.html">Hydrolic system</a></li>
-            <li><a href="../../Infos/eng/monuments_eng.html">Monuments</a></li>
-          </ul>
-        </li>
-
-        <li><a href="#">Useful info</a>
-          <ul class="submenu">
-            <li><a href="#">General info</a></li>
-            <li><a href="horaires_eng.html">Schedules of affluence</a></li>
-          </ul>
-        </li>
-
-        <li><a href="../../itineraire/eng/itineraire_eng.html">Itineraries</a>
-        </li>
-
-        <li><a href="#">Around Angkor</a>
-          <ul class="submenu">
-            <li><a href="../../autour/eng/culture_eng.html">Culture</a></li>
-            <li><a href="../../autour/eng/visiter_eng.html">What to visit ?</a></li>
-          </ul>
-        </li>
-
-        <li><a href="../../apropos/eng/apropos_eng.html">About us</a>
-        </li>
-
-      </ul>
-    </nav>
+      <li><a href="../../../index_eng.html">Home</a></li>
+      <li class="menu-item-has-children"><a href="#">About Angkor <img src="../../../CSS/Images/logo/chevron_down.png"  class="chevron"></a><ul class="sub-menu"> <!-- le premier lien n'emmène nulle part , il est donc inactif -->
+        <!-- la sous liste imbriquée réprésente les sous onglets , ils sont cachés et apparaissent lorsque le curseur passe par dessus le premier lien -->
+          <li><a href="../../Infos/eng/frise_eng.html">Historical timeline</a></li>
+          <li><a href="../../Infos/eng/systemehydro_eng.html"> Hydrolic system</a></li>
+        <li><a href="../../Infos/eng/monuments_eng.html">Monuments</a></li>
+        </ul></li>
+      <li class="menu-item-has-children"><a href="#">Useful Info <img src="../../../CSS/Images/logo/chevron_down.png"  class="chevron"></a>
+        <ul class="sub-menu">
+          <li><a href="#">General Info</a></li>
+          <li><a href="../../infospratique/eng/horaires_eng.html">Schedules of affluence</a></li>
+        </ul>
+      </li>
+      <li><a href="../../itineraire/eng/itineraire_eng.html">Itineraries</a></li>
+      <li class="menu-item-has-children"><a href="#">Around Angkor <img src="../../../CSS/Images/logo/chevron_down.png"  class="chevron"></a>
+        <ul class="sub-menu">
+          <li><a href="../../autour/eng/culture_eng.html">Culture</a></li>
+          <li><a href="../../autour/eng/visiter_eng.html">What to visit <div id="Ptit">aaaaaaa</div></a></li>
+        </ul>
+      </li>
+      <li><a href="../../voyageur/eng/voyageurs_eng.html">Travelers</a></li>
+      <li><a href="../../commentaires_eng.php">Comments</a></li>
+      <li><a href="../../apropos/eng/apropos_eng.html">About us</a></li>
+    </ul>
+</nav> <!-- Fin de la barre de navigation -->
 
   </header>
 
   <div class="Contenu">
-
+    <!-- Page info sur Angkor -->
     <h2>How to get to Angkor:</h2>
-    <p>Les moyens de transport les plus pratiques pour se rendre à Angkor depuis Siem Reap sont le tuk-tuk et la moto. La bicyclette est aussi une bonne solution pour les voyageurs les plus courageux. Circuler à pied entre les temples d'Angkor est très agréable, même si les distances sont parfois longues. Louer un tuk-tuk pour la journée afin de circuler à l'intérieur du site d'Angkor permet donc de préserver ses forces.</p>
+    <p>The most convenient means of transportation to Angkor from Siem Reap are tuk-tuk and motorbike. The bicycle is also a good solution for the most courageous travelers. It is very pleasant to walk between the temples of Angkor, even if the distances are sometimes long. Renting a tuk-tuk for the day to circulate inside the site of Angkor thus allows to preserve its forces.</p>
     <h2>Opening time:</h2>
     <p>
-      Le Parc archéologique aura comme horaire : De 7h30 à 17h30.
-      Angkor Wat : 5h00 – 17h30 (la partie centrale où l’on peut monter sera ouverte elle à 7h30).<br>
-      Srah Sang : 5h00 – 17h30 <br>
-      Phnom Bakheng : 5h00 – 19h00 <br>
-      Pre Ru : 5h00 – 19h00 <br>
-      Le coucher de soleil ne sera possible qu’au Phnom Bakeng et au Pre Rup en arrivant assez tôt et à Angkor Wat, mais attention car le lever de soleil attire beaucoup de visiteurs.
+      The Archaeological Park will have as a timetable: From 7:30 am to 5:30 pm.
+      Angkor Wat : 5:00 am – 5:30 pm (the central part where you can climb will be open at 7:30).<br>
+      Srah Sang : 5:00 am – 5:30 pm <br>
+      Phnom Bakheng : 5:00 am – 7:00 pm <br>
+      Pre Ru : 5:00 am – 7:00 pm <br>
+      Watching the sunset will only be possible at Phnom Bakeng and Pre Rup by arriving early and at Angkor Wat, but watch out because the sunrise attracts many visitors.
     </p>
     <h2>Pricing:</h2>
     <p>
-      pass 1 jour : 37$ <br>
-      pass 3 jour consécutifs : 62$ <br>
-      pass 7 consécutifs : 72$ <br>
-      Le pass ne couvre pas les temples situés à plus de 10km, il faudra donc payer à nouveau pour les visiter. <br>
-      Temples non compris dans les pass : <br>
-      Beng Melea : 5$ (prix du tuk-tuk : 35$) <br>
-      Koh Ker : 10$ <br>
-      Kulen Mountain : 20$ ( + 2,50 $ si l’on souhaite monter en voiture sur la montagne) <br>
-      Preah Vihear : 10$
+      pass 1 day : 37$ (US Dollar) (Around 150,397 riel)<br>
+      pass 3 consecutive days  : 62$ (US Dollar) (Around 252,002 riel)<br>
+      pass 7 consecutive days : 72$ (US Dollar) (Around 292,648 riel)<br>
+      The pass does not cover the temples located more than 10km, so you will have to pay again to visit them. <br>
+      Temples not included in the pass : <br>
+      Beng Melea : 5$ (US Dollar) (Around 20,322 riel) (price of tuk-tuk : 35$ (Around 142,267 riel) ) <br>
+      Koh Ker : 10$ (US Dollar) (Arround 40,644 riel)<br>
+      Kulen Mountain : 20$ (US Dollar) ( + 2,50 $ if you want to ride a car on the mountain) (Arround 81,287 riel)<br>
+      Preah Vihear : 10$ (US Dollar) (Arround 40,644 riel)
     </p>
 
 

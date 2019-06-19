@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
   <link rel="stylesheet" href="../../../CSS/styles.css">
   <link rel="stylesheet" href="../../../CSS/frise.css">
@@ -10,128 +12,158 @@
 <body>
 
   <header>
-    <div class="Banderole">
-      <table>
-        <table>
-          <tr>
-            <th> <img src="../../../CSS/Images/logo/forumunesco.png" alt=""> </th>
-            <th rowspan="2"> <h1 id="Titre" >Angkor</h1> </th>
-            <th><img src="../../../CSS/Images/logo/upem.png" alt=""></th>
-          </tr>
-          <tr>
-            <th><img src="../../../CSS/Images/logo/unesco.png" alt=""></th>
-            <th><img src="../../../CSS/Images/logo/logo_MCN.png" alt="" id="MCN"></th>
-          </tr>
-        </table>
-      </table>
-    </div>
-    <nav>
+    <nav class="main-navigation">
+    <ul class="menu">
+      <li class="menu-item-has-children" id="lang-button"><a href="#"> <img src="../../../CSS/Images/drapeaux/language.png" alt=""></a>
+            <ul class="sub-menu" id="language">
+              <li><a href="../frise.html"> <img src="../../../CSS/Images/drapeaux/flag-fr.png" alt=""> </a></li>
+              <li><a href="#"><img src="../../../CSS/Images/drapeaux/flag-gb.png" alt=""></a></li>
+            </ul>
+          </li>
 
-
-      <ul class="Menu">
-        <li><a href="#"> <img src="../../../CSS/Images/drapeaux/language.png" alt=""></a>
-          <ul class="submenu" id="language">
-            <li><a href="../frise.html"> <img src="../../../CSS/Images/drapeaux/flag-fr.png" alt=""> </a></li>
-            <li><a href="#"><img src="../../../CSS/Images/drapeaux/flag-gb.png" alt=""></a></li>
-          </ul>
-        </li>
-
-        <li><a href="../../../index_eng.html">Home</a>
-        </li>
-
-        <li><a href="#">About Angkor</a>
-          <ul class="submenu">
-            <li><a href="#">Historical timeline</a></li>
-            <li><a href="systemehydro_eng.html">Hydrolic system</a></li>
-            <li><a href="monuments_eng.html">Monuments</a></li>
-          </ul>
-        </li>
-
-        <li><a href="#">Useful info</a>
-          <ul class="submenu">
-            <li><a href="../../infospratique/eng/infogenerale_eng.html">General info</a></li>
-            <li><a href="../../infospratique/eng/horaires_eng.html">Schedules of affluence</a></li>
-          </ul>
-        </li>
-
-        <li><a href="../../itineraire/eng/itineraire_eng.html">Itineraries</a>
-        </li>
-
-        <li><a href="#">Around Angkor</a>
-          <ul class="submenu">
-            <li><a href="../../autour/eng/culture_eng.html">Culture</a></li>
-            <li><a href="../../autour/eng/visiter_eng.html">What to visit ?</a></li>
-          </ul>
-        </li>
-
-        <li><a href="../../apropos/eng/apropos_eng.html">About us</a>
-        </li>
-
-      </ul>
-    </nav>
+      <!-- La page actuelle a son lien désactivé -->
+      <li><a href="../../../index_eng.php">Home</a></li>
+      <li class="menu-item-has-children"><a href="#">About Angkor <img src="../../../CSS/Images/logo/chevron_down.png"  class="chevron"></a><ul class="sub-menu"> <!-- le premier lien n'emmène nulle part , il est donc inactif -->
+        <!-- la sous liste imbriquée réprésente les sous onglets , ils sont cachés et apparaissent lorsque le curseur passe par dessus le premier lien -->
+          <li><a href="#">Historical timeline</a></li>
+          <li><a href="../../Infos/eng/systemehydro_eng.html"> Hydrolic system</a></li>
+        <li><a href="../../Infos/eng/monuments_eng.html">Monuments</a></li>
+        </ul></li>
+      <li class="menu-item-has-children"><a href="#">Useful Info <img src="../../../CSS/Images/logo/chevron_down.png"  class="chevron"></a>
+        <ul class="sub-menu">
+          <li><a href="../../infospratique/eng/infogenerale_eng.html">General Info</a></li>
+          <li><a href="../../infospratique/eng/horaires_eng.html">Schedules of affluence</a></li>
+        </ul>
+      </li>
+      <li><a href="../../itineraire/eng/itineraire_eng.html">Itineraries</a></li>
+      <li class="menu-item-has-children"><a href="#">Around Angkor <img src="../../../CSS/Images/logo/chevron_down.png"  class="chevron"></a>
+        <ul class="sub-menu">
+          <li><a href="../../autour/eng/culture_eng.html">Culture</a></li>
+          <li><a href="../../autour/eng/visiter_eng.html">What to visit <div id="Ptit">aaaaaaa</div></a></li>
+        </ul>
+      </li>
+      <li><a href="../../voyageur/eng/voyageurs_eng.html">Travelers</a></li>
+      <li><a href="../../commentaires_eng.php">Comments</a></li>
+      <li><a href="../../apropos/eng/apropos_eng.html">About us</a></li>
+    </ul>
+</nav> <!-- Fin de la barre de navigation -->
 
   </header>
-
   <div class="Contenu">
+    <!-- utilisation d'un iframe pour afficher une frise interactive -->
+    <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1BouPEjCc1fRItg4l-QS3RMNii0eUdR6RtCABJ9IlRTE&font=Default&lang=en&initial_zoom=2&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
 
-    <h2>Historical timeline</h2>
-    <div id="content">
+    <h2>Additional information:</h2>
+    <ul>
+      <div style="color:white;">
 
-      <ul class="timeline">
-        <li class="event" >
-          <h3>VIIème siècle</h3>
-          <p>début de la civilisation Khmer</p
-          </li>
-          <li class="event">
-            <h3>IXème siècle</h3>
-            <p>Fondation d’Angkor sous l’empire khmer par le roi Jayavarman II ( ព្រះបាទជ័យវរ្ម័នទី២,Prohbat Jayavarman ti pi). Marque le début de la période “Angkorienne” (802-1432)</p>
-            <p>877-889 :le roi Indravarman I fit construire plusieurs monuments, le temple-montagne Bakong, le temple Preah Ko, un grand réservoir d’eau (Baray) et l’Indrakada </p>
+      <!-- liens pour donner des informations supplémentaires -->
+      <li> <a href="#JayavarmanII">Jayavarman II</a> </li>
+      <li> <a href="#IndravarmanI">Indravarman I</a> </li>
+      <li> <a href="#YasovarmanI">Yasovarman I</a> </li>
+      <li> <a href="#SuryavarmanI">Suryavarman I</a> </li>
+      <li> <a href="#JayavarmanVII">Jayavarman VII</a> </li>
+      <li> <a href="#JayavarmanVIII">Jayavarman VIII</a> </li>
+    </ul>
+    </div>
+    <div class="Modal" id="JayavarmanII">
+      <div class="">
+        <header>
+          <a href="#" title="Fermer la fenêtre" class="droite">X</a>
+          <h2>JayavarmanII</h2>
+        </header>
+        <div>
+          <p><b>Date : </b> 11th century-12th century</p>
+            <p>
+              Considered as one of the greatest kings of ancient Cambodia, he is the founder of Angkorian power. In 802, he claimed the Khmer independence from the Javanese and established the cult of devarāja (Hindu rites) as the official religion. He established a series of capitals, first in Indrapura, on the lower Mekong River east of Kâmpóng (Kompong) Cham; then, moving northward, in Hariharalaya, southeast of the current Siem Reap; and then to Mahendraparvata (now Roluos), in the region north of the Tonle Sap (Great Lake), about ten kilometres from the current Angkor, the next seat of the Khmer empire, which remained its capital for 600 years.  His reign allowed the unification of the Khmer kingdom then divided into different provinces
 
-            <p>889-910 : règne du successeur d’Indravarman I, Yasovarman I, déplaça la capitale à Angkor et y fit construire des petits temples tels que Phnom Bok et Phnom Krom. Il a également été à l’origine de la construction d’un lac artificiel servant de réserve d’eau(Baray Oriental).</p>
-          </li>
-          <li class="event">
-            <h3>Xème Siècle</h3>
-            <p>928-944 : règne de Jayavarman IV, installe une nouvelle capitale à Koh Ker ( à 60 km d’Angkor) </p>
-            <p>944-968 : Rajendravarman II, neveu du roi Jayavarman IV, déplaça la capitale à Angkor dans la volonté de consolider l’empire. </p>
-            <p>968-1001: Jayavarman V fit construire le temple-montagne de Ta Keo (inachevé)</p>
-          </li>
-          <li class="event">
-            <h3>XIème siècle</h3>
-            <p>1010-1050 : Suryavarman I s’empare du trône.</p>
-          </li>
-          <li class="event">
-            <h3>XIIème siècle</h3>
-            <p>1113-1150: Règne de Suryavarman II, il fit construire le plus beau et le plus grand des temples, Angkor Vat</p>
-            <p>1177 : Angkor est assiégé et pillé par les Chams qui occupèrent le territoire pendant 4 ans.</p>
-            <p>1181-1202 : Dernier grand roi d’Angkor, Jayavarman VII Victoire sur les Chams, intenses constructions </p>
-          </li>
-          <li class="event">
-            <h3>XIIIème siècle</h3>
-            <p>1243 : Jayavarman VIII impose le retour à l’hindouisme et détruit les nombreuses sculptures représentant Bouddha construit sous le règne de son prédécesseur </p>
-          </li>
-          <li class="event">
-            <h3>XIVème siècle</h3>
-            <p>1327: Fin des constructions</p>
-            <p>1351: Nouvelle puissance ennemis grandissante venant du royaume d’Ayutthaya (anciennement Siam) situé dans l’actuelle Thaïlande </p>
-            <p>1353: le royaume d’Ayutthaya s’empare du royaume d’Angkor pendant 7 ans</p>
-          </li>
-          <li class="event">
-            <h3>XVème siècle</h3>
-            <p>1431 : Abandon d’Angkor après une deuxième invasion Thaïlandaise, Angkor assiégé pendant 7 mois, début d’une longue phase de déclin</p>
-            <p>1434: déplacement de la capitale à Phnom Penh </p>
-          </li>
-          <li class="event">
-            <h3>XVIème siècle</h3>
-            <p>1570: Redécouverte de la cité d’Angkor par des voyageurs espagnols et portugais .</p>
-          </li>
-          <li class="event">
-            <h3>Temps Modernes</h3>
-            <p>1993: l’UNESCO lance un vaste programme de préservation du site</p>
-          </li>
-
-        </ul>
+            </p>
+        </div>
       </div>
+    </div>
 
+    <div class="Modal" id="IndravarmanI">
+      <div class="">
+        <header>
+          <a href="#" title="Fermer la fenêtre" class="droite">X</a>
+          <h2>Indravarman I</h2>
+        </header>
+        <div>
+            <p>
+              Indravarman I take over from Jayavarman III and
+              is at the origin of a major expansion of
+              his empire in a peaceful way.
+              Its main achievement was the construction of a reservoir that is now dry. In 879, he had the Preah Ko temple built.
+            </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="Modal" id="YasovarmanI">
+      <div class="">
+        <header>
+          <a href="#" title="Fermer la fenêtre" class="droite">X</a>
+          <h2>Yasovarman I</h2>
+        </header>
+        <div>
+            <p>
+              Yasovarman I, son and successor of Indravarman,
+              was the first to settle on the Angkor site.
+              There are at least a hundred monasteries built throughout his kingdom,
+              which served as a resting place for the king. In 893, he built the Baray Oriental,
+              a reserve in the middle of a lake.
+              In addition, he had two temples built: Phnom Bok and Phnom Krom
+            </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="Modal" id="SuryavarmanI">
+      <div class="">
+        <header>
+          <a href="#" title="Fermer la fenêtre" class="droite">X</a>
+          <h2>Suryavarman I</h2>
+        </header>
+        <div>
+            <p>
+              Suryavarman I (សូរ្យវរ្ម្ម័នទី១; posthumously Nirvanapada),
+              is known as a conquering king since he extended his territorial possessions and
+              consolidated the conquered lands into a strong and unified empire.
+              He was a strong and competent leader who knew prayer, rituals, sacrifices and astronomy,
+              his reign was marked by peace and prosperity, indeed no revolt was made.
+            </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="Modal" id="JayavarmanVII">
+      <div class="">
+        <header>
+          <a href="#" title="Fermer la fenêtre" class="droite">X</a>
+          <h2>Jayavarman VII</h2>
+        </header>
+        <div>
+            <p>
+              Jayavarman VII spent all his youth fighting the Chams and was crowned in 1181 at the age of 50. He is considered as one of the last great Khmer kings because he was able to recover in a very short time a country that was in the process of material, cultural and moral loss. It was under the influence of his second wife, Princess Indradevi, that Jayavarman II replaced the devaraja cult by that of Buddha-roi and worshipped the bodhisatva Lokesvara.He had 102 hospitals, cottages, roads and bridges built, and schools for monks. Nicknamed the "Builder King", he is the one who built the most temples in Angkor. He is responsible for his major work: Le Bayon but also: the ramparts, the five gates and the renovation of Angkor Thom, the terraces known as the Elephants and the Leper King, the Prah Khan, a vast monastery dedicated to his father, the Ta Prohm in memory of his mother, the Neak Pean, the Bantéa Kdeï but also the Ta Prohm, the Banteay Chhmar and the Vat Nokor; Jayavarman VII gave his heart to his people: "The suffering of the people is his". Its main objective was to transform Cambodia into a paradise where the Khmer people would be the Tevada.
+            </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="Modal" id="JayavarmanVIII">
+      <div class="">
+        <header>
+          <a href="#" title="Fermer la fenêtre" class="droite">X</a>
+          <h2>Jayavarman VIII</h2>
+        </header>
+        <div>
+            <p>
+              Jayavarman VIII took power from 1243 to 1295. He imposed a return to Hinduism and the cult of the devaraja sovereign (God-king) and finally put an end to the religious tolerance established by his predecessor Jayavarman VII.
+              He will devote himself to converting or destroying all Buddhist temples into Hindu temples and destroying thousands of Buddha statues, some of which are nearly 4 meters high in the Bayon.
+            </p>
+        </div>
+      </div>
+    </div>
 
     </div>
 

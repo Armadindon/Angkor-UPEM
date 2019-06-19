@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
   <link rel="stylesheet" href="../../../CSS/styles.css">
   <link rel="stylesheet" href="../../../CSS/visiter.css">
@@ -10,132 +12,112 @@
 <body>
 
   <header>
-    <div class="Banderole">
-      <table>
-        <table>
-          <tr>
-            <th> <img src="../../../CSS/Images/logo/forumunesco.png" alt=""> </th>
-            <th rowspan="2"> <h1 id="Titre" >Angkor</h1> </th>
-            <th><img src="../../../CSS/Images/logo/upem.png" alt=""></th>
-          </tr>
-          <tr>
-            <th><img src="../../../CSS/Images/logo/unesco.png" alt=""></th>
-            <th><img src="../../../CSS/Images/logo/logo_MCN.png" alt="" id="MCN"></th>
-          </tr>
-        </table>
-      </table>
-    </div>
-    <nav>
+    <nav class="main-navigation">
+    <ul class="menu">
+      <li class="menu-item-has-children" id="lang-button"><a href="#"> <img src="../../../CSS/Images/drapeaux/language.png" alt=""></a>
+            <ul class="sub-menu" id="language">
+              <li><a href="../visiter.html"> <img src="../../../CSS/Images/drapeaux/flag-fr.png" alt=""> </a></li>
+              <li><a href="#"><img src="../../../CSS/Images/drapeaux/flag-gb.png" alt=""></a></li>
+            </ul>
+          </li>
 
 
-      <ul class="Menu">
-        <li><a href="#"> <img src="../../../CSS/Images/drapeaux/language.png" alt=""></a>
-          <ul class="submenu" id="language">
-            <li><a href="../visiter.html"> <img src="../../../CSS/Images/drapeaux/flag-fr.png" alt=""> </a></li>
-            <li><a href="#"><img src="../../../CSS/Images/drapeaux/flag-gb.png" alt=""></a></li>
-          </ul>
-        </li>
-
-        <li><a href="../../../index_eng.html">Home</a>
-        </li>
-
-        <li><a href="#">About Angkor</a>
-          <ul class="submenu">
-            <li><a href="../../Infos/eng/frise_eng.html">Historical timeline</a></li>
-            <li><a href="../../Infos/eng/systemehydro_eng.html">Hydrolic system</a></li>
-            <li><a href="../../Infos/eng/monuments_eng.html">Monuments</a></li>
-          </ul>
-        </li>
-
-        <li><a href="#">Useful info</a>
-          <ul class="submenu">
-            <li><a href="../../infospratique/eng/infogenerale_eng.html">General info</a></li>
-            <li><a href="../../infospratique/eng/horaires_eng.html">Schedules of affluence</a></li>
-          </ul>
-        </li>
-
-        <li><a href="../../itineraire/eng/itineraire_eng.html">Itineraries</a>
-        </li>
-
-        <li><a href="#">Around Angkor</a>
-          <ul class="submenu">
-            <li><a href="culture_eng.html">Culture</a></li>
-            <li><a href="#">What to visit ?</a></li>
-          </ul>
-        </li>
-
-        <li><a href="../../apropos/eng/apropos_eng.html">About us</a>
-        </li>
-
-      </ul>
-    </nav>
+      <li><a href="../../../index_eng.php">Home</a></li>
+      <li class="menu-item-has-children"><a href="#">About Angkor <img src="../../../CSS/Images/logo/chevron_down.png"  class="chevron"></a><ul class="sub-menu"> <!-- le premier lien n'emmène nulle part , il est donc inactif -->
+        <!-- la sous liste imbriquée réprésente les sous onglets , ils sont cachés et apparaissent lorsque le curseur passe par dessus le premier lien -->
+          <li><a href="../../Infos/eng/frise_eng.html">Historical timeline</a></li>
+          <li><a href="../../Infos/eng/systemehydro_eng.html"> Hydrolic system</a></li>
+        <li><a href="../../Infos/eng/monuments_eng.html">Monuments</a></li>
+        </ul></li>
+      <li class="menu-item-has-children"><a href="#">Useful Info <img src="../../../CSS/Images/logo/chevron_down.png"  class="chevron"></a>
+        <ul class="sub-menu">
+          <li><a href="../../infospratique/eng/infogenerale_eng.html">General Info</a></li>
+          <li><a href="../../infospratique/eng/horaires_eng.html">Schedules of affluence</a></li>
+        </ul>
+      </li>
+      <li><a href="../../itineraire/eng/itineraire_eng.html">Itineraries</a></li>
+      <li class="menu-item-has-children"><a href="#">Around Angkor <img src="../../../CSS/Images/logo/chevron_down.png"  class="chevron"></a>
+        <ul class="sub-menu">
+          <li><a href="../../autour/eng/culture_eng.html">Culture</a></li>
+          <li><a href="../../autour/eng/visiter_eng.html">What to visit <div id="Ptit">aaaaaaa</div></a></li>
+        </ul>
+      </li>
+      <li><a href="../../voyageur/eng/voyageurs_eng.html">Travelers</a></li>
+      <li><a href="../../commentaires_eng.php">Comments</a></li>
+      <li><a href="../../apropos/eng/apropos_eng.html">About us</a></li>
+    </ul>
+</nav> <!-- Fin de la barre de navigation -->
 
   </header>
 
   <div class="Contenu">
-
+    <!-- Page sur les choses à visiter autour d'Angkor -->
     <h2>What to visit </h2>
-    <p>Le pays cambodgien regorge de choses à visiter</p>
-    <p>Voici une liste de choses à faire au Cambodge</p>
-    <h3>Sbek Thom, a Khmer shadow theatre</h3>
-    <p>Inscrit en 2008 sur la liste représentative du patrimoine immatériel de l’humanité, ce théâtre Khmer met en scène des marionnettes non articulé,  faites en cuir ciselé, pouvant parfois atteindre la taille de 2m de haut. Datant de la période pré-angkorienne et considéré comme un art sacré, ces représentations de marionnette, était autrefois dédiées aux divinités, et elle n’étaient données que trois ou quatre fois par an. Après la chute d’Angkor au quinzième siècle, le théâtre d’ombres a dépassé le cadre rituel pour devenir une forme artistique, sans toutefois perdre sa dimension cérémonielle.
-      Les représentations ont généralement lieu la nuit, en plein air, aux abords d’une rizière ou d’une pagode. Un drap blanc est tendu entre deux hauts mâts de bambou devant des projecteurs. Les silhouettes des marionnettes sont projetées en ombre chinoise sur cet écran blanc. Le manipulateur lui donne vie en effectuant des pas de danse et, un orchestre et deux narrateurs accompagnent l’action dramatique. Elles peuvent s’étaler sur plusieurs nuits consécutives et nécessiter jusqu’à 160 marionnettes pour un même spectacle.
+    <p>The Cambodgian is overflowing of places to visit. </p>
+    <p>Here is a list of things to do in Cambodgia.</p>
+    <h3>Sbek Thom, a Khmer shadow theater</h3>
+    <p>Registered in the Representative List of the Intangible Cultural Heritage of Humanity in 2008, this Khmer theatre features non-articulated puppets, made of carved leather, sometimes reaching a height of 2m. Dating from the pre-Angkorian period and considered a sacred art, these puppet performances were once dedicated to the deities, and they were only given three or four times a year. After the fall of Angkor in the fifteenth century, shadow theatre went beyond ritual to become an artistic form, but without losing its ceremonial dimension.
+      Representations are usually taking place at night, outdoors, near a scribble or a pagoda. A white sheet is tightened with two bamboo sticks in front of lights. The shapes of the dolls are
+projected in chinese shadow on a white screen. The artist is giving life to these shadows by doing some dance steps, an orchestra and two narrators are supporting the dramatic action. These representations can last for many consecutive nights and use 160 dolls for the same show.
+
+
     </p>
     <img id="outil" src="../../../CSS/Images/visiter/sbek.JPG" alt="Outil utilisé pour créer les ombres">
-    <p class="description">Outil pour fabriquer des ombres représentant le personnage dessiné</p>
+    <p class="description">Tools for creating shadows who represent the drawed character</p>
 
     <h3>The Royal Cambodian Ballet</h3>
-    <p>Inscrit en 2008 sur la liste représentative du patrimoine culturel immatériel de l’humanité, cet art Kmer est renommé pour sa gestuelle gracieuse et ses somptueux costumes. Plus qu’une simple danse, cette art fait partie intégrante de l’histoire et de l’identité du peuple cambodgien. Cette forme d’art, qui a échappé de justesse à l’anéantissement dans les années 1970, est, de fait, vénérée par de nombreux Cambodgiens.
-      Investie d’un rôle sacré et symbolique, la danse incarne les valeurs traditionnelles de raffinement, de respect et de spiritualité. Son répertoire immortalise les légendes fondatrices du peuple khmer. C’est pourquoi les Cambodgiens la considèrent depuis toujours comme l’emblème de la culture khmère. Le répertoire classique comporte quatre types de personnages : Neang la femme, Neayrong l’homme, Yeak le géant et Sva le singe. Chacun possède des couleurs, des costumes, un maquillage et des masques qui lui sont propres. La gestuelle et les postures, dont la maîtrise exige des années de formation intensive, traduisent toute la gamme des émotions humaines, de la crainte et de la rage à l’amour et à la joie. Un orchestre accompagne la danse, tandis qu’un chœur de femmes commente l’intrigue et souligne les émotions mimées par les danseurs.
+    <p>Registered in the Representative List of the Intangible Cultural Heritage of Humanity in 2008, this Khmer art is renowned for the gracious gestures and gorgeous outfits. More than just a simple dance, this art is part of the history and the identity of the Cambodian people. This art form, which narrowly escaped annihilation in the 1970s, is in fact revered by many Cambodians.
+Dance, with its sacred and symbolic role, embodies the traditional values of refinement, respect and spirituality. His repertory immortalizes the founding legends of the Khmer people. That is why Cambodians have always considered it as the emblem of Khmer culture. The classical repertoire includes four types of characters: Neang the woman, Neayrong the man, Yeak the giant and Sva the monkey. Each one has its own colours, costumes, make-up and masks. The gestures and postures, which require years of intensive training to master, reflect the full range of human emotions, from fear and rage to love and joy. An orchestra accompanies the dance, while a women's choir comments on the plot and highlights the emotions mimicked by the dancers.
+
     </p>
-    <img class="palais" src="../../../CSS/Images/visiter/ballet_royal.jpg" alt="Femmes faisant parties du ballet royal">
-    <p class="description">Femmes jouant dans le ballet royal</p>
+    <img class="palais" src="../../../CSS/Images/visiter/ballet_royal.jpg" alt="Women who are part of the Royal Ballet">
+    <p class="description">Women performing in the Royal Ballet</p>
 
     <h3>A walk on the street pub of Siem Reap</h3>
-    <p>Pour une soirée détente, promenez-vous dans les rues du Pub Street entre pubs,
-      restaurant et boutique. Vous pourrez assister à  des spectacles de danse traditionnelle ou tester la fish pédicure.</p>
-      <img class="palais" src="../../../CSS/Images/visiter/pub_street.jpg" alt="Image de la pub street">
-      <p class="description">La pub street de Siem Reap</p>
+    <p>For a relaxing evening, take a walk through the streets of Pub Street between pubs,
+      restaurant and shop. You can attend traditional dance performances or test the fish pedicure. </p>
+      <img class="palais" src="../../../CSS/Images/visiter/pub_street.jpg" alt="Image of the street pub">
+      <p class="description">Siem Reap's street pub</p>
 
       <h3>The Angkor National Museum</h3>
-      <p>Pour les plus érudit, profitez d’une visite dans le Musée National d’Angkor. Vous y découvrez 1500 ans d'Histoire à compter de l'instauration du royaume Funan au Ier siècle après J-C, jusqu'à la chute du grand empire khmer.
-        Le musée est composé de différente galerie retraçant l’âge d’or de l’Empire Khmer :
+      <p>For the more educated, enjoy a visit to the Angkor National Museum. You will discover 1500 years of history from the establishment of the Funan kingdom in the 1st century AD, until the fall of the great Khmer empire.
+        The museum is composed of different galleries retracing the golden age of the Khmer Empire:</p>
         <ul>
-          <li><h4>Galerie A - La civilisation Khmer</h4>
-            Découvrez la raison qui a conduit la civilisation Khmer à créer une des plus grandes structures architecturales du monde.
-            Explorer les croyances de ce peuple khmer envers leurs grands Rois et intéressez-vous au histoire des ancienne guerre qui ont ravagé les Terres du Cambodge.</li>
-            <li><h4>Galerie B - Religion et Croyance</h4>
-              Apprenez à connaître les anciens peuples Khmer à travers leur religion et croyance qui ont façonné la culture Khmer, comme leur oeuvre littéraire,  sculptural, architectural et leur vie quotidienne.</li>
-              <li><h4>Galerie C - Les grands Rois Khmer</h4>
-                Apprenez en plus sur les principaux Rois Khmer qui ont permis à la l’Empire Khmer d’être l’une des plus grandes civilisation antique du monde.</li>
-                <li><h4>Galerie D - Angkor Wat</h4>
-                  Retrouvez des descriptions sur le fameu temple d’Angkor Wat.</li>
-                  <li><h4>Galerie E - Angkor Thom</h4></li>
-                  <li><h4>Galerie F - L’histoire à travers la pierre</h4>
-                    Retracez à travers les inscriptions sur les pierres, les preuves qu’un jour l’Empire Khmer à exister.</li>
-                    <li><h4>Galerie G - Les anciennes traditions</h4>
-                      Découvrez les fascinantes coutumes Khmer comme la danse Apsara.</li>
+          <li><h4>Gallery A - The Khmer civilization</h4>
+            Discover the reason that led the Khmer civilization to create one of the largest architectural structures in the world.
+            Explore the beliefs of these Khmer people towards their great Kings and learn about the history of the ancient war that ravaged the lands of Cambodia.</li>
+            <li><h4>Gallery B - Religion and beliefs/h4>
+              Get to know the ancient Khmer people through their religion and beliefs that shaped Khmer culture, as well as their literary, sculptural, architectural and everyday life.</li>
+              <li><h4>Gallery C - The great Khmer Kings</h4>
+                Learn more about the major Khmer Kings who made the Khmer Empire one of the greatest ancient civilizations in the world.</li>
+                <li><h4>Gallery D - Angkor Wat</h4>
+                  Find descriptions on the famous Angkor Wat temple.</li>
+                  <li><h4>Gallery E - Angkor Thom</h4></li>
+                  <li><h4>Gallery F - History through stones</h4>
+                    Trace back through the inscriptions on the stones, the evidence that one day the Khmer Empire existed.</li>
+                    <li><h4>Gallery G - The ancient traditions</h4>
+                      Discover the fascinating Khmer customs like the Apsara dance.</li>
                     </ul>
-                    <img class="palais" src="../../../CSS/Images/visiter/national_museum.jpg" alt="Image du musée national">
-                    <p class="description">Le Musée national d'Angkor</p>
+                    <img class="palais" src="../../../CSS/Images/visiter/national_museum.jpg" alt="Image of the National Museum of Angkor">
+                    <p class="description">National Museum of Angkor</p>
 
 
                     <h3>The floating village of Tonlé Sap</h3>
-                    <p>Au bord de la rivière Tonlé Sap, vous découvrirez des villages flottants dans lesquels vous pourrez vous perdre et en apprendre plus sur la culture locale.</p>
+                    <p>On the banks of the Tonle Sap River, you will discover floating villages in which you can get lost and learn more about the local culture.</p>
                     <img class="palais" src="../../../CSS/Images/visiter/village_flottant_tonle_sap.jpg" alt="Tonle Sap">
-                    <p class="description">Village de Tonlé Sap</p>
+                    <p class="description">Village of Tonlé Sap</p>
 
                     <h3>The Royal Palace of Phnom Penh</h3>
-                    <p>Le palais royal de Phnom Penh est un endroit à visiter impérativement. Le batiment est composé d'énormes toits dorée.
-                      La construction date de l'année 1860 et montre la technique et la beauté de l'architecture khmère.</p>
+                    <p>The Royal Palace of Phnom Penh is a must visit. The building is composed of huge golden roofs.
+                      The building dates back to 1860 and shows the technique and beauty of Khmer architecture.</p>
                       <img class="palais" src="../../../CSS/Images/visiter/palais.jpg" alt="Palais royal">
-                      <p class="description">Palais royal de Phnom-Penh</p>
+                      <p class="description">Royal Palace of Phnom-Penh</p>
 
                       <h3>Other activities to do</h3>
                       <ul>
-                        <li>La réserve ornithologique de Prek Toal</li>
-                        <li>Faire un trek dans le ratanakiri</li>
-                        <li>Faire un détour dans les Killings Caves (Attention aux chauves-souris)</li>
+                        <li>Prek Toal Ornithological Reserve</li>
+                        <li>Trekking in the ratanakiri</li>
+                        <li>Take a detour to the Killings Caves (Beware of bats)</li>
                       </ul>
 
                     </div>

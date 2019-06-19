@@ -1,0 +1,36 @@
+img {
+  width: 300px;
+  height:400px;
+  float:left;
+  margin-right : 30px;
+  margin-bottom : 20px;
+}
+
+p {
+  text-align: justify;
+}
+
+.gras {
+  font-weight: bold;
+}
+a:link, a:active, a:visited {
+  color: #e1c0c0;
+  text-decoration: none;
+}
+
+ a:hover {
+   color: #d0a790;
+   text-decoration: none;
+ }
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom:2px;
+}
+
+.italic {
+  font-style: italic;
+}
